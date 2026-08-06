@@ -19,7 +19,7 @@ _DATASET_CACHE = None
 # If deployed (drug.csv not present locally), download from GitHub Release
 DATASET_URL = os.environ.get(
     "DATASET_URL",
-    "https://github.com/AyaanMukadam/drug-emergency-response/releases/download/v1.0/drug.csv"
+    "https://github.com/AyaanMukadam/drug-emergency-response/releases/download/v1.0/drug.csv.csv"
 )
 
 def ensure_dataset():
