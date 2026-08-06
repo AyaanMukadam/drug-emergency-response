@@ -1,0 +1,200 @@
+{
+  "total_reviews": 160398,
+  "total_drugs": 3431,
+  "total_conditions": 884,
+  "avg_rating": 7.0,
+  "top_conditions": {
+    "Birth Control": 28788,
+    "Depression": 9069,
+    "Pain": 6145,
+    "Anxiety": 5904,
+    "Acne": 5588,
+    "Bipolar Disorde": 4224,
+    "Insomnia": 3673,
+    "Weight Loss": 3609,
+    "Obesity": 3568,
+    "ADHD": 3383,
+    "Diabetes, Type 2": 2554,
+    "Emergency Contraception": 2463,
+    "High Blood Pressure": 2321,
+    "Vaginal Yeast Infection": 2274,
+    "Abnormal Uterine Bleeding": 2096
+  },
+  "condition_ratings": {
+    "von Willebrand's Disease": 10.0,
+    "m Pain Disorde": 10.0,
+    "amilial Cold Autoinflammatory Syndrome": 10.0,
+    "Testicular Cance": 10.0,
+    "Thyrotoxicosis": 10.0,
+    "Vitamin K Deficiency": 10.0,
+    "acial Lipoatrophy": 10.0,
+    "Zollinger-Ellison Syndrome": 10.0,
+    "26</span> users found this comment helpful.": 10.0,
+    "30</span> users found this comment helpful.": 10.0,
+    "Toothache": 10.0,
+    "48</span> users found this comment helpful.": 10.0,
+    "Renal Transplant": 10.0,
+    "76</span> users found this comment helpful.": 10.0,
+    "79</span> users found this comment helpful.": 10.0
+  },
+  "rating_distribution": {
+    "1": 21504,
+    "2": 6879,
+    "3": 6465,
+    "4": 4980,
+    "5": 7959,
+    "6": 6301,
+    "7": 9395,
+    "8": 18791,
+    "9": 27379,
+    "10": 50745
+  },
+  "sentiment_distribution": {
+    "Positive": 106310,
+    "Negative": 39828,
+    "Neutral": 14260
+  },
+  "emergency_distribution": {
+    "LOW": 96915,
+    "CRITICAL": 34848,
+    "MODERATE": 15696,
+    "HIGH": 12939
+  },
+  "top_drugs_by_condition": {
+    "Birth Control": [
+      {
+        "drugName": "Plan B",
+        "avg_rating": 10.0,
+        "reviews": 3
+      },
+      {
+        "drugName": "Heather",
+        "avg_rating": 9.75,
+        "reviews": 4
+      },
+      {
+        "drugName": "Ortho-Novum 7 / 7 / 7",
+        "avg_rating": 9.666666666666666,
+        "reviews": 3
+      },
+      {
+        "drugName": "Femcon Fe",
+        "avg_rating": 8.166666666666666,
+        "reviews": 6
+      },
+      {
+        "drugName": "Lybrel",
+        "avg_rating": 7.888888888888889,
+        "reviews": 9
+      }
+    ],
+    "Depression": [
+      {
+        "drugName": "Desipramine",
+        "avg_rating": 9.857142857142858,
+        "reviews": 7
+      },
+      {
+        "drugName": "Niacin",
+        "avg_rating": 9.857142857142858,
+        "reviews": 14
+      },
+      {
+        "drugName": "Serzone",
+        "avg_rating": 9.8,
+        "reviews": 5
+      },
+      {
+        "drugName": "Amitriptyline / chlordiazepoxide",
+        "avg_rating": 9.666666666666666,
+        "reviews": 3
+      },
+      {
+        "drugName": "Luvox",
+        "avg_rating": 9.333333333333334,
+        "reviews": 3
+      }
+    ],
+    "Pain": [
+      {
+        "drugName": "Roxicodone Intensol",
+        "avg_rating": 10.0,
+        "reviews": 3
+      },
+      {
+        "drugName": "Bupivacaine liposome",
+        "avg_rating": 10.0,
+        "reviews": 3
+      },
+      {
+        "drugName": "Cataflam",
+        "avg_rating": 9.75,
+        "reviews": 4
+      },
+      {
+        "drugName": "Ketoprofen",
+        "avg_rating": 9.75,
+        "reviews": 8
+      },
+      {
+        "drugName": "Valdecoxib",
+        "avg_rating": 9.75,
+        "reviews": 4
+      }
+    ],
+    "Anxiety": [
+      {
+        "drugName": "Alprazolam Intensol",
+        "avg_rating": 10.0,
+        "reviews": 3
+      },
+      {
+        "drugName": "Niravam",
+        "avg_rating": 9.8,
+        "reviews": 5
+      },
+      {
+        "drugName": "Amitriptyline / chlordiazepoxide",
+        "avg_rating": 9.666666666666666,
+        "reviews": 3
+      },
+      {
+        "drugName": "Klonopin Wafer",
+        "avg_rating": 9.6,
+        "reviews": 5
+      },
+      {
+        "drugName": "Tramadol",
+        "avg_rating": 9.454545454545455,
+        "reviews": 33
+      }
+    ],
+    "Acne": [
+      {
+        "drugName": "Aldactone",
+        "avg_rating": 9.75,
+        "reviews": 4
+      },
+      {
+        "drugName": "PanOxyl",
+        "avg_rating": 9.6,
+        "reviews": 5
+      },
+      {
+        "drugName": "Clarifoam EF",
+        "avg_rating": 9.2,
+        "reviews": 5
+      },
+      {
+        "drugName": "Doxy 100",
+        "avg_rating": 9.0,
+        "reviews": 5
+      },
+      {
+        "drugName": "Bactrim",
+        "avg_rating": 8.903846153846153,
+        "reviews": 52
+      }
+    ]
+  }
+}

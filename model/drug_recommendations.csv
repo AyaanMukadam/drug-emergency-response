@@ -1,0 +1,4214 @@
+condition,drugName,avg_rating,review_count
+Dermatological Disorders,Benzoic acid / salicylic acid,10.0,3
+Dermatologic Lesion,Zinc oxide,10.0,3
+von Willebrand's Disease,Stimate,10.0,3
+Lennox-Gastaut Syndrome,Rufinamide,10.0,5
+Light Sedation,Chlorpromazine,10.0,3
+Light Anesthesia,Lorazepam,10.0,3
+Insomnia,Secobarbital,10.0,3
+Muscle Spasm,Norgesic Forte,10.0,3
+"Diabetes, Type 1",Pramlintide,10.0,3
+Hypoestrogenism,Conjugated estrogens,10.0,3
+Motion Sickness,Cyclizine,10.0,5
+Indigestion,Prilosec OTC,10.0,3
+Indigestion,Pepto-Bismol,10.0,3
+"Hypothyroidism, After Thyroid Removal",Nature-Throid,10.0,3
+Menopausal Disorders,Estratest H.S.,10.0,4
+Menopausal Disorders,Esterified estrogens / methyltestosterone,10.0,5
+"Diabetes, Type 1",Insulin lispro,10.0,3
+Birth Control,Plan B,10.0,3
+Lennox-Gastaut Syndrome,Banzel,10.0,3
+Migraine,Migergot,10.0,5
+Herpes Simplex,Zovirax Cream,10.0,3
+"Diarrhea, Acute",Loperamide,10.0,5
+Diarrhea,Paregoric,10.0,3
+Not Listed / Othe,Cyproheptadine,10.0,3
+Not Listed / Othe,Magnesium citrate,10.0,4
+Cystic Fibrosis,Pancrelipase,10.0,5
+Sinus Symptoms,Guaifenesin / phenylephrine,10.0,3
+"COPD, Maintenance",Olodaterol / tiotropium,10.0,3
+Sinus Symptoms,Dexbrompheniramine / pseudoephedrine,10.0,6
+Sinus Symptoms,Drixoral Cold and Allergy,10.0,7
+Cutaneous Candidiasis,Nystatin / triamcinolone,10.0,3
+Bacterial Infection,Amoxil,10.0,3
+Hepatitis C,Daclatasvir,10.0,4
+"Burns, External",Silvadene,10.0,4
+"Herpes Simplex, Mucocutaneous/Immunocompromised Host",Valtrex,10.0,3
+Night Terrors,Diazepam,10.0,6
+Stomach Ulce,Rabeprazole,10.0,3
+Diaper Rash,Vusion,10.0,4
+Diaper Rash,Zinc oxide,10.0,5
+Stomach Ulce,Omeprazole / sodium bicarbonate,10.0,3
+"Burns, External",Silver sulfadiazine,10.0,35
+Nocturnal Leg Cramps,Soma,10.0,6
+Non-Small Cell Lung Cance,Crizotinib,10.0,3
+Nasal Congestion,Privine,10.0,9
+Nasal Congestion,Naphazoline,10.0,9
+Nasal Congestion,Dexbrompheniramine / pseudoephedrine,10.0,11
+Tonsillitis/Pharyngitis,Omnicef,10.0,3
+NSAID-Induced Gastric Ulce,Esomeprazole,10.0,3
+NSAID-Induced Gastric Ulce,Nexium,10.0,3
+"High Cholesterol, Familial Heterozygous",Rosuvastatin,10.0,4
+Hot Flashes,Bazedoxifene / conjugated estrogens,10.0,4
+Panic Disorde,Tofranil,10.0,4
+Cold Symptoms,Drixoral Cold and Allergy,10.0,7
+Cough and Nasal Congestion,Chlorpheniramine / hydrocodone / pseudoephedrine,10.0,10
+Rhinitis,Allerx Dose Pack DF,10.0,3
+Cold Symptoms,Dexbrompheniramine / pseudoephedrine,10.0,5
+Gastric Ulcer Maintenance Treatment,Zantac,10.0,3
+Anxiety,Alprazolam Intensol,10.0,3
+Cold Symptoms,Chlorpheniramine / phenylephrine,10.0,3
+Gingivitis,Chlorhexidine,10.0,3
+Anaplastic Oligodendroglioma,Temozolomide,10.0,3
+Psoriasis,Psoriasin,10.0,3
+HIV Infection,Fuzeon,10.0,3
+Paroxysmal Supraventricular Tachycardia,Flecainide,10.0,4
+Rosacea,Solodyn,10.0,3
+Cough and Nasal Congestion,Zutripro,10.0,10
+Allergic Reactions,EpiPen,10.0,3
+Rheumatoid Arthritis,Triamcinolone,10.0,3
+Allergic Rhinitis,Astelin,10.0,8
+Rheumatoid Arthritis,Kenalog-40,10.0,3
+Rheumatoid Arthritis,Ibuprofen,10.0,4
+Allergic Rhinitis,Chlor-Trimeton,10.0,3
+Erosive Esophagitis,Prevacid,10.0,3
+Erosive Esophagitis,Lansoprazole,10.0,5
+Costochondritis,Naproxen,10.0,4
+Erosive Esophagitis,Ranitidine,10.0,3
+Eye Redness,Hypotears,10.0,3
+Allergic Rhinitis,Chlorpheniramine / phenylephrine,10.0,3
+Psoriasis,Flurandrenolide,10.0,3
+Epilepsy,Mebaral,10.0,3
+Psoriasis,Cordran Tape,10.0,3
+GERD,Nizatidine,10.0,4
+Postpartum Depression,Fluoxetine,10.0,3
+Atopic Dermatitis,Dupixent,10.0,4
+Atopic Dermatitis,Dupilumab,10.0,4
+Head Lice,Spinosad,10.0,4
+Head Lice,Malathion,10.0,3
+Schizophrenia,Stelazine,10.0,3
+"Asthma, Maintenance",Intal Inhaler,10.0,3
+Atrial Fibrillation,Sotalol Hydrochloride AF,10.0,3
+Pain,Bupivacaine liposome,10.0,3
+Osteoporosis,Conjugated estrogens,10.0,3
+Headache,Ascomp with Codeine,10.0,3
+Sedation,Ativan,10.0,3
+Sinus Symptoms,Acetaminophen / pseudoephedrine,10.0,6
+Headache,Advil,10.0,3
+B12 Nutritional Deficiency,Cyanocobalamin,10.0,4
+B12 Nutritional Deficiency,Vitamin B12,10.0,4
+Pain,Roxicodone Intensol,10.0,3
+Opioid Overdose,Narcan Injection,10.0,3
+Dermatitis,Triamcinolone,9.93,14
+Allergic Rhinitis,Drixoral Cold and Allergy,9.93,14
+Anxiety and Stress,Elavil,9.89,9
+Nasal Congestion,Drixoral Cold and Allergy,9.88,8
+Not Listed / Othe,Buprenorphine / naloxone,9.88,8
+"Nausea/Vomiting, Chemotherapy Induced",Aprepitant,9.88,8
+"Nausea/Vomiting, Chemotherapy Induced",Emend,9.88,8
+Psoriasis,Elocon,9.88,8
+"Constipation, Chronic",Tegaserod,9.88,8
+Depression,Niacin,9.86,14
+Dry Skin,Biafine,9.86,7
+Dermatitis,Fluocinonide,9.86,7
+Depression,Desipramine,9.86,7
+"Diarrhea, Chronic",Loperamide,9.86,7
+"Constipation, Chronic",Zelnorm,9.86,7
+Allergic Rhinitis,Dexbrompheniramine / pseudoephedrine,9.85,13
+Nocturnal Leg Cramps,Carisoprodol,9.83,6
+Overactive Bladde,Belladonna / opium,9.83,6
+Prevention of Bladder infection,Methenamine,9.83,6
+Alopecia,Kenalog-10,9.83,6
+Anxiety and Stress,Prazosin,9.83,6
+Meniere's Disease,Valium,9.83,6
+Multiple Sclerosis,Avonex Pen,9.83,6
+Anxiety,Niravam,9.8,5
+Barrett's Esophagus,Omeprazole,9.8,5
+Dry Skin,Ammonium lactate,9.8,5
+amilial Mediterranean Feve,Colchicine,9.8,5
+Depression,Serzone,9.8,5
+Urinary Tract Infection,Methenamine,9.8,5
+Atopic Dermatitis,Clobetasol,9.8,10
+Chronic Fatigue Syndrome,Lisdexamfetamine,9.8,5
+Not Listed / Othe,Methadone,9.8,5
+Dumping Syndrome,Cholestyramine,9.75,4
+Back Pain,Acetaminophen / pamabrom,9.75,8
+Pain,Ketoprofen,9.75,8
+Pain,Cataflam,9.75,4
+Osteoarthritis,Prednisone,9.75,4
+Amenorrhea,Depo-Provera,9.75,4
+"Prosthetic Heart Valves, Mechanical Valves - Thrombosis Prophylaxis",Warfarin,9.75,4
+Cough and Nasal Congestion,Chlorpheniramine / dextromethorphan / pseudoephedrine,9.75,4
+Schizophrenia,Trifluoperazine,9.75,4
+Seizures,Zarontin,9.75,4
+"Asthma, acute",Primatene Mist,9.75,4
+Atopic Dermatitis,Mometasone,9.75,4
+Pain,Valdecoxib,9.75,4
+Cold Sores,Zovirax Ointment,9.75,4
+"Herpes Simplex, Mucocutaneous/Immunocompetent Host",Valacyclovir,9.75,4
+ge HCT (amlodipine / hydrochlorothiazide / valsartan),Amlodipine / hydrochlorothiazide / valsartan,9.75,4
+Diabetes Insipidus,DDAVP,9.75,4
+Birth Control,Heather,9.75,4
+Mitral Valve Prolapse,Atenolol,9.75,4
+Irritable Bowel Syndrome,Tegaserod,9.75,8
+Opiate Withdrawal,Dolophine,9.75,4
+Acne,Aldactone,9.75,4
+"Diarrhea, Chronic",Welchol,9.75,12
+Hemorrhoids,Proctofoam,9.75,16
+Insomnia,Tryptophan,9.75,4
+Chronic Pain,Methadone Diskets,9.71,7
+Pain,Aspirin / butalbital / caffeine,9.71,7
+Meniere's Disease,Diazepam,9.71,14
+Expectoration,Acetylcysteine,9.71,7
+Heart Failure,Coreg,9.71,14
+Prostate Cance,Zytiga,9.71,7
+Cough,Acetaminophen / hydrocodone,9.7,10
+Diarrhea,Opium,9.7,10
+Irritable Bowel Syndrome,Lotronex,9.69,13
+Irritable Bowel Syndrome,Alosetron,9.69,16
+mance Anxiety,Propranolol,9.67,187
+Insomnia,Dimenhydrinate,9.67,3
+Malaria,Artemether / lumefantrine,9.67,3
+Birth Control,Ortho-Novum 7 / 7 / 7,9.67,3
+Migraine Prevention,Clonidine,9.67,3
+Breast Cance,Abraxane,9.67,3
+Migraine,Methylergonovine,9.67,6
+Breast Cance,Paclitaxel protein-bound,9.67,3
+Migraine Prevention,Benicar,9.67,3
+Hypoestrogenism,Estrace Vaginal Cream,9.67,3
+"Diabetes, Type 1",Liraglutide,9.67,3
+Muscle Pain,Relafen,9.67,3
+Hemorrhoids,Dibucaine,9.67,3
+"Onychomycosis, Fingernail",Lamisil,9.67,3
+Hemorrhoids,Proctofoam HC,9.67,3
+Hemorrhoids,Nupercainal,9.67,3
+Binge Eating Disorde,Fluoxetine,9.67,3
+"COPD, Maintenance",Foradil Aerolizer,9.67,3
+Hepatitis C,Simeprevir,9.67,3
+Benign Essential Trem,Nadolol,9.67,3
+Diarrhea,Pepto-Bismol,9.67,3
+"Diarrhea, Chronic",Imodium,9.67,3
+High Cholesterol,Lopid,9.67,3
+Depression,Amitriptyline / chlordiazepoxide,9.67,3
+Myasthenia Gravis,Mestinon Timespan,9.67,3
+"Breast Cancer, Metastatic",Halaven,9.67,6
+Not Listed / Othe,Acetaminophen / oxycodone,9.67,6
+Bipolar Disorde,Nuvigil,9.67,6
+High Blood Pressure,Avalide,9.67,3
+High Blood Pressure,Reserpine,9.67,3
+Iron Deficiency Anemia,Iron polysaccharide,9.67,3
+1</span> users found this comment helpful.,Suboxone,9.67,3
+"Lyme Disease, Arthritis",Plaquenil,9.67,3
+Indigestion,Milk of Magnesia,9.67,3
+Headache,Esgic,9.67,6
+Osteoarthritis,Indomethacin,9.67,3
+Otitis Media,Ceftriaxone,9.67,3
+Otitis Media,Rocephin,9.67,3
+Back Pain,Flurbiprofen,9.67,3
+Osteoarthritis,Valdecoxib,9.67,3
+Seasonal Affective Disorde,Wellbutrin XL,9.67,3
+Headache,Aspirin / caffeine / salicylamide,9.67,3
+Headache,Acetaminophen / phenyltoloxamine,9.67,3
+Pain,Actiq,9.67,3
+Parkinson's Disease,Selegiline,9.67,3
+Panic Disorde,Klonopin Wafer,9.67,3
+Gout,Pegloticase,9.67,3
+"Asthma, Maintenance",Flovent HFA,9.67,3
+Cluster Headaches,Imitrex Statdose,9.67,3
+Pain,Sublimaze,9.67,3
+Cough and Nasal Congestion,Chlorpheniramine / hydrocodone / phenylephrine,9.67,3
+"Asthma, Maintenance",Xopenex,9.67,3
+Pain,Meperitab,9.67,3
+Atopic Dermatitis,Elocon,9.67,3
+Schizophrenia,Thorazine,9.67,3
+Pain,Fiorinal,9.67,3
+Cold Symptoms,Rynatan,9.67,3
+Photoaging of the Skin,Atralin,9.67,3
+Cold Symptoms,Bronkaid,9.67,3
+Anxiety,Amitriptyline / chlordiazepoxide,9.67,3
+Psoriasis,Olux,9.67,6
+Rheumatoid Arthritis,Xeljanz XR,9.67,3
+Cough,TussiCaps,9.67,3
+Allergic Reactions,Triamcinolone,9.67,3
+"Glaucoma, Open Angle",Brimonidine / brinzolamide,9.67,3
+Gout,Krystexxa,9.67,3
+Psoriasis,Infliximab,9.67,3
+Eye Redness,Systane Balance,9.67,3
+Allergic Rhinitis,Nasacort AQ,9.67,3
+Allergic Rhinitis,Rhinocort,9.67,3
+Insomnia,Intermezzo,9.67,6
+0</span> users found this comment helpful.,Hypercare,9.67,3
+4</span> users found this comment helpful.,Adipex-P,9.67,3
+Weight Loss,Megace ES,9.67,3
+Dermatitis,Mometasone,9.67,3
+Dermatitis,Clobetasol,9.67,12
+Seasonal Affective Disorde,Bupropion,9.64,11
+Nausea/Vomiting,Dramamine,9.62,8
+Pain,Methadose,9.62,8
+COPD,Anoro Ellipta,9.62,13
+Acne,PanOxyl,9.6,5
+eve,Acetaminophen,9.6,5
+"High Cholesterol, Familial Heterozygous",Ezetimibe,9.6,5
+Anxiety,Klonopin Wafer,9.6,5
+Non-Small Cell Lung Cance,Gefitinib,9.6,5
+Not Listed / Othe,Meloxicam,9.6,5
+Dry Skin,Urea,9.6,5
+Cough and Nasal Congestion,Dextromethorphan / guaifenesin / pseudoephedrine,9.6,5
+Insomnia,Quazepam,9.6,5
+Hepatitis C,Daklinza,9.6,5
+"Hypothyroidism, After Thyroid Removal",Liothyronine,9.6,5
+Dermatological Disorders,Urea,9.6,5
+Dermatitis,Betamethasone,9.6,5
+Motion Sickness,Dramamine,9.58,19
+Headache,Aspirin / butalbital / caffeine / codeine,9.58,19
+Hemorrhoids,Pramoxine,9.57,14
+Nausea/Vomiting,Dimenhydrinate,9.57,7
+"Conjunctivitis, Allergic",Ketotifen,9.57,7
+Eye Redness,FreshKote,9.57,7
+Alcohol Withdrawal,Chlordiazepoxide,9.57,69
+ADHD,Desoxyn,9.56,16
+Shift Work Sleep Disorde,Provigil,9.56,9
+Psoriasis,Coal tar,9.56,9
+Diabetes Insipidus,Desmopressin,9.56,9
+Irritable Bowel Syndrome,Zelnorm,9.56,9
+Bipolar Disorde,Armodafinil,9.56,9
+Multiple Sclerosis,Provigil,9.54,13
+Alcohol Withdrawal,Librium,9.54,67
+Eczema,Desonide,9.53,15
+Non-Small Cell Lung Cance,Erlotinib,9.52,21
+Primary Immunodeficiency Syndrome,Vivaglobin,9.5,4
+"Constipation, Acute",MiraLax,9.5,4
+Migraine Prevention,InnoPran XL,9.5,4
+Dermatological Disorders,Silver,9.5,4
+Mucositis,Saliva substitutes,9.5,4
+Migraine Prevention,Pamelor,9.5,4
+"Asthma, acute",Epinephrine,9.5,6
+Headache,Fiorinal,9.5,10
+COPD,Aclidinium,9.5,6
+Night Terrors,Klonopin,9.5,4
+Diarrhea,Codeine,9.5,4
+"Deep Vein Thrombosis, First Event",Coumadin,9.5,4
+Herbal Supplementation,Turmeric,9.5,4
+Bipolar Disorde,Eskalith,9.5,4
+Non-Small Cell Lung Cance,Iressa,9.5,4
+Not Listed / Othe,Alprazolam,9.5,10
+Irritable Bowel Syndrome,Lactobacillus acidophilus,9.5,4
+ADHD,Pemoline,9.5,6
+Migraine,Methergine,9.5,4
+ADHD,Cylert,9.5,6
+"Sexual Dysfunction, SSRI Induced",Dextroamphetamine,9.5,6
+"Asthma, Maintenance",Levalbuterol,9.5,4
+Dysautonomia,Alprazolam,9.5,4
+"Breast Cancer, Metastatic",Eribulin,9.5,6
+Dry Skin,X-Viate,9.5,4
+Narcolepsy,Adderall XR,9.5,4
+Nocturnal Leg Cramps,Qualaquin,9.5,4
+Post Traumatic Stress Disorde,Amitriptyline,9.5,6
+Helicobacter Pylori Infection,Rabeprazole,9.5,4
+Helicobacter Pylori Infection,Aciphex,9.5,4
+Eczema,Ultravate,9.5,4
+Inflammatory Conditions,Depo-Medrol,9.5,4
+Behcet's Disease,Infliximab,9.5,4
+Herbal Supplementation,Lecithin,9.5,6
+"Onychomycosis, Toenail",Fluconazole,9.5,6
+Cluster Headaches,Dihydroergotamine,9.5,4
+Inflammatory Bowel Disease,Entocort EC,9.5,4
+Rheumatoid Arthritis,Esomeprazole / naproxen,9.5,4
+Insomnia,Somnote,9.5,6
+Gouty Arthritis,Prednisone,9.48,27
+Constipation,Sodium biphosphate / sodium phosphate,9.48,23
+HIV Infection,Stribild,9.47,60
+Psoriasis,Mometasone,9.45,11
+Anxiety,Tramadol,9.45,33
+"Diarrhea, Chronic",Colesevelam,9.45,20
+Migraine,Butalbital Compound,9.44,9
+Barrett's Esophagus,Dexilant,9.44,9
+HIV Infection,Cobicistat / elvitegravir / emtricitabine / tenofovir,9.43,53
+Opioid Overdose,Naloxone,9.43,7
+Constipation,Magnesium oxide,9.43,7
+Tendonitis,Mobic,9.43,7
+Temporomandibular Joint Disorde,Valium,9.43,7
+Duodenal Ulce,Sucralfate,9.43,7
+Insomnia,Triazolam,9.42,26
+Cough,Chlorpheniramine / hydrocodone,9.42,69
+Pain,Demerol,9.42,36
+Irritable Bowel Syndrome,Donnatal,9.42,12
+Left Ventricular Dysfunction,Carvedilol,9.4,5
+Asthma,Ipratropium,9.4,5
+Pain,Panlor SS,9.4,5
+Oophorectomy,Premarin,9.4,5
+High Blood Pressure,Hydrochlorothiazide / irbesartan,9.4,5
+"Asthma, acute",Levalbuterol,9.4,5
+Keratosis,Carac,9.4,5
+Irritable Bowel Syndrome,Cholestyramine,9.4,25
+Headache,Fioricet with Codeine,9.4,10
+High Blood Pressure,Bisoprolol,9.4,5
+Cold Symptoms,Echinacea,9.4,5
+Allergic Rhinitis,Chlorpheniramine,9.4,10
+Atrial Fibrillation,Rythmol SR,9.38,13
+Pain,Butorphanol,9.38,21
+Eczema,Mometasone,9.38,21
+"Constipation, Chronic",Polyethylene glycol 3350 with electrolytes,9.38,8
+HIV Infection,Raltegravir,9.38,8
+Headache,Acetaminophen / butalbital / caffeine / codeine,9.38,16
+Rheumatoid Arthritis,Tramadol,9.38,8
+Cold Symptoms,Ephedrine / guaifenesin,9.38,8
+Premenstrual Dysphoric Disorde,Citalopram,9.36,11
+GERD,Aciphex,9.36,22
+Insomnia,Estazolam,9.36,11
+Migraine,Amerge,9.36,14
+Osteoarthritis,Voltaren,9.35,17
+"Herpes Simplex, Suppression",Lysine,9.35,26
+"Diabetes, Type 2",Chromium picolinate,9.33,6
+Breakthrough Pain,Fentora,9.33,3
+"Hypogonadism, Male",Depo-Testosterone,9.33,3
+"Constipation, Chronic",MoviPrep,9.33,3
+"Asthma, acute",Xopenex HFA,9.33,3
+ADHD,Catapres,9.33,3
+Vitamin B12 Deficiency,Cyanocobalamin,9.33,6
+Chronic Pain,Fentora,9.33,3
+Headache,Acetaminophen / caffeine,9.33,3
+"Diabetes, Type 1",Insulin regular,9.33,3
+Urinary Tract Infection,Rocephin,9.33,15
+Depression,Luvox,9.33,3
+ailure to Thrive,Cyproheptadine,9.33,3
+Primary Immunodeficiency Syndrome,Immune globulin intravenous,9.33,3
+"Constipation, Chronic",GoLYTELY,9.33,3
+Ulcerative Colitis,Delzicol,9.33,3
+Premenstrual Dysphoric Disorde,Venlafaxine,9.33,3
+Psoriasis,Vectical,9.33,3
+Pain,Meperidine / promethazine,9.33,9
+Clostridial Infection,Dificid,9.33,3
+Carcinoid Tum,Octreotide,9.33,3
+Rosacea,Azelex,9.33,3
+Urinary Incontinence,Botox,9.33,3
+Cluster Headaches,Imitrex Nasal,9.33,3
+Osteoarthritis,Naprelan,9.33,3
+Erosive Esophagitis,Dexilant,9.33,6
+Allergic Reactions,Benadryl Allergy,9.33,6
+Erectile Dysfunction,Caverject Impulse,9.33,6
+Peritonitis,Clindamycin,9.33,3
+"Asthma, Maintenance",Advair HFA,9.33,3
+Rosacea,Clarifoam EF,9.33,3
+"COPD, Maintenance",Tudorza Pressair,9.33,3
+Candidemia,Diflucan,9.33,3
+Heart Failure,Carvedilol,9.33,21
+Postherpetic Neuralgia,Gabapentin enacarbil,9.33,3
+Postmenopausal Symptoms,Elestrin,9.33,3
+Post Traumatic Stress Disorde,Seroquel XR,9.33,3
+Premenstrual Dysphoric Disorde,Lexapro,9.33,3
+Muscle Spasm,Soma Compound,9.33,6
+Not Listed / Othe,Amoxicillin,9.33,3
+High Blood Pressure,Captopril,9.33,3
+High Blood Pressure,Tekturna HCT,9.33,3
+Deep Vein Thrombosis,Lovenox,9.33,3
+Gastroenteritis,Zofran,9.33,18
+Temporomandibular Joint Disorde,Diazepam,9.33,6
+Osteoarthritis,Lodine,9.33,3
+Crohn's Disease,Sulfasalazine,9.33,3
+"Herpes Simplex, Mucocutaneous/Immunocompetent Host",Famciclovir,9.33,3
+Biliary Cirrhosis,Ursodiol,9.33,3
+Psychosis,Navane,9.33,3
+Lewy Body Dementia,Donepezil,9.33,3
+Lichen Planus,Prednisone,9.33,3
+Erosive Esophagitis,Omeprazole,9.33,6
+Candidemia,Fluconazole,9.33,3
+Dermatological Disorders,Betamethasone,9.33,9
+Crohn's Disease,Colazal,9.33,3
+"COPD, Acute",Epinephrine,9.33,3
+"Gout, Acute",Ibuprofen,9.33,3
+Addison's Disease,Dexamethasone,9.33,3
+Pain/Feve,Excedrin,9.33,3
+Pain,Voltaren-XR,9.33,3
+Cataplexy,Sodium oxybate,9.33,3
+Carcinoid Tum,Sandostatin,9.33,3
+Hemorrhoids,Proctosol-HC,9.33,3
+Not Listed / Othe,Diazepam,9.33,3
+Restless Legs Syndrome,Pregabalin,9.33,3
+"Pulmonary Embolism, Recurrent Event",Xarelto,9.33,3
+"Pulmonary Embolism, Recurrent Event",Rivaroxaban,9.33,3
+Obesity,Diethylpropion,9.31,84
+"Herpes Simplex, Suppression",Acyclovir,9.31,13
+Urinary Tract Infection,Ceftriaxone,9.31,13
+Headache,Aspirin / butalbital / caffeine,9.31,13
+Insomnia,Halcion,9.31,13
+"Nausea/Vomiting, Chemotherapy Induced",Marinol,9.3,10
+Depression,Tramadol,9.29,52
+Muscle Spasm,Aspirin / carisoprodol,9.29,7
+Cough,Tussionex Pennkinetic,9.27,51
+Pain,Meperidine,9.27,44
+COPD,Umeclidinium / vilanterol,9.27,15
+Motion Sickness,Dimenhydrinate,9.26,19
+Nausea/Vomiting,Emetrol,9.26,19
+Alcohol Dependence,Campral,9.25,91
+Keratosis,Aldara,9.25,4
+Not Listed / Othe,Lorazepam,9.25,4
+Bacterial Infection,Penicillin v potassium,9.25,4
+Not Listed / Othe,Zolpidem,9.25,4
+"COPD, Maintenance",Aclidinium,9.25,4
+Anxiety,Tranxene,9.25,4
+"Gout, Acute",Sulindac,9.25,4
+Seizures,Mysoline,9.25,4
+Primary Hyperaldosteronism,Spironolactone,9.25,4
+Chronic Pain,Dolophine,9.25,4
+Prostate Cance,Firmagon,9.25,4
+Hot Flashes,Paxil,9.25,4
+Atopic Dermatitis,Triamcinolone,9.25,8
+Allergic Reactions,Epinephrine,9.25,4
+Obsessive Compulsive Disorde,Lexapro,9.25,8
+Osteoarthritis,Methyl salicylate,9.25,4
+Crohn's Disease,Xifaxan,9.25,4
+"Diabetes, Type 2",Xigduo XR,9.25,4
+Crohn's Disease,Rifaximin,9.25,4
+"Nausea/Vomiting, Chemotherapy Induced",Sancuso,9.25,4
+Polycythemia Vera,Ruxolitinib,9.25,4
+Headache,Fiorinal with Codeine,9.25,8
+Cold Sores,Penciclovir,9.25,32
+Migraine,Axert,9.25,20
+Hot Flashes,Duavee,9.25,4
+Mitral Valve Prolapse,Bystolic,9.25,4
+Nasal Polyps,Fluticasone,9.25,4
+Pain,Acetaminophen / diphenhydramine,9.25,4
+Multiple Sclerosis,Modafinil,9.23,13
+Obesity,Tenuate,9.23,35
+Opiate Dependence,Subutex,9.22,49
+Migraine,Frovatriptan,9.22,27
+Constipation,Fleet Enema,9.21,14
+Cold Sores,Valacyclovir,9.21,148
+Anxiety,Oxazepam,9.21,24
+Cold Sores,Valtrex,9.2,89
+Acne,Clarifoam EF,9.2,5
+"Gout, Acute",Aleve,9.2,5
+mis,Dapsone,9.2,5
+Non-Hodgkin's Lymphoma,Rituxan,9.2,5
+Obesity,Tenuate Dospan,9.2,5
+Dysautonomia,Midodrine,9.2,5
+Alcohol Dependence,Revia,9.2,5
+Not Listed / Othe,Acetaminophen / hydrocodone,9.2,5
+Pain,Lodine,9.2,5
+Duodenal Ulce,Carafate,9.2,5
+GERD,Prilosec OTC,9.2,5
+Sciatica,Arthrotec,9.2,5
+Chronic Pain,Roxicodone,9.19,21
+Opiate Dependence,Buprenorphine,9.19,75
+Panic Disorde,Xanax,9.19,118
+Seizure Prevention,Clonazepam,9.19,27
+Migraine,Frova,9.19,27
+Depression,Clomipramine,9.18,11
+Panic Disorde,Alprazolam,9.17,168
+Muscle Spasm,Carisoprodol,9.17,131
+Panic Disorde,Anafranil,9.17,6
+Opiate Withdrawal,Methadone Diskets,9.17,12
+Rosacea,Accutane,9.17,6
+Tinnitus,Xanax,9.17,6
+"Crohn's Disease, Maintenance",Asacol,9.17,6
+Pain,Vicodin ES,9.17,6
+Anorexia,Megestrol,9.17,6
+Hypertensive Emergency,Clonidine,9.17,6
+"Asthma, Maintenance",Theophylline,9.17,6
+Cluster Headaches,Prednisone,9.17,6
+Premenstrual Dysphoric Disorde,Escitalopram,9.17,6
+Allergic Reactions,Chlorpheniramine,9.17,6
+Mountain Sickness / Altitude Sickness,Acetazolamide,9.17,6
+Vaginal Yeast Infection,Itraconazole,9.17,6
+Depression,Xanax,9.17,42
+Depression,Methylphenidate,9.16,25
+Depression,Fluoxetine / olanzapine,9.15,13
+Smoking Cessation,Nicoderm CQ,9.15,26
+Alcohol Dependence,Antabuse,9.15,33
+"Nausea/Vomiting, Chemotherapy Induced",Granisetron,9.14,7
+Seizures,Ethosuximide,9.14,7
+Schizophrenia,Chlorpromazine,9.14,7
+HIV Infection,Atripla,9.14,65
+HIV Infection,Efavirenz / emtricitabine / tenofovir,9.13,68
+Irritable Bowel Syndrome,Librax,9.13,23
+Pseudobulbar Affect,Nuedexta,9.12,8
+Cyclic Vomiting Syndrome,Amitriptyline,9.12,16
+Panic Disorde,Clomipramine,9.12,8
+Schizoaffective Disorde,Lurasidone,9.12,16
+Hyperhidrosis,Drysol,9.12,148
+Gastroenteritis,Ondansetron,9.11,18
+Prostate Cance,Abiraterone,9.11,9
+Methicillin-Resistant Staphylococcus Aureus Infection,Zyvox,9.11,9
+Non-Hodgkin's Lymphoma,Rituximab,9.1,10
+Headache,Esgic-Plus,9.1,10
+Generalized Anxiety Disorde,Lyrica,9.1,10
+Post Traumatic Stress Disorde,Desvenlafaxine,9.1,10
+Panic Disorde,Clonazepam,9.1,189
+Eczema,Elocon,9.09,11
+Not Listed / Othe,Phentermine,9.09,23
+Depression,Alprazolam,9.08,61
+Depression,Phenelzine,9.08,26
+Panic Disorde,Xanax XR,9.08,13
+Insomnia,Klonopin,9.08,13
+Muscle Spasm,Soma,9.07,109
+Anxiety,Valium,9.07,98
+Hypertriglyceridemia,Icosapent,9.07,14
+Constipation,Magnesium citrate,9.06,165
+Weight Loss,Adipex-P,9.06,255
+"Constipation, Chronic",Lactulose,9.06,18
+Opiate Dependence,Suboxone,9.05,348
+Anxiety,Xanax XR,9.05,21
+Cluster Headaches,Verapamil,9.03,39
+Migraine,Rizatriptan,9.02,151
+Migraine,Treximet,9.02,57
+Constipation,MiraLax,9.01,73
+Migraine,Caffeine / ergotamine,9.0,15
+Dermatomyositis,Hydroxychloroquine,9.0,4
+Major Depressive Disorde,Paxil,9.0,13
+Dermatomyositis,Plaquenil,9.0,3
+"Pulmonary Embolism, First Event",Warfarin,9.0,3
+Erectile Dysfunction,Staxyn,9.0,18
+Extrapyramidal Reaction,Cogentin,9.0,3
+Left Ventricular Dysfunction,Coreg,9.0,4
+Chronic Pain,Endocet,9.0,6
+Atopic Dermatitis,Kenalog,9.0,3
+Pain,Dolophine,9.0,5
+Depression,Isocarboxazid,9.0,3
+Depression,Marplan,9.0,3
+Irritable Bowel Syndrome,Desipramine,9.0,5
+Macular Degeneration,Lucentis,9.0,3
+Bowel Preparation,GaviLyte-G,9.0,7
+Angina,Nitroglycerin,9.0,6
+Muscle Spasm,Aspirin / caffeine / orphenadrine,9.0,3
+Hyperhidrosis,Xerac AC,9.0,7
+Turner's Syndrome,Somatropin,9.0,3
+Hypertensive Emergency,Catapres,9.0,3
+GERD,Cimetidine,9.0,3
+Ulcerative Proctitis,Mesalamine,9.0,5
+Pain,Tylenol 8 Hour,9.0,3
+Pain,Tylox,9.0,7
+"Crohn's Disease, Maintenance",Certolizumab,9.0,5
+"Breast Cancer, Metastatic",Avastin,9.0,3
+Narcolepsy,Dextroamphetamine,9.0,16
+Heart Attack,Plavix,9.0,12
+Urinary Incontinence,Sanctura,9.0,3
+Chronic Pain,Ultram ER,9.0,3
+Back Pain,Vicodin ES,9.0,3
+Cluster Headaches,Indomethacin,9.0,5
+Allergic Reactions,Cyproheptadine,9.0,3
+Erectile Dysfunction,Caverject,9.0,3
+Prostate Cance,Degarelix,9.0,3
+ADHD,Provigil,9.0,4
+Autoimmune Hepatitis,Budesonide,9.0,3
+Autoimmune Hepatitis,Mycophenolate mofetil,9.0,3
+Eye Redness,Lacrisert,9.0,3
+Pain,Acetaminophen / phenyltoloxamine,9.0,7
+ADHD,Wellbutrin XL,9.0,6
+ADHD,Ritalin LA,9.0,7
+Acne,Doxy 100,9.0,5
+Seizures,Topiramate,9.0,5
+Sciatica,Diclofenac / misoprostol,9.0,7
+Sedation,Lorazepam Intensol,9.0,3
+Nausea/Vomiting,Meclizine,9.0,7
+"Diabetes, Type 2",Prandin,9.0,4
+"Diabetes, Type 2",Repaglinide,9.0,4
+Diabetic Kidney Disease,Cozaar,9.0,3
+Tonsillitis/Pharyngitis,Penicillin v potassium,9.0,3
+"Organ Transplant, Rejection Prophylaxis",Mycophenolate mofetil,9.0,5
+Cluster Headaches,Cafergot,9.0,4
+Osteoarthritis,Feldene,9.0,4
+Schizoaffective Disorde,Latuda,9.0,8
+Schizoaffective Disorde,Lamotrigine,9.0,8
+Cluster Headaches,D.H.E. 45,9.0,3
+Crohn's Disease,Cholestyramine,9.0,6
+Schizoaffective Disorde,Lithium,9.0,3
+Tonsillitis/Pharyngitis,Zithromax,9.0,5
+Pre-Exposure Prophylaxis,Truvada,9.0,3
+Actinic Keratosis,Carac,9.0,3
+Hot Flashes,Prozac,9.0,3
+Chronic Lymphocytic Leukemia,Rituximab,9.0,3
+Bronchitis,Biaxin XL,9.0,3
+Periodic Limb Movement Disorde,Klonopin,9.0,6
+Diabetic Peripheral Neuropathy,Nucynta ER,9.0,6
+Abnormal Uterine Bleeding,Mestranol / norethindrone,9.0,3
+Stomach Ulce,Ranitidine,9.0,4
+Diabetic Peripheral Neuropathy,Topamax,9.0,4
+Panic Disorde,Klonopin,9.0,113
+Deep Vein Thrombosis,Enoxaparin,9.0,4
+Post Traumatic Stress Disorde,Pristiq,9.0,8
+"Conjunctivitis, Bacterial",Tobramycin,9.0,3
+High Blood Pressure,Trandolapril / verapamil,9.0,3
+Post Traumatic Stress Disorde,Risperdal,9.0,5
+Cyclic Vomiting Syndrome,Sumatriptan,9.0,3
+Cyclic Vomiting Syndrome,Elavil,9.0,3
+Non-Hodgkin's Lymphoma,Bendamustine,9.0,3
+Postherpetic Neuralgia,Neurontin,9.0,10
+"Conjunctivitis, Allergic",Elestat,9.0,3
+"Conjunctivitis, Allergic",Epinastine,9.0,3
+Pneumonia,Ceftin,9.0,3
+Pneumonia,Amoxicillin,9.0,4
+Non-Small Cell Lung Cance,Tarceva,9.0,22
+Social Anxiety Disorde,Risperidone,9.0,3
+"COPD, Maintenance",Combivent,9.0,9
+Pharyngitis,Clarithromycin,9.0,4
+"COPD, Acute",Levalbuterol,9.0,3
+"COPD, Acute",Xopenex,9.0,3
+COPD,Tudorza Pressair,9.0,5
+Not Listed / Othe,Armodafinil,9.0,4
+Burning Mouth Syndrome,Klonopin,9.0,3
+Bipolar Disorde,Lamictal ODT,9.0,3
+Cough and Nasal Congestion,Rezira,9.0,3
+Epilepsy,Keppra XR,9.0,3
+Not Listed / Othe,Oxycodone,9.0,11
+COPD,Prednisone,9.0,5
+Cold Sores,Famvir,9.0,5
+Photoaging of the Skin,Retin-A,9.0,3
+Vertig,Dramamine II,9.0,4
+Dietary Supplementation,Arginine,9.0,3
+Uveitis,Remicade,9.0,4
+Esophageal Variceal Hemorrhage Prophylaxis,Nadolol,9.0,3
+Erosive Esophagitis,Kapidex,9.0,3
+Erosive Esophagitis,Nexium,9.0,5
+Erosive Esophagitis,Esomeprazole,9.0,5
+Depression,Provigil,9.0,4
+Interstitial Cystitis,Azo-Standard,9.0,3
+min),Dapagliflozin / metformin,9.0,3
+Chronic Pain,Methadone,8.98,87
+Migraine,Maxalt-MLT,8.97,38
+Irritable Bowel Syndrome,Chlordiazepoxide / clidinium,8.97,30
+Hyperhidrosis,Aluminum chloride hexahydrate,8.96,320
+Panic Disorde,Lorazepam,8.95,41
+"Gout, Acute",Methylprednisolone,8.95,19
+Chronic Pain,Dilaudid,8.94,33
+Irritable Bowel Syndrome,Atropine / hyoscyamine / phenobarbital / scopolamine,8.94,16
+Depression,Nefazodone,8.94,16
+Migraine,Cambia,8.93,14
+Hashimoto's disease,Tirosint,8.93,14
+Smoking Cessation,Commit,8.93,14
+Obesity,Adipex-P,8.92,65
+Insomnia,Flurazepam,8.92,13
+Hiccups,Chlorpromazine,8.92,12
+ADHD,Clonidine,8.92,24
+Hyperhidrosis,Hypercare,8.92,155
+Acne,Bactrim,8.9,52
+Vaginal Yeast Infection,Acidophilus,8.9,10
+Chronic Pain,Subutex,8.9,10
+Chronic Myelogenous Leukemia,Dasatinib,8.9,10
+Headache,Acetaminophen / butalbital,8.9,10
+Migraine Prevention,Lisinopril,8.9,10
+Pseudobulbar Affect,Dextromethorphan / quinidine,8.9,10
+Alcohol Dependence,Acamprosate,8.9,109
+Melasma,Fluocinolone / hydroquinone / tretinoin,8.89,38
+Alcohol Withdrawal,Baclofen,8.89,38
+Headache,Acetaminophen / butalbital / caffeine,8.89,127
+Methicillin-Resistant Staphylococcus Aureus Infection,Linezolid,8.89,9
+"Constipation, Acute",Polyethylene glycol 3350,8.89,9
+Hepatitis C,Zepatier,8.89,18
+Hot Flashes,Gabapentin,8.89,62
+Pain,Percocet,8.88,130
+Smoking Cessation,Chantix,8.88,633
+Menorrhagia,Lysteda,8.88,24
+"Asthma, Maintenance",Cromolyn,8.88,8
+HIV Infection,Emtricitabine / tenofovir,8.88,8
+Allergies,Hydroxyzine,8.88,24
+Osteoarthritis,Arthrotec,8.88,16
+Cluster Headaches,Imitrex,8.88,16
+Migraine,Naratriptan,8.88,24
+Alcohol Dependence,Disulfiram,8.87,47
+Nausea/Vomiting,Phenergan,8.87,39
+Migraine,Maxalt,8.87,70
+Anxiety,Alprazolam,8.87,428
+Hepatitis C,Ledipasvir / sofosbuvir,8.87,195
+Acne,Benzaclin,8.87,52
+Anorexia,Cyproheptadine,8.86,59
+Obesity,Victoza,8.86,22
+Anxiety,Diazepam,8.86,204
+Pain,Oxycodone,8.86,281
+Premenstrual Dysphoric Disorde,Sertraline,8.86,28
+Migraine,Naproxen / sumatriptan,8.86,63
+Alcohol Withdrawal,Diazepam,8.86,7
+Trigeminal Neuralgia,Trileptal,8.86,7
+Sedation,Desyrel,8.86,7
+HIV Infection,Truvada,8.86,7
+Eczema,Hydrocortisone,8.86,7
+Trigeminal Neuralgia,Tegretol XR,8.86,7
+Headache,Acetaminophen / caffeine / isometheptene mucate,8.86,7
+Pneumonia,Avelox,8.85,27
+High Blood Pressure,Azor,8.85,40
+Migraine Prevention,Atenolol,8.85,13
+Bronchitis,Augmentin,8.85,13
+Depression,Symbyax,8.85,13
+Smoking Cessation,Varenicline,8.84,785
+Constipation,Polyethylene glycol 3350,8.84,97
+Urticaria,Levocetirizine,8.83,24
+Colorectal Cance,Xeloda,8.83,6
+Dental Abscess,Flagyl,8.83,6
+High Blood Pressure,Twynsta,8.83,6
+Schizophrenia,Clozaril,8.83,6
+GERD,Kapidex,8.83,12
+Anxiety,Clorazepate,8.83,18
+Cutaneous Candidiasis,Nystatin,8.83,6
+Restless Legs Syndrome,Neurontin,8.83,6
+Cold Sores,Denavir,8.82,28
+Acne,Benzoyl peroxide,8.82,22
+Osteoarthritis,Pennsaid,8.82,11
+Obsessive Compulsive Disorde,Escitalopram,8.81,27
+Chronic Myelogenous Leukemia,Gleevec,8.81,16
+Schizophrenia,Clozapine,8.81,16
+Headache,Acetaminophen / dichloralphenazone / isometheptene mucate,8.8,46
+Back Pain,Cataflam,8.8,5
+Obsessive Compulsive Disorde,Seroquel,8.8,5
+Glioblastoma Multi,Bevacizumab,8.8,5
+Endometriosis,Aviane,8.8,5
+Post Traumatic Stress Disorde,Lamotrigine,8.8,10
+Adult Human Growth Hormone Deficiency,Somatropin,8.8,5
+Schizoaffective Disorde,Lamictal,8.8,5
+Cold Sores,Sitavig,8.8,5
+Skin Cance,Carac,8.8,5
+Anesthesia,Lidocaine / prilocaine,8.8,5
+Hot Flashes,Effexor XR,8.8,15
+Atrial Flutte,Flecainide,8.8,5
+Pain,Roxicodone,8.8,20
+Weight Loss,Phentermine,8.8,1211
+Pain,OxyContin,8.8,134
+Erectile Dysfunction,Viagra,8.79,102
+Narcolepsy,Adderall,8.79,29
+Muscle Spasm,Diazepam,8.79,62
+Migraine,Almotriptan,8.79,19
+Opiate Withdrawal,Methadone,8.79,122
+Back Pain,Voltaren,8.79,14
+Melasma,Tri-Luma,8.78,32
+Extrapyramidal Reaction,Benztropine,8.78,9
+Motion Sickness,Bonine,8.78,18
+Erosive Esophagitis,Dexlansoprazole,8.78,9
+"Gout, Acute",Indocin,8.78,9
+Allergies,Atarax,8.78,9
+Panic Disorde,Ativan,8.77,22
+Hypertriglyceridemia,Vascepa,8.77,13
+Barrett's Esophagus,Dexlansoprazole,8.77,13
+Depression,St. john's wort,8.77,43
+Trigeminal Neuralgia,Gabapentin,8.76,17
+Psoriasis,Clobex,8.76,17
+Borderline Personality Disorde,Lamotrigine,8.76,17
+Premenstrual Dysphoric Disorde,Sarafem,8.76,17
+Depression,Parnate,8.76,38
+Nausea/Vomiting,Zofran,8.76,91
+Narcolepsy,Amphetamine / dextroamphetamine,8.76,37
+Multiple Sclerosis,Alemtuzumab,8.75,4
+Chronic Myelogenous Leukemia,Sprycel,8.75,8
+Ankylosing Spondylitis,Indomethacin,8.75,4
+Migraine Prevention,Lyrica,8.75,4
+"Lyme Disease, Arthritis",Hydroxychloroquine,8.75,4
+Lichen Sclerosus,Clobetasol,8.75,4
+Allergic Rhinitis,Astepro,8.75,12
+Rheumatoid Arthritis,Piroxicam,8.75,4
+ADHD,Modafinil,8.75,16
+Vulvodynia,Tramadol,8.75,4
+Rheumatoid Arthritis,Lortab,8.75,4
+Noninfectious Colitis,Dicyclomine,8.75,4
+Panic Disorde,Desvenlafaxine,8.75,4
+"Crohn's Disease, Maintenance",Cimzia,8.75,4
+Pneumonia,Rocephin,8.75,12
+Acne,Benzoyl peroxide / erythromycin,8.75,24
+Soft Tissue Sarcoma,Votrient,8.75,8
+"Gout, Prophylaxis",Colchicine,8.75,4
+Post Traumatic Stress Disorde,Saphris,8.75,8
+Pharyngitis,Azithromycin,8.75,4
+Obsessive Compulsive Disorde,Celexa,8.75,4
+Gastrointestinal Stromal Tum,Gleevec,8.75,4
+"Conjunctivitis, Bacterial",Zylet,8.75,4
+Post Traumatic Stress Disorde,Minipress,8.75,4
+Smoking Cessation,Habitrol,8.75,4
+Borderline Personality Disorde,Abilify,8.75,4
+Bone infection,Clindamycin,8.75,8
+Urinary Incontinence,Oxytrol,8.75,8
+Chronic Myelogenous Leukemia,Imatinib,8.75,16
+Not Listed / Othe,Duloxetine,8.75,4
+Constipation,Milk of Magnesia,8.75,8
+Constipation,Phillips' Milk of Magnesia,8.75,71
+Irritable Bowel Syndrome,Amitriptyline,8.74,47
+Pain,Methadone,8.74,113
+Smoking Cessation,Zyban,8.74,58
+Irritable Bowel Syndrome,Nortriptyline,8.74,19
+High Blood Pressure,Amlodipine / olmesartan,8.74,34
+Nausea/Vomiting,Phosphorated carbohydrate solution,8.73,15
+Cluster Headaches,Sumatriptan,8.73,45
+Postpartum Depression,Zoloft,8.73,11
+Underactive Thyroid,Cytomel,8.73,11
+Periodic Limb Movement Disorde,Clonazepam,8.73,11
+Alcohol Withdrawal,Gabapentin,8.72,18
+Psoriasis,Stelara,8.72,61
+"Sexual Dysfunction, SSRI Induced",Viagra,8.71,7
+Breakthrough Pain,Actiq,8.71,7
+Seizures,Phenobarbital,8.71,7
+Insomnia,Edluar,8.71,7
+Barrett's Esophagus,Esomeprazole,8.71,14
+Anxiety,Xanax,8.71,283
+Emergency Contraception,Plan B One-Step,8.71,424
+Constipation,Magnesium hydroxide,8.71,90
+atigue,Modafinil,8.71,24
+COPD,Symbicort,8.71,17
+Hepatitis C,Elbasvir / grazoprevir,8.7,20
+Headache,Fioricet,8.7,89
+Pain,Ibuprofen,8.7,23
+Obsessive Compulsive Disorde,Quetiapine,8.69,13
+Postmenopausal Symptoms,Premarin,8.69,13
+ADHD,Dextroamphetamine,8.69,68
+Obesity,Phentermine,8.69,304
+Back Pain,Norco,8.69,45
+Breakthrough Pain,Fentanyl,8.68,19
+Bipolar Disorde,Klonopin,8.68,38
+Anxiety,Klonopin,8.68,229
+Erectile Dysfunction,Tadalafil,8.67,267
+Intermittent Claudication,Pentoxifylline,8.67,3
+Xerostomia,NeutraSal,8.67,3
+Iron Deficiency Anemia,Niferex,8.67,3
+Depression,Sinequan,8.67,3
+Rheumatoid Arthritis,Acetaminophen / tramadol,8.67,3
+Varicella-Zoste,Valacyclovir,8.67,3
+Cold Sores,Famciclovir,8.67,15
+Addison's Disease,Hydrocortisone,8.67,3
+Anxiety,Paxil CR,8.67,6
+Acne,Adoxa,8.67,3
+Endometrial Cance,Anastrozole,8.67,3
+Dry Eye Disease,Lacrisert,8.67,3
+Peripheral Arterial Disease,Clopidogrel,8.67,3
+Anxiety,Tenormin,8.67,3
+Hepatitis C,Harvoni,8.67,198
+Benign Prostatic Hyperplasia,Cardura,8.67,3
+Bipolar Disorde,Neurontin,8.67,6
+Not Listed / Othe,Testosterone,8.67,3
+Psoriatic Arthritis,Remicade,8.67,9
+Restless Legs Syndrome,Rotigotine,8.67,21
+Bacterial Endocarditis Prevention,Cephalexin,8.67,3
+Ankylosing Spondylitis,Indocin SR,8.67,3
+"Crohn's Disease, Acute",Budesonide,8.67,3
+"Crohn's Disease, Acute",Entocort EC,8.67,3
+Systemic Lupus Erythematosus,CellCept,8.67,3
+Overactive Bladde,Sanctura XR,8.67,3
+Reiter's Syndrome,Adalimumab,8.67,3
+Uveitis,Infliximab,8.67,3
+Infection Prophylaxis,Sulfamethoxazole / trimethoprim,8.67,3
+Indigestion,Magnesium hydroxide,8.67,6
+HIV Infection,Lopinavir / ritonavir,8.67,3
+Psoriasis,Kenalog,8.67,3
+Alopecia,Triamcinolone,8.67,9
+"Sexual Dysfunction, SSRI Induced",Wellbutrin,8.67,3
+"Pulmonary Embolism, Recurrent Event",Warfarin,8.67,3
+Pain,Methadone Diskets,8.67,3
+Atopic Dermatitis,Fluticasone,8.67,3
+Pain,Fentora,8.67,3
+ADHD,Amantadine,8.67,3
+zen Shoulde,Diclofenac,8.67,3
+2</span> users found this comment helpful.,Microgestin Fe 1 / 20,8.67,3
+Emergency Contraception,Plan B,8.66,601
+Psoriasis,Clobetasol,8.66,29
+Depression,Nardil,8.64,25
+Pneumonia,Ceftriaxone,8.64,11
+Weight Loss,Megestrol,8.64,11
+Erectile Dysfunction,Cialis,8.64,236
+ADHD,Dexedrine,8.63,49
+Migraine Prevention,Amlodipine,8.63,19
+Premenstrual Dysphoric Disorde,Beyaz,8.62,8
+Pulmonary Hypertension,Letairis,8.62,8
+Osteoarthritis,Vimovo,8.62,8
+Urticaria,Doxepin,8.62,8
+Pain,Sprix,8.62,8
+Bacterial Infection,Ceftriaxone,8.62,16
+Hyperprolactinemia,Dostinex,8.62,8
+Pharyngitis,Prednisone,8.62,8
+Urticaria,Allegra,8.62,16
+Opiate Dependence,Buprenorphine / naloxone,8.61,424
+Anxiety,Clonazepam,8.61,392
+Bipolar Disorde,Trileptal,8.61,23
+Migraine,Relpax,8.61,94
+Bursitis,Prednisone,8.6,5
+Muscle Spasm,Valium,8.6,30
+Hereditary Angioedema,C1 esterase inhibitor (human),8.6,5
+Migraine,Cafergot,8.6,5
+Colorectal Cance,Capecitabine,8.6,10
+Interstitial Cystitis,Amitriptyline,8.6,35
+"Breast Cancer, Adjuvant",Femara,8.6,5
+Indigestion,Calcium carbonate,8.6,5
+Anxiety,Viibryd,8.6,5
+Cyclic Vomiting Syndrome,Nortriptyline,8.6,5
+moterol),Formoterol,8.6,5
+HIV Infection,Isentress,8.6,10
+Back Pain,Lorcet 10 / 650,8.6,10
+Crohn's Disease,Pentasa,8.6,5
+Anesthesia,Emla,8.6,5
+Psoriasis,Methotrexate,8.6,50
+Clostridial Infection,Fidaxomicin,8.6,5
+ibromyalgia,Escitalopram,8.6,10
+Opiate Withdrawal,Methadose,8.6,15
+Back Pain,Lortab,8.59,27
+Keratosis,Fluorouracil,8.59,22
+Chronic Pain,Percocet,8.59,17
+Erectile Dysfunction,Edex,8.58,19
+"Herpes Simplex, Suppression",Valtrex,8.58,52
+Restless Legs Syndrome,Tramadol,8.58,52
+Pain,Fentanyl,8.58,113
+Pain/Feve,Acetaminophen / aspirin / caffeine,8.57,7
+Indigestion,Omeprazole,8.57,7
+Post Traumatic Stress Disorde,Asenapine,8.57,14
+Dietary Supplementation,Ubiquinone,8.57,7
+Psoriatic Arthritis,Infliximab,8.57,7
+Psychosis,Haldol,8.57,7
+Allergic Rhinitis,Olopatadine,8.57,7
+Sinus Symptoms,Ibuprofen / pseudoephedrine,8.57,23
+ADHD,Methamphetamine,8.57,23
+Period Pain,Cataflam,8.56,9
+"Constipation, Acute",Lactulose,8.56,9
+Pain,Reprexain,8.56,9
+Pain,Hydrocodone / ibuprofen,8.56,45
+Bipolar Disorde,Iloperidone,8.56,9
+Motion Sickness,Meclizine,8.56,27
+Depression,Amitriptyline,8.55,38
+Multiple Sclerosis,Ampyra,8.55,42
+Pain,Acetaminophen / oxycodone,8.55,249
+Burning Mouth Syndrome,Clonazepam,8.55,11
+Nasal Congestion,Phenylephrine,8.55,11
+Rheumatoid Arthritis,Etanercept,8.54,59
+Obesity,Xenical,8.54,63
+Bacterial Infection,Rocephin,8.54,13
+Barrett's Esophagus,Nexium,8.54,13
+"Herpes Simplex, Suppression",Valacyclovir,8.54,69
+Migraine,Eletriptan,8.54,84
+Erectile Dysfunction,Sildenafil,8.53,144
+Depression,Emsam,8.53,15
+Acne,Bactrim DS,8.53,15
+Pain,MS Contin,8.53,34
+"Organ Transplant, Rejection Prophylaxis",Prograf,8.53,17
+Depression,Tranylcypromine,8.53,38
+"Organ Transplant, Rejection Prophylaxis",Tacrolimus,8.53,19
+Obsessive Compulsive Disorde,Clomipramine,8.52,54
+Bipolar Disorde,Gabapentin,8.52,64
+Headache,Bupap,8.5,4
+Atherosclerosis,Crestor,8.5,4
+Schizophrenia,Risperdal Consta,8.5,4
+3</span> users found this comment helpful.,Ortho Tri-Cyclen Lo,8.5,4
+Rheumatoid Arthritis,Actemra,8.5,10
+Vertig,Bonine,8.5,6
+Borderline Personality Disorde,Risperdal,8.5,4
+ADHD,Methylin,8.5,8
+Intraocular Hypertension,Latanoprost,8.5,4
+Rhinitis,Chlorpheniramine / methscopolamine / phenylephrine,8.5,4
+Cough and Nasal Congestion,Guaifenesin / phenylephrine,8.5,4
+High Blood Pressure,Amlodipine / telmisartan,8.5,4
+Sinusitis,Ceftin,8.5,8
+Still's Disease,Anakinra,8.5,4
+Muscle Pain,Aspirin / caffeine / orphenadrine,8.5,4
+Trigeminal Neuralgia,Oxcarbazepine,8.5,22
+Premenstrual Dysphoric Disorde,Drospirenone / ethinyl estradiol / levomefolate calcium,8.5,8
+Postmenopausal Symptoms,Evamist,8.5,10
+Glioblastoma Multiforme,Avastin,8.5,4
+Light Sedation,Diazepam,8.5,4
+Generalized Anxiety Disorde,Celexa,8.5,4
+Gas,Simethicone,8.5,6
+"Hypothyroidism, After Thyroid Removal",Tirosint,8.5,6
+Tinea Corporis,Econazole,8.5,6
+Systemic Lupus Erythematosus,Mycophenolate mofetil,8.5,4
+ADHD,Zenzedi,8.5,8
+Constipation,Psyllium,8.5,6
+Headache,Prodrin,8.5,4
+Rheumatoid Arthritis,Methylprednisolone,8.5,10
+Osteoarthritis,Relafen,8.5,4
+Cough,Acetaminophen / codeine,8.5,8
+Atherosclerosis,Rosuvastatin,8.5,4
+Alcohol Dependence,Naltrexone,8.5,90
+Pain,Trolamine salicylate,8.5,12
+Alcohol Dependence,Vivitrol,8.5,12
+Dysuria,Azo-Standard,8.5,4
+Alcohol Withdrawal,Valium,8.5,6
+Anesthesia,Diprivan,8.5,14
+Rosacea,Sulfacetamide sodium / sulfur,8.5,12
+Cluster Headaches,Caffeine / ergotamine,8.5,4
+Obstructive Sleep Apnea/Hypopnea Syndrome,Armodafinil,8.5,24
+Progesterone Insufficiency,Prometrium,8.5,6
+Pain,Tylenol with Codeine,8.5,4
+Skin and Structure Infection,Zyvox,8.5,6
+Pain,Zohydro ER,8.5,28
+Constipation,Metamucil,8.5,6
+Herpes Zoste,Acyclovir,8.5,6
+Not Listed / Othe,Citalopram,8.5,4
+Myasthenia Gravis,CellCept,8.5,4
+Pain,Dilaudid,8.48,159
+Hirsutism,Vaniqa,8.48,31
+Osteoarthritis,Mobic,8.48,29
+Gout,Febuxostat,8.48,27
+Gout,Uloric,8.48,27
+Nausea/Vomiting,Promethazine,8.48,79
+Urinary Tract Stones,Flomax,8.48,44
+Sinusitis,Zithromax,8.48,21
+Vitamin/Mineral Supplementation during Pregnancy/Lactation,"Multivitamin, prenatal",8.48,40
+Pain,Ultracet,8.47,19
+Emergency Contraception,Levonorgestrel,8.47,1221
+atigue,Amphetamine / dextroamphetamine,8.47,17
+Schizoaffective Disorde,Asenapine,8.47,15
+Migraine,Neurontin,8.47,15
+GERD,Prevacid,8.47,30
+Obesity,Phentermine / topiramate,8.45,110
+"Gout, Acute",Naproxen,8.45,22
+Postmenopausal Symptoms,Vivelle-Dot,8.45,11
+ibromyalgia,Prednisone,8.45,20
+Nausea/Vomiting,Lorazepam,8.44,18
+Mitral Valve Prolapse,Metoprolol,8.44,9
+Sinus Symptoms,Advil Cold and Sinus,8.44,18
+Ankylosing Spondylitis,Simponi,8.44,9
+Pain,Fentanyl Transdermal System,8.44,16
+Premenstrual Dysphoric Disorde,Fluoxetine,8.43,53
+Rosacea,Oracea,8.43,30
+Opiate Withdrawal,Catapres,8.43,14
+Narcolepsy,Dexedrine,8.43,7
+"Asthma, acute",Methylprednisolone,8.43,7
+ibromyalgia,Lexapro,8.43,7
+Plaque Psoriasis,Enbrel,8.43,7
+Anorexia,Dronabinol,8.43,7
+Plaque Psoriasis,Etanercept,8.43,7
+ADHD,Methylin ER,8.43,7
+Headache,Naproxen,8.43,21
+Rheumatoid Arthritis,Celebrex,8.43,14
+Headache,Dolgic Plus,8.43,7
+Social Anxiety Disorde,Venlafaxine,8.42,12
+"Nausea/Vomiting, Chemotherapy Induced",Dronabinol,8.42,12
+Obesity,Phendimetrazine,8.42,89
+Pain,Stadol,8.41,17
+Interstitial Cystitis,Phenazopyridine,8.41,22
+Premenstrual Dysphoric Disorde,Zoloft,8.41,22
+Osteoarthritis,Voltaren Gel,8.41,37
+Multiple Sclerosis,Dalfampridine,8.41,37
+Acne,Accutane,8.4,321
+Depression,Budeprion SR,8.4,5
+Post Traumatic Stress Disorde,Dronabinol,8.4,5
+"Diabetes, Type 1",Lantus,8.4,5
+Smoking Cessation,Nicorette,8.4,5
+Postpartum Depression,Sertraline,8.4,10
+Mitral Valve Prolapse,Nebivolol,8.4,5
+Pe,Propranolol,8.4,5
+"Deep Vein Thrombosis, First Event",Warfarin,8.4,5
+High Blood Pressure,Tenormin,8.4,5
+Depression,Anafranil,8.4,5
+Secondary Hyperparathyroidism,Sensipar,8.4,5
+"Asthma, Maintenance",Flovent,8.4,5
+Edema,Spironolactone,8.4,5
+Herpes Simplex,Lysine,8.4,10
+Not Listed / Othe,Clonazepam,8.4,5
+Chronic Pain,Kadian,8.4,10
+Osteoarthritis,Methylprednisolone,8.4,5
+Depression,S-adenosylmethionine,8.4,5
+ibromyalgia,Nabilone,8.4,5
+Acne,Sulfamethoxazole / trimethoprim,8.39,93
+Diarrhea,Loperamide,8.38,13
+Acne,Isotretinoin,8.38,517
+Menorrhagia,Tranexamic acid,8.38,42
+Photoaging of the Skin,Tretinoin,8.38,21
+Chronic Pain,Hydromorphone,8.38,69
+Psoriasis,Desoximetasone,8.38,8
+Oophorectomy,Conjugated estrogens,8.38,8
+Insomnia,Dalmane,8.38,8
+Irritable Bowel Syndrome,Venlafaxine,8.38,8
+Not Listed / Othe,Gabapentin,8.38,8
+Rosacea,Isotretinoin,8.38,8
+HIV Infection,Triumeq,8.37,54
+"Sexual Dysfunction, SSRI Induced",Sildenafil,8.36,11
+Bipolar Disorde,Clonazepam,8.36,50
+ibromyalgia,Guaifenesin,8.36,50
+Rosacea,Minocycline,8.36,14
+Acne,Onexton,8.36,14
+Pain,Acetaminophen / caffeine / dihydrocodeine,8.36,14
+Obstructive Sleep Apnea/Hypopnea Syndrome,Modafinil,8.35,17
+Obstructive Sleep Apnea/Hypopnea Syndrome,Provigil,8.35,17
+Rheumatoid Arthritis,Enbrel,8.35,54
+Insomnia,Seroquel,8.34,47
+1</span> users found this comment helpful.,Sprintec,8.33,3
+ibromyalgia,Nuvigil,8.33,6
+ADHD,Nuvigil,8.33,6
+Dermatitis,Coal tar,8.33,3
+Uveitis,Durezol,8.33,3
+Chronic Pain,Subsys,8.33,3
+Atopic Dermatitis,Betamethasone,8.33,3
+Renal Cell Carcinoma,Sunitinib,8.33,12
+Renal Cell Carcinoma,Pazopanib,8.33,30
+Depression,Selegiline,8.33,21
+Weight Loss,Belviq XR,8.33,3
+Prevention of Osteoporosis,Reclast,8.33,3
+Prevention of Osteoporosis,Zoledronic acid,8.33,3
+Endometriosis,LoSeasonique,8.33,3
+Endometriosis,Desogestrel / ethinyl estradiol,8.33,3
+Basal Cell Carcinoma,Efudex,8.33,3
+Barrett's Esophagus,Pantoprazole,8.33,6
+Autoimmune Hemolytic Anemia,Prednisone,8.33,3
+Opiate Adjunct,Promethazine,8.33,6
+Atrial Fibrillation,Propafenone,8.33,27
+Chronic Pain,Xartemis XR,8.33,3
+Obesity,Desvenlafaxine,8.33,3
+Not Listed / Othe,Baclofen,8.33,3
+Not Listed / Othe,Atenolol,8.33,3
+Not Listed / Othe,Lisdexamfetamine,8.33,3
+Asthma,Methylprednisolone,8.33,3
+"Gout, Acute",Colcrys,8.33,15
+"Asthma, Maintenance",Pulmicort Turbuhaler,8.33,3
+Opiate Withdrawal,Catapres-TTS,8.33,3
+Acne,Retin A Micro,8.33,3
+Endometriosis,Quasense,8.33,3
+Acne,Acticlate,8.33,3
+Seizure Prevention,Diazepam,8.33,3
+Schizophrenia,Cariprazine,8.33,9
+Acne,Magnesium hydroxide,8.33,3
+Obesity,Didrex,8.33,6
+Not Listed / Othe,Desvenlafaxine,8.33,3
+Status Epilepticus,Ativan,8.33,3
+Postural Orthostatic Tachycardia Syndrome,Florinef,8.33,3
+Postoperative Ocular Inflammation,Loteprednol,8.33,3
+Dietary Supplementation,Bifidobacterium infantis / lactobacillus acidophilus,8.33,3
+Myasthenia Gravis,Mycophenolate mofetil,8.33,12
+Bipolar Disorde,Wellbutrin XL,8.33,3
+Sjogren's Syndrome,Cevimeline,8.33,9
+Diarrhea,Florastor,8.33,3
+Multiple Sclerosis,Lemtrada,8.33,3
+High Blood Pressure,Zestoretic,8.33,3
+High Blood Pressure,Methyldopa,8.33,3
+Hyperhidrosis,Terazosin,8.33,3
+Hypersomnia,Vivarin,8.33,3
+"Conjunctivitis, Bacterial",Loteprednol / tobramycin,8.33,3
+"Glaucoma, Open Angle",Timolol,8.33,3
+Pneumonia,Moxifloxacin,8.33,30
+ADHD,Adderall,8.33,160
+Psoriasis,Ustekinumab,8.33,67
+Anxiety,Lorazepam,8.33,299
+Obsessive Compulsive Disorde,Prozac,8.32,37
+"Asthma, Maintenance",Xolair,8.32,34
+Osteoarthritis,Diclofenac,8.32,118
+Generalized Anxiety Disorde,Lexapro,8.32,205
+Cold Sores,Acyclovir,8.32,25
+Arrhythmia,Tikosyn,8.32,25
+Narcolepsy,Xyrem,8.32,50
+Allergic Rhinitis,Levocetirizine,8.32,25
+Psoriatic Arthritis,Etanercept,8.32,25
+Bipolar Disorde,Fluoxetine / olanzapine,8.32,22
+Pain,Avinza,8.32,19
+"Gout, Acute",Indomethacin,8.32,73
+Acne,Azelaic acid,8.31,16
+ibromyalgia,Metaxalone,8.31,16
+HIV Infection,Emtricitabine / rilpivirine / tenofovir,8.31,42
+Headache,Ibuprofen,8.31,13
+Seasonal Allergic Conjunctivitis,Patanol,8.31,13
+Insomnia,Ativan,8.31,13
+Smoking Cessation,Bupropion,8.31,147
+GERD,Rabeprazole,8.3,23
+Chronic Pain,Exalgo,8.3,20
+Restless Legs Syndrome,Gabapentin,8.3,47
+Weight Loss,Saxenda,8.29,95
+Cough,Hydromet,8.29,24
+Urticaria,Xyzal,8.29,24
+Bulimia,Fluoxetine,8.29,24
+Anxiety,Serax,8.29,7
+Pain,Vicodin HP,8.29,7
+Seizure Prevention,Klonopin,8.29,7
+Vaginal Yeast Infection,Lactobacillus acidophilus,8.29,7
+Performance Anxiety,Inderal,8.29,7
+Acne,Retin-A,8.28,32
+Bipolar Disorde,Lamictal,8.28,300
+Migraine,Sumavel DosePro,8.28,25
+Bipolar Disorde,Lamotrigine,8.28,406
+Cough,Hycodan,8.28,18
+Rheumatoid Arthritis,Infliximab,8.28,18
+Postmenopausal Symptoms,Conjugated estrogens,8.28,18
+Generalized Anxiety Disorde,Pregabalin,8.28,119
+Hiccups,Thorazine,8.27,11
+Skin and Structure Infection,Mupirocin,8.27,11
+Skin and Structure Infection,Bactroban,8.27,11
+Pain,Aleve,8.27,11
+Anxiety,Ativan,8.27,169
+Rosacea,Doxycycline,8.27,59
+Hyperhidrosis,Oxybutynin,8.27,37
+Insomnia,Lorazepam,8.26,46
+Generalized Anxiety Disorde,Paxil,8.25,28
+Arrhythmia,Disopyramide,8.25,4
+Panic Disorde,Prozac,8.25,28
+9</span> users found this comment helpful.,Loestrin 24 Fe,8.25,4
+Post-Cholecystectomy Diarrhea,Cholestyramine,8.25,12
+Polycystic Ovary Syndrome,Glucophage,8.25,4
+Allergic Reactions,Benadryl,8.25,8
+Osteoarthritis,Trolamine salicylate,8.25,4
+Rheumatoid Arthritis,Vimovo,8.25,4
+Schizophrenia,Seroquel XR,8.25,4
+Hepatitis C,Telaprevir,8.25,8
+Abnormal Uterine Bleeding,Ortho Micronor,8.25,4
+Not Listed / Othe,Tramadol,8.25,8
+Acne,Finacea,8.25,12
+Narcolepsy,Lisdexamfetamine,8.25,4
+Trigeminal Neuralgia,Neurontin,8.25,4
+Irritable Bowel Syndrome,Symax Duotab,8.25,4
+Upper Respiratory Tract Infection,Zithromax,8.25,4
+Major Depressive Disorde,Fluoxetine / olanzapine,8.25,4
+Migraine,Fiorinal,8.25,36
+Acne,Claravis,8.25,64
+Migraine Prevention,Pregabalin,8.25,8
+ADHD,Daytrana,8.24,45
+Herpes Simplex,Acyclovir,8.24,46
+COPD,Roflumilast,8.24,21
+Migraine,Diclofenac,8.24,21
+Smoking Cessation,Nicotine,8.24,84
+Depression,Brexpiprazole,8.24,17
+Migraine Prevention,Verapamil,8.23,30
+Chronic Myelogenous Leukemia,Tasigna,8.23,13
+Emergency Contraception,My Way,8.23,13
+Bipolar Disorde,Symbyax,8.23,22
+Pain,Duragesic,8.23,31
+Restless Legs Syndrome,Sinemet,8.22,9
+Depression,Elavil,8.22,9
+Hyperprolactinemia,Cabergoline,8.22,27
+Night Terrors,Clonazepam,8.22,9
+Sedation,Lorazepam,8.22,9
+Acne,Tetracycline,8.22,18
+Acne,Ocella,8.22,9
+Benign Essential Trem,Inderal,8.22,9
+Migraine,Aspirin / butalbital / caffeine,8.21,42
+Alopecia,Spironolactone,8.21,14
+Insomnia,Chloral hydrate,8.21,14
+HIV Infection,Abacavir / dolutegravir / lamivudine,8.21,52
+Ankylosing Spondylitis,Etanercept,8.21,29
+HIV Infection,Complera,8.21,39
+Opiate Withdrawal,Clonidine,8.2,127
+Diarrhea,Atropine / diphenoxylate,8.2,30
+Cold Symptoms,Acetaminophen / dextromethorphan / doxylamine / pseudoephedrine,8.2,5
+Pain,Darvon,8.2,5
+Cold Symptoms,Vicks Nyquil D Cold and Flu Nighttime Relief,8.2,5
+Erosive Esophagitis,Rabeprazole,8.2,5
+Chronic Pain,Naloxone / pentazocine,8.2,5
+Cold Symptoms,Chlorpheniramine / hydrocodone,8.2,10
+Urticaria,Fexofenadine,8.2,20
+Insomnia,Neurontin,8.2,5
+"Lyme Disease, Neurologic",Doxycycline,8.2,5
+Tinea Versicol,Selenium sulfide,8.2,10
+Skin and Structure Infection,Linezolid,8.2,5
+Sciatica,Voltaren,8.2,5
+Obesity,Lorcaserin,8.2,185
+Obesity,Bupropion,8.2,5
+Anxiety,Chlordiazepoxide,8.2,15
+Primary Ovarian Failure,Estradiol,8.2,5
+Eczema,Dupilumab,8.2,10
+"Nausea/Vomiting, Chemotherapy Induced",Dexamethasone,8.2,5
+Tinnitus,Alprazolam,8.19,26
+Obsessive Compulsive Disorde,Sertraline,8.19,80
+Chronic Pain,MS Contin,8.18,33
+Panic Disorde,Imipramine,8.18,11
+"Diabetes, Type 2",Byetta,8.18,51
+Diarrhea,Saccharomyces boulardii lyo,8.17,6
+Osteoarthritis,Bioflavonoids,8.17,6
+Ventricular Tachycardia,Atenolol,8.17,6
+Cold Symptoms,Actifed,8.17,6
+Anorexia,Marinol,8.17,6
+Cold Symptoms,Pseudoephedrine / triprolidine,8.17,6
+Allergic Rhinitis,Allegra-D 12 Hour,8.17,6
+Migraine,Imitrex Statdose,8.17,12
+Acne,Zenatane,8.17,6
+Nasal Congestion,Sudafed Congestion,8.17,6
+Birth Control,Femcon Fe,8.17,6
+Hypertriglyceridemia,Omega-3 polyunsaturated fatty acids,8.17,6
+Bipolar Disorde,Pristiq,8.17,6
+Generalized Anxiety Disorde,Escitalopram,8.16,287
+Migraine Prevention,Nortriptyline,8.16,110
+Urticaria,Omalizumab,8.16,49
+Panic Disorde,Fluoxetine,8.16,43
+Hepatitis C,Epclusa,8.16,44
+Plaque Psoriasis,Cosentyx,8.16,19
+Psoriasis,Etanercept,8.16,19
+"Asthma, Maintenance",Omalizumab,8.16,32
+Anesthesia,Propofol,8.15,194
+ibromyalgia,Desvenlafaxine,8.15,13
+Shift Work Sleep Disorde,Modafinil,8.15,13
+Postmenopausal Symptoms,Femring,8.15,13
+Renal Cell Carcinoma,Votrient,8.15,26
+Obesity,Meridia,8.15,41
+Back Pain,Acetaminophen / hydrocodone,8.15,130
+ibromyalgia,Armodafinil,8.14,7
+Borderline Personality Disorde,Lurasidone,8.14,7
+ibromyalgia,Skelaxin,8.14,14
+Herpes Zoste,Valacyclovir,8.14,7
+"Organ Transplant, Rejection Prophylaxis",CellCept,8.14,7
+Epilepsy,Carbatrol,8.14,7
+Neuralgia,Nortriptyline,8.14,14
+Atopic Dermatitis,Elidel,8.14,7
+Weight Loss,Victoza,8.14,63
+ADHD,Adderall XR,8.14,107
+Obstructive Sleep Apnea/Hypopnea Syndrome,Nuvigil,8.14,22
+Epilepsy,Phenytoin,8.14,22
+Pain,Hydromorphone,8.13,187
+Eczema,Elidel,8.13,15
+Opiate Dependence,Naltrexone,8.12,72
+Psoriasis,Halobetasol,8.12,8
+Anemia,Multivitamin with iron,8.12,8
+Pain,Amitriptyline,8.12,112
+"Crohn's Disease, Maintenance",Mesalamine,8.12,25
+Panic Disorde,Propranolol,8.12,17
+Period Pain,Naproxen,8.11,44
+"Onychomycosis, Fingernail",Terbinafine,8.11,9
+Pain,Levorphanol,8.11,9
+Pain,Nubain,8.11,18
+Ankylosing Spondylitis,Enbrel,8.11,27
+"High Cholesterol, Familial Heterozygous",Repatha,8.11,9
+Restless Legs Syndrome,Neupro,8.11,18
+Pain,Lortab,8.11,65
+Chronic Pain,Fentanyl,8.11,85
+Depression,Lamotrigine,8.11,57
+Social Anxiety Disorde,Paroxetine,8.1,48
+Pain,Celebrex,8.1,39
+Obsessive Compulsive Disorde,Luvox,8.1,39
+Polycystic Ovary Syndrome,Desogestrel / ethinyl estradiol,8.1,10
+Erectile Dysfunction,Vardenafil,8.1,90
+Migraine Prevention,Metoprolol,8.1,10
+Chronic Pain,Duragesic,8.1,20
+Ovarian Cysts,Ortho Tri-Cyclen Lo,8.1,10
+Hirsutism,Eflornithine,8.1,30
+Inflammatory Bowel Disease,Budesonide,8.1,10
+Pain,Voltaren,8.1,30
+"Asthma, Maintenance",Fluticasone / salmeterol,8.1,50
+Erectile Dysfunction,Levitra,8.1,71
+Allergic Rhinitis,Azelastine,8.1,42
+Bipolar Disorde,Oxcarbazepine,8.09,75
+Skin Cance,Fluorouracil,8.09,11
+Helicobacter Pylori Infection,Prevpac,8.09,34
+Obsessive Compulsive Disorde,Fluvoxamine,8.09,69
+Social Anxiety Disorde,Effexor XR,8.08,12
+Acne,Atralin,8.08,25
+Systemic Lupus Erythematosus,Belimumab,8.08,13
+Rheumatoid Arthritis,Tocilizumab,8.08,13
+Systemic Lupus Erythematosus,Benlysta,8.07,14
+Smoking Cessation,Nicotrol Inhaler,8.07,14
+Pain,Zipsor,8.07,14
+"Asthma, Maintenance",Advair Diskus,8.07,43
+Pain,Vicoprofen,8.07,30
+Narcolepsy,Sodium oxybate,8.07,46
+Back Pain,Ultram,8.06,16
+Depression,L-methylfolate,8.06,66
+Generalized Anxiety Disorde,Citalopram,8.05,75
+Rheumatoid Arthritis,Remicade,8.05,19
+COPD,Daliresp,8.05,20
+Plaque Psoriasis,Secukinumab,8.04,26
+Obesity,Qsymia,8.04,105
+Chronic Idiopathic Constipation,Trulance,8.04,27
+Obsessive Compulsive Disorde,Zoloft,8.04,56
+Neuralgia,Pregabalin,8.04,28
+Pain,Morphine,8.03,118
+Interstitial Cystitis,Pentosan polysulfate sodium,8.02,45
+Panic Disorde,Paxil,8.02,46
+Obsessive Compulsive Disorde,Fluoxetine,8.02,47
+Anxiety,Gabapentin,8.02,193
+Migraine,Imitrex,8.01,97
+Bladder Infection,Methenamine,8.0,6
+Irritable Bowel Syndrome,Psyllium,8.0,4
+Hot Flashes,Fluoxetine,8.0,13
+Seizures,Primidone,8.0,8
+Interstitial Cystitis,Elavil,8.0,7
+Rheumatoid Arthritis,Certolizumab,8.0,4
+High Blood Pressure,Hydrochlorothiazide / losartan,8.0,25
+Rosacea,Finacea,8.0,29
+Rosacea,Azelaic acid,8.0,32
+Sinusitis,Azithromycin Dose Pack,8.0,6
+Pain,Roxicet,8.0,13
+Depression,Remeron SolTab,8.0,5
+Insomnia,Seroquel XR,8.0,5
+Schizophrenia,Fanapt,8.0,7
+Insomnia,Diphenhydramine / naproxen,8.0,6
+"Asthma, Maintenance",Alvesco,8.0,7
+Hepatocellular Carcinoma,Nexavar,8.0,3
+"Diabetes, Type 2",Toujeo Solostar,8.0,3
+"COPD, Maintenance",Atrovent,8.0,4
+Stomach Ulce,Protonix,8.0,6
+High Blood Pressure,Cartia XT,8.0,3
+Herpes Zoste,Valtrex,8.0,5
+High Blood Pressure,Aliskiren / hydrochlorothiazide,8.0,3
+"Diabetes, Type 2",Humalog,8.0,3
+Migraine,Excedrin,8.0,9
+Restless Legs Syndrome,Clonazepam,8.0,30
+Restless Legs Syndrome,Gabapentin enacarbil,8.0,11
+Rheumatoid Arthritis,Arthrotec,8.0,4
+Allergic Rhinitis,Budesonide,8.0,5
+Lyme Disease,Ceftin,8.0,5
+Pain,Sulindac,8.0,5
+Kidney Infections,Cephalexin,8.0,9
+Mania,Risperdal,8.0,3
+"Asthma, acute",Racepinephrine,8.0,9
+Pain,OxyIR,8.0,4
+High Blood Pressure,Hydrochlorothiazide / telmisartan,8.0,10
+Reflex Sympathetic Dystrophy Syndrome,Trazodone,8.0,6
+Allergic Rhinitis,Veramyst,8.0,6
+Reflex Sympathetic Dystrophy Syndrome,Neurontin,8.0,3
+Atrial Fibrillation,Cardizem,8.0,3
+Abortion,Misoprostol,8.0,4
+High Blood Pressure,Felodipine,8.0,4
+Light Sedation,Phenergan,8.0,5
+Restless Legs Syndrome,Mirapex,8.0,61
+Rhinitis,Veramyst,8.0,6
+Anesthesia,Pentothal,8.0,3
+Diarrhea,Lomotil,8.0,17
+Ventricular Tachycardia,Propafenone,8.0,5
+Pulmonary Embolism,Eliquis,8.0,3
+Multiple Sclerosis,Interferon beta-1b,8.0,4
+Muscle Spasm,Orphenadrine,8.0,16
+Psoriatic Arthritis,Enbrel,8.0,25
+Cold Sores,Zovirax Cream,8.0,11
+Prostate Cance,Provenge,8.0,3
+Cluster Headaches,Lithium,8.0,5
+Narcolepsy,Concerta,8.0,6
+Bipolar Disorde,Zyprexa Zydis,8.0,5
+Eczema,Desoximetasone,8.0,7
+Ectopic Pregnancy,Methotrexate,8.0,3
+"Nausea/Vomiting, Chemotherapy Induced",Ondansetron,8.0,7
+Anesthesia,Thiopental,8.0,3
+Tourette's Syndrome,Topamax,8.0,3
+Tourette's Syndrome,Topiramate,8.0,3
+Chronic Pain,Acetaminophen / oxycodone,8.0,101
+Pulmonary Hypertension,Ambrisentan,8.0,5
+Hemorrhoids,Analpram-HC,8.0,9
+Vitamin/Mineral Supplementation during Pregnancy/Lactation,Duet DHA,8.0,5
+Hemorrhoids,Hydrocortisone / pramoxine,8.0,12
+Headache,Aleve,8.0,5
+Pain,Ketamine,8.0,6
+Pain,Kadian,8.0,20
+Supraventricular Tachycardia,Verapamil,8.0,4
+Migraine Prevention,Lamotrigine,8.0,8
+Hepatitis B,Tenofovir,8.0,5
+Herpes Zoste,Famciclovir,8.0,5
+Pain,Propoxyphene,8.0,15
+Juvenile Rheumatoid Arthritis,Etanercept,8.0,7
+"High Cholesterol, Familial Heterozygous",Praluent,8.0,5
+Insomnia,Oxazepam,8.0,4
+Immunosuppression,Prednisone,8.0,3
+Sedation,Atarax,8.0,3
+ADHD,Wellbutrin SR,8.0,4
+Panic Disorde,Celexa,8.0,8
+3</span> users found this comment helpful.,Microgestin Fe 1 / 20,8.0,3
+Obsessive Compulsive Disorde,Riluzole,8.0,3
+"Ulcerative Colitis, Active",Uceris,8.0,3
+Hypoparathyroidism,Natpara,8.0,3
+Obsessive Compulsive Disorde,Paxil,8.0,15
+Cough and Nasal Congestion,Hydrocodone / pseudoephedrine,8.0,3
+Anxiety,Neurontin,8.0,9
+Indigestion,Ranitidine,8.0,8
+Indigestion,Phillips' Milk of Magnesia,8.0,3
+Oral Thrush,Nystatin,8.0,11
+Osteoarthritis,Limbrel,8.0,5
+Urinary Tract Infection,Hyoscyamine / methenamine / methylene blue / phenyl salicylate,8.0,9
+Upper Respiratory Tract Infection,Cefuroxime,8.0,4
+Not Listed / Othe,Cyclobenzaprine,8.0,3
+ADHD,Omega-3 polyunsaturated fatty acids,8.0,4
+Bipolar Disorde,Effexor,8.0,13
+Premature Lab,Prometrium,8.0,3
+Polycystic Ovary Syndrome,Glucophage XR,8.0,3
+Eczema,Halobetasol,8.0,6
+Obsessive Compulsive Disorde,Venlafaxine,8.0,10
+"Ulcerative Colitis, Active",Asacol,8.0,5
+New Daily Persistent Headache,Levetiracetam,8.0,4
+Nocturnal Leg Cramps,Quinine,8.0,7
+Trichomoniasis,Tinidazole,8.0,4
+Ulcerative Colitis,Pentasa,8.0,3
+Narcolepsy,Ritalin,8.0,13
+Anal Fissure and Fistula,Nitroglycerin,8.0,8
+Chronic Fatigue Syndrome,Nuvigil,8.0,19
+Thyroid Cance,Thyroid desiccated,8.0,4
+Barrett's Esophagus,Kapidex,8.0,5
+Postherpetic Neuralgia,Gralise,8.0,3
+Basal Cell Carcinoma,Fluorouracil,8.0,10
+Overactive Bladde,Sanctura,8.0,9
+ADHD,Amphetamine / dextroamphetamine,8.0,353
+Obesity,Liraglutide,8.0,312
+Obesity,Belviq,7.99,181
+Anxiety,Propranolol,7.99,94
+Chronic Pain,Oxycodone,7.99,178
+Nausea/Vomiting,Ondansetron,7.99,170
+"Diabetes, Type 2",Victoza,7.98,255
+Multiple Sclerosis,Interferon beta-1a,7.98,51
+Generalized Anxiety Disorde,Paroxetine,7.98,46
+HIV Infection,Genvoya,7.98,43
+Pain,Acetaminophen / hydrocodone,7.98,332
+Irritable Bowel Syndrome,Hyoscyamine,7.98,40
+Urticaria,Xolair,7.97,32
+Migraine Prevention,Elavil,7.96,27
+Depression,Modafinil,7.96,26
+Psoriasis,Taclonex,7.96,26
+Depression,Remeron,7.96,77
+Pain,Vicodin,7.96,76
+"Crohn's Disease, Maintenance",Pentasa,7.96,25
+Multiple Sclerosis,Tecfidera,7.96,24
+Migraine,Sumatriptan,7.95,213
+Benign Prostatic Hyperplasia,Dutasteride,7.95,21
+Opiate Dependence,Vivitrol,7.95,42
+GERD,Lansoprazole,7.95,41
+Pain,Opana ER,7.95,61
+Anxiety and Stress,Effexor XR,7.95,20
+Pneumonia,Clarithromycin,7.95,20
+GERD,Ranitidine,7.95,37
+Migraine Prevention,Inderal,7.94,18
+Pain,Norco,7.94,108
+Schizoaffective Disorde,Saphris,7.94,17
+Hepatitis C,Sofosbuvir / velpatasvir,7.94,48
+Insomnia,Elavil,7.94,16
+Hashimoto's disease,Armour Thyroid,7.94,32
+GERD,Omeprazole,7.93,60
+Seizures,Zonegran,7.93,15
+Arrhythmia,Dofetilide,7.93,30
+Panic Disorde,Sertraline,7.93,206
+Anxiety,Trazodone,7.93,42
+HIV Infection,Cobicistat / elvitegravir / emtricitabine / tenofovir alafenamide,7.93,41
+Insomnia,Quetiapine,7.93,191
+"High Cholesterol, Familial Heterozygous",Evolocumab,7.92,13
+"Crohn's Disease, Maintenance",Adalimumab,7.92,26
+Multiple Sclerosis,Natalizumab,7.92,63
+Weight Loss,Lorcaserin,7.92,387
+Gout,Allopurinol,7.92,36
+Rosacea,MetroGel,7.92,12
+Lyme Disease,Doxycycline,7.92,24
+Acne,Monodox,7.91,23
+Amenorrhea,Medroxyprogesterone,7.91,45
+Heart Attack,Clopidogrel,7.91,22
+Anxiety,Escitalopram,7.91,484
+Allergic Reactions,Diphenhydramine,7.9,21
+Weight Loss,Liraglutide,7.9,166
+"Diabetes, Type 2",Amaryl,7.9,10
+Benign Prostatic Hyperplasia,Cialis,7.9,40
+Allergic Rhinitis,Allegra-D 24 Hour,7.89,9
+Rheumatoid Arthritis,Rituximab,7.89,36
+Bipolar Disorde,Epitol,7.89,9
+Birth Control,Lybrel,7.89,9
+Opiate Withdrawal,Methocarbamol,7.89,18
+Insomnia,Gabapentin,7.89,44
+Bladder Infection,Cephalexin,7.88,26
+Panic Disorde,Zoloft,7.88,164
+Chronic Pain,OxyContin,7.88,51
+Acne,Tretinoin,7.88,228
+Inflammatory Conditions,Prednisone,7.88,59
+Anxiety and Stress,Zoloft,7.88,49
+Postpartum Depression,Effexor XR,7.88,8
+Obsessive Compulsive Disorde,Mirtazapine,7.88,8
+GERD,Zantac 150,7.88,16
+Pulmonary Hypertension,Tyvaso,7.88,8
+Pain,Ultram ER,7.88,8
+Juvenile Rheumatoid Arthritis,Enbrel,7.88,8
+Benign Prostatic Hyperplasia,Tadalafil,7.87,39
+Multiple Sclerosis,Tysabri,7.87,53
+Restless Legs Syndrome,Carbidopa / levodopa,7.87,15
+Weight Loss,Belviq,7.86,381
+Pain,Morphine / naltrexone,7.86,7
+Bladder Infection,Hiprex,7.86,7
+Bipolar Disorde,Citalopram,7.86,7
+Supraventricular Tachycardia,Diltiazem,7.86,7
+0</span> users found this comment helpful.,Depo-Provera,7.86,7
+Osteoarthritis,Celebrex,7.85,40
+Generalized Anxiety Disorde,Quetiapine,7.85,80
+Weight Loss,Phentermine / topiramate,7.85,249
+Obsessive Compulsive Disorde,Anafranil,7.85,26
+Urticaria,Zyrtec,7.85,26
+Migraine Prevention,Amitriptyline,7.85,188
+Psoriasis,Enbrel,7.84,19
+Condylomata Acuminata,Podofilox,7.84,19
+Anxiety,Lexapro,7.84,372
+Pain,Voltaren Gel,7.84,74
+Irritable Bowel Syndrome,Escitalopram,7.83,6
+"High Cholesterol, Familial Heterozygous",Alirocumab,7.83,6
+Schizophrenia,Geodon,7.83,18
+ADHD,Kapvay,7.83,12
+Raynaud's Syndrome,Nifedipine,7.83,24
+GERD,Zegerid,7.83,12
+Rheumatoid Arthritis,Acetaminophen / hydrocodone,7.83,18
+Panic Disorde,Pristiq,7.83,6
+"Asthma, acute",Asthmanefrin,7.83,6
+Migraine,Gabapentin,7.83,59
+Insomnia,Clonazepam,7.83,70
+Obesity,Saxenda,7.83,250
+Erectile Dysfunction,Alprostadil,7.83,58
+"Hypothyroidism, After Thyroid Removal",Thyroid desiccated,7.83,23
+Bipolar Disorde,Topiramate,7.82,67
+Pain,Diclofenac,7.82,212
+Allergic Rhinitis,Xyzal,7.82,22
+Overactive Bladde,Darifenacin,7.82,11
+Nausea/Vomiting,Hydroxyzine,7.82,11
+Schizophrenia,Vraylar,7.82,11
+Polycystic Ovary Syndrome,Metformin,7.82,136
+Pain,Oxymorphone,7.82,136
+Crohn's Disease,Mesalamine,7.81,16
+Acne,Amnesteem,7.81,21
+Insomnia,Restoril,7.81,36
+Trichomoniasis,Metronidazole,7.8,56
+Opiate Adjunct,Phenergan,7.8,5
+Pain,Aspirin,7.8,5
+Crohn's Disease,Budesonide,7.8,5
+"Onychomycosis, Toenail",Ciclopirox,7.8,10
+Skin Cance,Efudex,7.8,5
+Dry Skin,EpiCeram,7.8,10
+Lennox-Gastaut Syndrome,Clobazam,7.8,5
+Dermatitis,Hydrocortisone,7.8,5
+Intermittent Claudication,Cilostazol,7.8,5
+Schizophrenia,Ziprasidone,7.8,20
+ibromyalgia,Flexeril,7.8,10
+Dermatitis,Prednisolone,7.8,5
+Opiate Withdrawal,Robaxin,7.8,5
+Osteoarthritis,Piroxicam,7.8,5
+Parkinson's Disease,Sinemet,7.8,5
+Schizophrenia,Saphris,7.8,20
+Muscle Pain,Voltaren,7.8,5
+Impetig,Retapamulin,7.8,5
+Prostate Cance,Goserelin,7.8,5
+Supraventricular Tachycardia,Atenolol,7.8,5
+Anxiety,Meprobamate,7.8,5
+Period Pain,Aleve,7.8,5
+"COPD, Maintenance",Ipratropium,7.8,5
+Not Listed / Othe,Trazodone,7.8,5
+Depression,Wellbutrin XL,7.8,149
+ADHD,Bupropion,7.79,58
+Narcolepsy,Methylphenidate,7.79,29
+Amenorrhea,Provera,7.79,33
+Multiple Sclerosis,Copaxone,7.79,70
+Allergic Rhinitis,Nasonex,7.78,23
+Acne,Benzoyl peroxide / clindamycin,7.78,262
+ADHD,Focalin XR,7.78,50
+Bulimia,Prozac,7.78,18
+Allergic Rhinitis,Fexofenadine / pseudoephedrine,7.77,22
+Acne,Gianvi,7.77,22
+Human Papilloma Virus,Aldara,7.77,13
+Bronchitis,Guaifenesin,7.77,26
+COPD,Breo Ellipta,7.77,13
+Migraine,Zolmitriptan,7.77,69
+Eye Redness,Ocular lubricant,7.77,30
+Pain,Opana,7.77,64
+Multiple Sclerosis,Gilenya,7.76,51
+Binge Eating Disorde,Vyvanse,7.76,34
+Sedation,Trazodone,7.76,55
+Multiple Sclerosis,Glatiramer,7.76,76
+Psoriasis,Adalimumab,7.76,59
+Pain,Acetaminophen,7.76,21
+Osteoarthritis,Celecoxib,7.76,49
+Iron Deficiency Anemia,Iron sucrose,7.75,4
+lic Acid Deficiency,L-methylfolate,7.75,4
+Soft Tissue Sarcoma,Pazopanib,7.75,8
+Cluster Headaches,Sumavel DosePro,7.75,4
+Schizophrenia,Abilify Maintena,7.75,4
+Sinusitis,Ciprofloxacin,7.75,12
+Seizures,Keppra XR,7.75,8
+Bacterial Vaginitis,Flagyl ER,7.75,4
+Bacterial Infection,Keflex,7.75,8
+Sinusitis,Cleocin,7.75,4
+Allergic Reactions,Promethazine,7.75,4
+Epilepsy,Depakote ER,7.75,12
+Ventricular Tachycardia,Flecainide,7.75,4
+Tonsillitis/Pharyngitis,Amoxicillin,7.75,12
+Colorectal Cance,Cetuximab,7.75,4
+Nasal Congestion,Brompheniramine / pseudoephedrine,7.75,4
+Hashimoto's disease,Levoxyl,7.75,4
+Panic Disorde,Effexor XR,7.75,16
+Vulvodynia,Elavil,7.75,4
+Status Epilepticus,Lorazepam,7.75,4
+Alopecia,Rogaine Women's,7.75,4
+Psoriasis,Triamcinolone,7.75,8
+Condylomata Acuminata,Imiquimod,7.75,4
+Colorectal Cance,Erbitux,7.75,4
+Conjunctivitis,Gatifloxacin,7.75,4
+Dietary Supplementation,CoQ10,7.75,4
+Erosive Esophagitis,Aciphex,7.75,4
+Rheumatoid Arthritis,Prednisone,7.75,24
+5</span> users found this comment helpful.,Levora,7.75,4
+"Diabetes, Type 2",Lantus Solostar,7.75,12
+Allergic Rhinitis,Chlorpheniramine / pseudoephedrine,7.75,4
+Acne,Drospirenone / ethinyl estradiol / levomefolate calcium,7.74,19
+"Ulcerative Colitis, Active",Lialda,7.74,38
+Acne,Clindamycin,7.73,49
+Panic Disorde,Paroxetine,7.73,64
+Muscle Spasm,Skelaxin,7.73,45
+Osteoarthritis,Diclofenac / misoprostol,7.73,15
+Systemic Lupus Erythematosus,Hydroxychloroquine,7.73,26
+"Ulcerative Colitis, Maintenance",Mesalamine,7.73,26
+Ulcerative Colitis,Lialda,7.73,11
+High Blood Pressure,Amlodipine / hydrochlorothiazide / olmesartan,7.73,11
+Muscle Pain,Diclofenac,7.73,11
+Tourette's Syndrome,Orap,7.73,11
+Postmenopausal Symptoms,Drospirenone / estradiol,7.73,11
+Nausea/Vomiting,Zofran ODT,7.73,22
+Bipolar Disorde,Seroquel XR,7.73,62
+Generalized Anxiety Disorde,Sertraline,7.72,58
+Chronic Pain,Fentanyl Transdermal System,7.72,29
+Cough,Homatropine / hydrocodone,7.72,65
+"Diabetes, Type 2",Liraglutide,7.72,270
+ibromyalgia,Mucinex,7.72,18
+Acne,Beyaz,7.72,18
+Panic Disorde,Citalopram,7.72,43
+"Crohn's Disease, Maintenance",Infliximab,7.72,25
+Major Depressive Disorde,Fluoxetine,7.72,32
+Social Anxiety Disorde,Zoloft,7.72,116
+ibromyalgia,Sodium oxybate,7.71,7
+Bipolar Disorde,Desvenlafaxine,7.71,7
+Ankylosing Spondylitis,Humira,7.71,35
+Gas,Gas-X,7.71,7
+Acne,Spironolactone,7.71,178
+GERD,Esomeprazole,7.71,66
+Pain,Lyrica,7.71,59
+Schizophrenia,Asenapine,7.71,24
+Seizures,Dilantin,7.71,17
+Chronic Myelogenous Leukemia,Nilotinib,7.71,17
+Period Pain,Diclofenac,7.7,20
+Migraine,Zomig-ZMT,7.7,10
+Osteoarthritis,Etodolac,7.7,10
+Emergency Contraception,Next Choice,7.7,30
+Chlamydia Infection,Azithromycin,7.7,236
+ADHD,Vyvanse,7.7,392
+Weight Loss,Qsymia,7.7,207
+Major Depressive Disorde,Wellbutrin SR,7.69,13
+Restless Legs Syndrome,Horizant,7.69,13
+Atrial Fibrillation,Sotalol,7.69,26
+Underactive Thyroid,Armour Thyroid,7.69,65
+Bipolar Disorde,Lithium,7.69,136
+Schizoaffective Disorde,Abilify,7.69,29
+Irritable Bowel Syndrome,Dicyclomine,7.69,106
+Insulin Resistance Syndrome,Metformin,7.69,16
+Pain,Pregabalin,7.69,80
+Anxiety and Stress,Citalopram,7.69,417
+GERD,Nexium,7.69,54
+Pain,Elavil,7.68,22
+Pain,Codeine,7.68,22
+emale Infertility,Clomid,7.68,25
+Epilepsy,Depakote,7.68,28
+Acne,Benzamycin,7.67,6
+"High Cholesterol, Familial Heterozygous",Simvastatin,7.67,3
+Abnormal Uterine Bleeding,Aviane,7.67,6
+Dermatitis,Fluocinolone,7.67,3
+Cough,Mucinex DM,7.67,3
+Acne,Tazarotene,7.67,9
+Hypokalemia,Potassium chloride,7.67,3
+0</span> users found this comment helpful.,Ortho Tri-Cyclen Lo,7.67,3
+Epilepsy,Dilantin,7.67,18
+Bronchitis,Bactrim,7.67,3
+Rosacea,Minocin,7.67,3
+SIADH,Demeclocycline,7.67,3
+Lipodystrophy,Tesamorelin,7.67,3
+"Onychomycosis, Toenail",Sporanox,7.67,3
+Bladder Infection,Amoxicillin,7.67,3
+"Diabetes, Type 2",Glimepiride,7.67,33
+Perimenopausal Symptoms,Prometrium,7.67,3
+7</span> users found this comment helpful.,Microgestin Fe 1 / 20,7.67,3
+Atopic Dermatitis,Fluocinonide,7.67,3
+"Constipation, Acute",Docusate / senna,7.67,6
+Extrapyramidal Reaction,Artane,7.67,3
+"Diabetes, Type 1",Afrezza,7.67,27
+Cough,Codeine / promethazine,7.67,36
+Abnormal Uterine Bleeding,Necon 1 / 35,7.67,3
+Pharyngitis,Erythromycin,7.67,3
+Constipation,Methylcellulose,7.67,3
+Multiple Sclerosis,Betaseron,7.67,3
+Birth Control,Junel Fe 24,7.67,3
+Psoriasis,Calcitriol,7.67,3
+Anxiety and Stress,Effexor,7.67,30
+Atrophic Vaginitis,Vagifem,7.67,15
+Tinea Capitis,Terbinafine,7.67,3
+Trichotillomania,Citalopram,7.67,3
+Temporomandibular Joint Disorde,Flexeril,7.67,3
+Vaginal Yeast Infection,Terazol,7.67,3
+Narcolepsy,Methylin,7.67,3
+Dyspareunia,Osphena,7.67,6
+Hashimoto's disease,Thyroid desiccated,7.67,45
+HIV Infection,Darunavir,7.67,3
+Acne,Minocin,7.67,6
+Seasonal Allergic Conjunctivitis,Olopatadine,7.67,33
+Bowel Preparation,GaviLyte-N,7.67,3
+Nasal Congestion,Loratadine / pseudoephedrine,7.65,26
+Anxiety and Stress,Prozac,7.65,147
+Migraine Prevention,Propranolol,7.65,106
+Underactive Thyroid,Thyroid desiccated,7.65,83
+Muscle Spasm,Metaxalone,7.65,57
+Acne,Veltin,7.65,17
+Epilepsy,Lamotrigine,7.64,14
+Urinary Tract Stones,Tamsulosin,7.64,53
+Chronic Pain,Morphine,7.64,97
+Depression,Doxepin,7.64,11
+Anxiety and Stress,Fluoxetine,7.64,231
+Plaque Psoriasis,Adalimumab,7.64,11
+Keratosis,Efudex,7.64,11
+Menstrual Disorders,Tranexamic acid,7.63,30
+"Crohn's Disease, Maintenance",Humira,7.63,27
+ADHD,Lisdexamfetamine,7.63,407
+Obesity,Orlistat,7.63,153
+Pain,Cymbalta,7.62,32
+Pain,Zorvolex,7.62,8
+Menorrhagia,Dienogest / estradiol,7.62,8
+"Crohn's Disease, Maintenance",Azathioprine,7.62,8
+Bronchitis,Mucinex,7.62,16
+Bipolar Disorde,Zoloft,7.62,8
+"Crohn's Disease, Acute",Remicade,7.62,8
+Acne,Doryx,7.62,45
+ibromyalgia,Cyclobenzaprine,7.62,29
+Obesity,Topiramate,7.62,100
+Sedation,Promethazine,7.62,21
+Postherpetic Neuralgia,Gabapentin,7.62,21
+High Cholesterol,Vytorin,7.62,13
+Depression,Escitalopram,7.61,380
+Edema,Furosemide,7.61,31
+Social Anxiety Disorde,Paxil,7.61,41
+Bipolar Disorde,Tegretol,7.61,28
+Chronic Idiopathic Constipation,Plecanatide,7.61,33
+"Gout, Acute",Colchicine,7.61,33
+Insomnia,Zolpimist,7.6,5
+Cold Symptoms,Coricidin HBP Cold & Flu,7.6,5
+Strep Throat,Augmentin,7.6,15
+Prevention of Thromboembolism in Atrial Fibrillation,Dabigatran,7.6,50
+Chronic Fatigue Syndrome,Modafinil,7.6,20
+Back Pain,Aspirin,7.6,5
+Insomnia,Olanzapine,7.6,20
+Psoriasis,Humira,7.6,60
+Prostate Cance,Bicalutamide,7.6,5
+Upper Respiratory Tract Infection,Erythromycin,7.6,5
+Allergic Reactions,Prednisone,7.6,20
+Rheumatoid Arthritis,Aleve,7.6,5
+Rhinitis,Fluticasone,7.6,40
+Polycythemia Vera,Jakafi,7.6,5
+Peripheral Neuropathy,Pregabalin,7.6,15
+Prevention of Bladder infection,Macrodantin,7.6,5
+Ischemic Stroke,Plavix,7.6,5
+HIV Infection,Tivicay,7.6,5
+High Blood Pressure,Olmesartan,7.6,72
+Migraine,Zomig,7.6,42
+Atrial Fibrillation,Diltiazem,7.59,22
+Shift Work Sleep Disorde,Nuvigil,7.59,17
+Psoriasis,Fluocinonide,7.58,12
+Seborrheic Dermatitis,Ketoconazole,7.58,12
+Sciatica,Diclofenac,7.58,12
+Migraine,Acetaminophen / aspirin / caffeine,7.58,79
+Anxiety,Atenolol,7.58,19
+Pain,Endocet,7.58,26
+Restless Legs Syndrome,Pramipexole,7.58,85
+Pain,Duloxetine,7.57,47
+Pain,Toradol IV / IM,7.57,7
+Postmenopausal Symptoms,Angeliq,7.57,14
+High Cholesterol,Welchol,7.57,7
+Nasal Congestion,Nostrilla,7.57,7
+Psoriasis,Soriatane,7.57,7
+Dyspareunia,Ospemifene,7.57,7
+Ankylosing Spondylitis,Adalimumab,7.57,28
+Depression,Citalopram,7.57,388
+Depression,Effexor XR,7.56,133
+Multiple Sclerosis,Fingolimod,7.56,48
+Pain,Nucynta ER,7.56,32
+Nasal Congestion,Xylometazoline,7.56,16
+Pain,Buprenorphine,7.56,73
+Bowel Preparation,Magnesium sulfate / potassium sulfate / sodium sulfate,7.56,625
+Nausea/Vomiting,Benadryl,7.56,9
+Swine Flu,Oseltamivir,7.56,9
+Obesity,Benzphetamine,7.56,9
+Xerostomia,Saliva substitutes,7.56,9
+Endometriosis,Microgestin Fe 1 / 20,7.56,9
+Interstitial Cystitis,Elmiron,7.55,47
+Acne,Duac,7.55,120
+Otitis Media,Clarithromycin,7.55,11
+Psoriasis,Acitretin,7.55,11
+"Asthma, Maintenance",Symbicort,7.55,55
+Acute Coronary Syndrome,Prasugrel,7.55,11
+Migraine Prevention,Clonazepam,7.55,11
+Pain,Nalbuphine,7.55,22
+Migraine Prevention,Zonegran,7.55,11
+Anxiety and Stress,Celexa,7.54,238
+Acute Coronary Syndrome,Effient,7.54,13
+ADHD,Evekeo,7.54,13
+Benign Prostatic Hyperplasia,Doxazosin,7.54,13
+Skin or Soft Tissue Infection,Keflex,7.54,13
+Overactive Bladde,Oxytrol,7.54,28
+Anxiety,Effexor XR,7.54,99
+ibromyalgia,Naltrexone,7.53,15
+Nasal Congestion,Claritin-D,7.53,17
+Urinary Tract Infection,Amoxicillin,7.53,17
+Postpartum Depression,Citalopram,7.53,17
+Nightmares,Prazosin,7.53,17
+Obsessive Compulsive Disorde,Citalopram,7.53,17
+Pain,Ketorolac,7.53,140
+Post Traumatic Stress Disorde,Prazosin,7.53,36
+Rosacea,Ivermectin,7.53,59
+ADHD,Ritalin,7.52,61
+Shift Work Sleep Disorde,Armodafinil,7.52,21
+Anxiety,Clonidine,7.52,21
+Acne,Adapalene / benzoyl peroxide,7.52,397
+Angina,Ranexa,7.52,25
+Rheumatoid Arthritis,Methotrexate,7.52,50
+Pain,Toradol,7.52,106
+"Hypogonadism, Male",Axiron,7.51,68
+Rosacea,Soolantra,7.51,51
+ibromyalgia,Mobic,7.5,6
+HIV Infection,Dolutegravir,7.5,8
+Prostate Cance,Sipuleucel-T,7.5,4
+1</span> users found this comment helpful.,Seasonique,7.5,4
+Post Traumatic Stress Disorde,Seroquel,7.5,4
+Impetig,Altabax,7.5,4
+Anxiety,Doxepin,7.5,10
+Hot Flashes,Venlafaxine,7.5,50
+"High Cholesterol, Familial Heterozygous",Zetia,7.5,4
+Cough and Nasal Congestion,Chlorpheniramine / dextromethorphan / phenylephrine,7.5,4
+Hepatitis B,Viread,7.5,6
+Periodic Limb Movement Disorde,Pramipexole,7.5,4
+Allergic Rhinitis,Patanase,7.5,8
+Postmenopausal Symptoms,Paroxetine,7.5,4
+Ankylosing Spondylitis,Voltaren,7.5,6
+Pain,Ryzolt,7.5,4
+Light Sedation,Demerol,7.5,4
+Anxiety,Librium,7.5,8
+Temporomandibular Joint Disorde,Cyclobenzaprine,7.5,6
+Migraine Prevention,Baclofen,7.5,8
+Upper Respiratory Tract Infection,Amoxicillin,7.5,6
+Ankylosing Spondylitis,Cimzia,7.5,4
+Menstrual Disorders,Gildess Fe 1 / 20,7.5,4
+Lyme Disease,Cefuroxime,7.5,4
+Trichomoniasis,Flagyl,7.5,8
+Crohn's Disease,Asacol,7.5,4
+"Melanoma, Metastatic",Pembrolizumab,7.5,4
+Trigeminal Neuralgia,Topiramate,7.5,8
+Eczema,Pimecrolimus,7.5,14
+Restless Legs Syndrome,Klonopin,7.5,8
+Burning Mouth Syndrome,Amitriptyline,7.5,4
+Pediatric Growth Hormone Deficiency,Somatropin,7.5,4
+Dietary Supplementation,Chondroitin / glucosamine,7.5,4
+Pulmonary Embolism,Apixaban,7.5,6
+Systemic Lupus Erythematosus,Plaquenil,7.5,12
+Pain,Celecoxib,7.5,42
+Bowel Preparation,OsmoPrep,7.5,4
+Asthma,Fluticasone / vilanterol,7.5,24
+ibromyalgia,Amrix,7.5,6
+Sciatica,Aleve,7.5,4
+"Hypothyroidism, After Thyroid Removal",Synthroid,7.5,32
+Muscle Spasm,Zanaflex,7.49,59
+Depression,Deplin,7.49,49
+Hepatitis C,Sovaldi,7.48,31
+"Insomnia, Stimulant-Associated",Clonidine,7.48,25
+Atrial Fibrillation,Flecainide,7.48,46
+Inflammatory Conditions,Methylprednisolone,7.48,82
+Premenstrual Dysphoric Disorde,Drospirenone / ethinyl estradiol,7.48,61
+Postoperative Pain,Ketorolac,7.47,19
+Obsessive Compulsive Disorde,Paroxetine,7.47,17
+High Blood Pressure,Aliskiren,7.47,17
+Birth Control,Ortho Evra,7.47,219
+Postmenopausal Symptoms,Estradiol,7.47,96
+Bowel Preparation,Suprep Bowel Prep Kit,7.46,597
+Birth Control,Kyleena,7.46,151
+Post Traumatic Stress Disorde,Zoloft,7.46,41
+Hirsutism,Spironolactone,7.46,13
+Borderline Personality Disorde,Seroquel,7.46,13
+Renal Cell Carcinoma,Sutent,7.46,13
+Psoriasis,Betamethasone / calcipotriene,7.46,26
+Post Traumatic Stress Disorde,Quetiapine,7.46,26
+Chronic Fatigue Syndrome,Armodafinil,7.46,26
+Depression,Lexapro,7.46,306
+Obesity,Topamax,7.46,24
+Anxiety and Stress,Sertraline,7.46,212
+Social Anxiety Disorde,Sertraline,7.46,153
+Anxiety and Stress,Amitriptyline,7.45,66
+Borderline Personality Disorde,Olanzapine,7.45,11
+"Diabetes, Type 1","Insulin inhalation, rapid acting",7.45,22
+"Hypogonadism, Male",Testosterone,7.45,264
+Psychosis,Haloperidol,7.45,29
+Irritable Bowel Syndrome,Bentyl,7.45,47
+Hot Flashes,Paroxetine,7.45,56
+Menstrual Disorders,Lysteda,7.44,9
+Supraventricular Tachycardia,Toprol-XL,7.44,9
+ADHD,Dexmethylphenidate,7.44,97
+"Onychomycosis, Toenail",Lamisil,7.44,52
+Acne,Doxycycline,7.44,361
+Depression,Rexulti,7.44,16
+Bipolar Disorde,Sertraline,7.43,30
+Neuralgia,Lyrica,7.43,30
+Anxiety,Paroxetine,7.43,165
+Ulcerative Colitis,Imuran,7.43,7
+"Diabetes, Type 2",Glucotrol,7.43,7
+Urinary Tract Infection,Macrodantin,7.43,7
+Diverticulitis,Cipro,7.43,7
+Acne,Acanya,7.42,45
+Ulcerative Colitis,Remicade,7.42,24
+Labor Pain,Butorphanol,7.42,12
+Eczema,Dupixent,7.42,12
+Acne,Adapalene,7.41,176
+Borderline Personality Disorde,Quetiapine,7.41,46
+Bipolar Disorde,Perphenazine,7.4,5
+Allergic Rhinitis,Ciclesonide,7.4,5
+"Hypogonadism, Male",AndroGel,7.4,55
+High Blood Pressure,Catapres-TTS,7.4,5
+Extrapyramidal Reaction,Trihexyphenidyl,7.4,5
+Psychosis,Fanapt,7.4,5
+"Asthma, Maintenance",Ciclesonide,7.4,5
+Rheumatoid Arthritis,Simponi,7.4,20
+Bipolar Disorde,Levetiracetam,7.4,5
+Urinary Incontinence,Detrol LA,7.4,5
+"Glaucoma, Open Angle",Dorzolamide,7.4,5
+Atrial Fibrillation,Tambocor,7.4,5
+Pain,Piroxicam,7.4,5
+Bipolar Disorde,Lithobid,7.4,10
+Herpes Simplex,Zovirax,7.4,5
+Dandruff,Ketoconazole,7.4,5
+Bacterial Infection,Vancomycin,7.4,5
+Endometriosis,Ethinyl estradiol / norgestrel,7.4,5
+Dermatitis,Desonide,7.4,5
+"Hypothyroidism, After Thyroid Removal",Levoxyl,7.4,5
+0</span> users found this comment helpful.,Implanon,7.4,5
+Peripheral Neuropathy,Capsaicin,7.4,5
+ibromyalgia,Tramadol,7.4,91
+Anxiety,Desvenlafaxine,7.39,97
+Basal Cell Carcinoma,Imiquimod,7.39,31
+Anxiety,Paxil,7.39,132
+Bacterial Vaginitis,Tinidazole,7.38,34
+Acne,Clindamycin / tretinoin,7.38,74
+ADHD,Armodafinil,7.38,8
+moterol),Budesonide / formoterol,7.38,72
+Psoriatic Arthritis,Humira,7.38,40
+min),Linagliptin / metformin,7.38,8
+Bipolar Disorde,Asenapine,7.37,135
+Cervical Dystonia,Botox,7.37,19
+Benign Prostatic Hyperplasia,Avodart,7.37,19
+GERD,Omeprazole / sodium bicarbonate,7.36,11
+Reflex Sympathetic Dystrophy Syndrome,Pregabalin,7.36,11
+High Blood Pressure,Benicar,7.36,55
+Postmenopausal Symptoms,Estradiol / norethindrone,7.36,11
+Motion Sickness,Scopolamine,7.36,58
+Depression,Celexa,7.36,221
+Depression,Bupropion,7.36,549
+High Blood Pressure,Tribenzor,7.36,14
+Schizoaffective Disorde,Seroquel,7.36,14
+Back Pain,Diclofenac,7.36,45
+Helicobacter Pylori Infection,Amoxicillin / clarithromycin / lansoprazole,7.35,48
+Obesity,Bontril Slow Release,7.35,17
+Pain,Flector Patch,7.35,37
+ibromyalgia,Meloxicam,7.35,20
+Atopic Dermatitis,Protopic,7.35,20
+Panic Disorde,Venlafaxine,7.35,23
+Pain,Acetaminophen / propoxyphene,7.35,52
+"Constipation, Chronic",Linaclotide,7.35,191
+ADHD,Methylphenidate,7.34,388
+Depression,Wellbutrin,7.33,230
+Ovulation Induction,Clomid,7.33,9
+Chronic Pain,Talwin Nx,7.33,3
+Parkinson's Disease,Requip XL,7.33,3
+2</span> users found this comment helpful.,Mirena,7.33,3
+Prostatitis,Doxycycline,7.33,3
+Immunosuppression,Methylprednisolone,7.33,3
+Epilepsy,Divalproex sodium,7.33,42
+8</span> users found this comment helpful.,Mirena,7.33,3
+Premature Lab,Makena,7.33,33
+Acne,Sulfacetamide sodium / sulfur,7.33,18
+Edema,Bumetanide,7.33,3
+Mania,Divalproex sodium,7.33,15
+Overactive Bladde,Detrol,7.33,12
+Primary Ovarian Failure,Conjugated estrogens,7.33,3
+Panic Disorde,Maprotiline,7.33,3
+Pain/Feve,Goody's Extra-Strength Headache Powders,7.33,3
+Pancreatic Cance,Gemcitabine,7.33,3
+Pancreatic Cance,Gemzar,7.33,3
+Trigeminal Neuralgia,Baclofen,7.33,6
+Ventricular Tachycardia,Propranolol,7.33,3
+Hypoparathyroidism,Calcitriol,7.33,3
+Hemorrhoids,Hydrocortisone,7.33,6
+Seizures,Diazepam,7.33,3
+Depression,Desyrel,7.33,3
+Women (oxybutynin),Oxybutynin,7.33,3
+Headache,Epidrin,7.33,3
+Bacterial Vaginitis,Clindesse,7.33,6
+Pain,Exalgo,7.33,6
+Ovulation Induction,Clomiphene,7.33,6
+Benign Essential Trem,Metoprolol,7.33,3
+Diabetic Peripheral Neuropathy,Topiramate,7.33,6
+Allergic Rhinitis,Rhinocort Aqua,7.33,3
+Postpartum Depression,Celexa,7.33,12
+Acne,BenzEFoam,7.33,3
+Oligospermia,Clomiphene,7.33,3
+"Asthma, Maintenance",Singulair,7.33,24
+Depression,Budeprion XL,7.33,12
+Juvenile Idiopathic Arthritis,Actemra,7.33,3
+High Blood Pressure,Doxazosin,7.33,9
+Borderline Personality Disorde,Clozapine,7.33,3
+"High Cholesterol, Familial Heterozygous",Atorvastatin,7.33,3
+Osteoarthritis,Meloxicam,7.33,87
+Urinary Incontinence,Trospium,7.33,6
+"Diabetes, Type 2",Insulin aspart,7.33,6
+Acne,Epiduo,7.33,394
+emale Infertility,Clomiphene,7.32,31
+Multiple Sclerosis,Dimethyl fumarate,7.32,25
+Insomnia,Zolpidem,7.31,477
+Depression,Seroquel XR,7.31,35
+GERD,Prilosec,7.31,16
+Vertig,Meclizine,7.31,74
+Chlamydia Infection,Doxycycline,7.31,26
+Pain,Etodolac,7.31,26
+Acne,Ziana,7.3,46
+Plaque Psoriasis,Taltz,7.3,23
+"Constipation, Chronic",Linzess,7.3,184
+"Asthma, Maintenance",Budesonide,7.3,10
+Migraine Prevention,Nadolol,7.3,10
+Kidney Infections,Levaquin,7.3,10
+Cluster Headaches,Tizanidine,7.3,10
+Mania,Depakote,7.3,10
+Ankylosing Spondylitis,Diclofenac,7.3,10
+Bipolar Disorde,Depakote ER,7.3,20
+High Blood Pressure,Tekturna,7.3,20
+Insomnia,Ambien,7.3,286
+Acne,Aczone,7.29,129
+High Blood Pressure,Hydrochlorothiazide / olmesartan,7.29,17
+Anxiety and Stress,Venlafaxine,7.29,68
+Pain,Butrans,7.29,48
+Seizures,Aptiom,7.29,7
+Motion Sickness,Promethazine,7.29,7
+"Nausea/Vomiting, Chemotherapy Induced",Zofran,7.29,7
+Back Pain,Ibuprofen,7.29,7
+Acne,Tazorac,7.29,7
+Hepatitis C,Dasabuvir / ombitasvir / paritaprevir / ritonavir,7.29,7
+Ventricular Tachycardia,Amiodarone,7.29,7
+"Asthma, Maintenance",Asmanex Twisthaler,7.29,7
+Vulvodynia,Amitriptyline,7.29,7
+Rhinitis,Flonase,7.29,28
+Eczema,Prednisone,7.29,7
+Weight Loss,Ionamin,7.29,7
+Obesity,Chorionic gonadotropin (hcg),7.29,7
+Depression,Zoloft,7.28,281
+Keratosis,Zyclara,7.28,25
+Migraine,Dihydroergotamine,7.28,18
+Urinary Incontinence,VESIcare,7.28,18
+Anxiety,Remeron,7.28,18
+Insomnia,Sominex,7.28,18
+Acne,Epiduo Forte,7.28,18
+Schizoaffective Disorde,Ziprasidone,7.28,29
+Acne,Differin,7.27,95
+Birth Control,Ortho-Cept,7.27,11
+Underactive Thyroid,Levoxyl,7.27,11
+Constipation,Dulcolax Laxative,7.27,22
+Rheumatoid Arthritis,Celecoxib,7.27,11
+Generalized Anxiety Disorde,Seroquel,7.27,11
+Ankylosing Spondylitis,Golimumab,7.27,11
+Allergic Rhinitis,Beclomethasone,7.27,11
+Major Depressive Disorde,Remeron,7.27,11
+Insomnia,Mirtazapine,7.27,121
+Asthma,Prednisone,7.27,30
+Back Pain,Duloxetine,7.26,19
+Irritable Bowel Syndrome,Linaclotide,7.26,108
+Binge Eating Disorde,Lisdexamfetamine,7.26,35
+Birth Control,Skyla,7.26,822
+ibromyalgia,Ultram ER,7.25,4
+"Ulcerative Colitis, Active",Pentasa,7.25,4
+Epilepsy,Felbatol,7.25,4
+Streptococcal Infection,Levofloxacin,7.25,8
+Migraine Prevention,Klonopin,7.25,4
+"Diabetes, Type 2",Tresiba,7.25,12
+Ovarian Cysts,Mononessa,7.25,4
+Bronchitis,Amoxicillin / clavulanate,7.25,24
+Insomnia,Remeron,7.25,16
+Nephrocalcinosis,Hydrochlorothiazide,7.25,4
+"Glaucoma, Open Angle",Xalatan,7.25,4
+Prostate Cance,Casodex,7.25,4
+Cold Symptoms,Acetaminophen / chlorpheniramine,7.25,4
+Motion Sickness,Phenergan,7.25,4
+Crohn's Disease,Lialda,7.25,4
+"Deep Vein Thrombosis, Prophylaxis",Xarelto,7.25,4
+Prostate Cance,Zoladex,7.25,4
+Hepatitis C,Incivek,7.25,4
+Muscle Spasm,Lioresal,7.25,4
+Cough,Tessalon,7.25,8
+Prevention of Thromboembolism in Atrial Fibrillation,Pradaxa,7.25,48
+Endometriosis,Mononessa,7.25,4
+Bipolar Disorde,Invega,7.25,4
+Edema,Lasix,7.25,16
+Pain,Pamelor,7.25,4
+Constipation,Glycerin,7.25,4
+"Ulcerative Colitis, Active",Canasa,7.25,4
+Inflammatory Bowel Disease,Mesalamine,7.25,4
+Depression,Mirtazapine,7.25,205
+ADHD,Concerta,7.25,190
+Depression,Prozac,7.24,205
+Depression,Desvenlafaxine,7.24,414
+"Diabetes, Type 2",Insulin glargine,7.24,42
+Multiple Sclerosis,Avonex,7.24,21
+Allergic Rhinitis,Flonase,7.24,21
+Urticaria,Cetirizine,7.24,38
+Acne,Dapsone,7.24,127
+Bipolar Disorde,Quetiapine,7.23,294
+GERD,Zantac,7.23,13
+Otitis Media,Ciprodex,7.23,13
+Birth Control,Copper,7.23,607
+Depression,Fluoxetine,7.23,302
+Psoriatic Arthritis,Adalimumab,7.23,44
+Sinusitis,Cefuroxime,7.23,22
+"Ulcerative Colitis, Active",Mesalamine,7.23,62
+Irritable Bowel Syndrome,Linzess,7.23,102
+Premenstrual Dysphoric Disorde,Yaz,7.22,40
+Urinary Tract Infection,Septra DS,7.22,9
+Hepatitis C,Sofosbuvir,7.22,27
+High Cholesterol,Colesevelam,7.22,9
+Skin or Soft Tissue Infection,Doxycycline,7.21,14
+Post Traumatic Stress Disorde,Paroxetine,7.21,14
+"Constipation, Drug Induced",Methylnaltrexone,7.21,19
+min / pioglitazone),Metformin / pioglitazone,7.2,5
+Not Listed / Othe,Metoprolol,7.2,5
+"Hypogonadism, Male",Fortesta,7.2,15
+Irritable Bowel Syndrome,Methscopolamine,7.2,5
+"Conjunctivitis, Bacterial",Dexamethasone / tobramycin,7.2,5
+Cough,Promethazine DM,7.2,5
+Not Listed / Othe,Escitalopram,7.2,5
+Plaque Psoriasis,Ixekizumab,7.2,20
+Angina,Ranolazine,7.2,35
+"Breast Cancer, Metastatic",Letrozole,7.2,10
+Tinea Pedis,Lamisil,7.2,5
+Diabetic Peripheral Neuropathy,Tapentadol,7.2,5
+Vulvodynia,Gabapentin,7.2,5
+Seizures,Eslicarbazepine,7.2,5
+Raynaud's Syndrome,Procardia,7.2,5
+Pulmonary Hypertension,Treprostinil,7.2,5
+Back Pain,Zipsor,7.2,10
+Adrenocortical Insufficiency,Hydrocortisone,7.2,5
+"Diabetes, Type 2",Exenatide,7.2,192
+Constipation,Linzess,7.19,36
+Pain,Acetaminophen / tramadol,7.19,26
+Depression,Pristiq,7.19,418
+Autism,Abilify,7.19,16
+Benign Prostatic Hyperplasia,Terazosin,7.19,16
+Anxiety,Cymbalta,7.19,124
+Allergic Rhinitis,Allegra,7.19,27
+Major Depressive Disorde,Lexapro,7.19,27
+Hypersomnia,Caffeine,7.18,11
+Seizures,Vimpat,7.18,56
+Rheumatoid Arthritis,Abatacept,7.18,17
+Depression,Trazodone,7.18,57
+Rheumatoid Arthritis,Diclofenac,7.17,23
+Sinusitis,Azithromycin,7.17,75
+Weight Loss,Fastin,7.17,35
+Depression,Sertraline,7.17,459
+Insomnia,Zyprexa,7.17,12
+Menorrhagia,Natazia,7.17,6
+Osteoarthritis,Duloxetine,7.17,18
+ibromyalgia,Xyrem,7.17,6
+Multiple Sclerosis,Corticotropin,7.17,6
+ibromyalgia,Desyrel,7.17,6
+Head Lice,Sklice,7.17,24
+Back Pain,Relafen,7.17,6
+Psychosis,Perphenazine,7.17,6
+Post Traumatic Stress Disorde,Sertraline,7.17,48
+Underactive Thyroid,Liothyronine,7.17,18
+Human Papilloma Virus,Imiquimod,7.16,85
+Major Depressive Disorde,Wellbutrin,7.16,31
+Osteoarthritis,Cymbalta,7.16,19
+Polycystic Ovary Syndrome,Loestrin 24 Fe,7.15,20
+Ulcerative Colitis,Infliximab,7.14,21
+Parkinson's Disease,Amantadine,7.14,7
+"Asthma, acute",Ventolin,7.14,7
+Prevention of Dental Caries,Fluoride,7.14,7
+Urinary Incontinence,Solifenacin,7.14,21
+Period Pain,Ponstel,7.14,7
+Birth Control,Trivora,7.14,7
+Rheumatoid Arthritis,Golimumab,7.14,28
+Erosive Esophagitis,Pantoprazole,7.14,7
+Bipolar Disorde,Seroquel,7.14,198
+Migraine Prevention,OnabotulinumtoxinA,7.14,58
+Back Pain,Aleve,7.14,22
+Seizures,Lacosamide,7.13,67
+Myasthenia Gravis,Pyridostigmine,7.13,15
+Major Depressive Disorde,Zoloft,7.13,47
+Mania,Lithium,7.12,8
+Ulcerative Colitis,Balsalazide,7.12,8
+Myelodysplastic Syndrome,Vidaza,7.12,8
+Urinary Incontinence,Tolterodine,7.12,8
+Postmenopausal Symptoms,CombiPatch,7.12,8
+High Blood Pressure,Edarbyclor,7.12,8
+Schizoaffective Disorde,Aripiprazole,7.12,32
+High Blood Pressure,Toprol-XL,7.12,24
+Atopic Dermatitis,Tacrolimus,7.12,25
+"Hypogonadism, Male",Androderm,7.12,17
+GERD,Sucralfate,7.12,17
+Schizophrenia,Quetiapine,7.12,26
+Prevention of Bladder infection,Nitrofurantoin,7.11,36
+High Blood Pressure,Micardis HCT,7.11,9
+Allergic Rhinitis,Singulair,7.11,36
+Psoriasis,Calcipotriene,7.11,9
+Chronic Pancreatitis,Pancrelipase,7.11,9
+Premenstrual Dysphoric Disorde,Prozac,7.11,9
+Insomnia,Amitriptyline,7.11,109
+"Diabetes, Type 2",Afrezza,7.11,19
+Major Depressive Disorde,Prozac,7.11,19
+"Diabetes, Type 2","Insulin inhalation, rapid acting",7.11,19
+"Hypothyroidism, After Thyroid Removal",Levothyroxine,7.1,58
+Bulimia,Topiramate,7.1,10
+Hepatitis C,Peginterferon alfa-2a,7.1,10
+Eye Redness/Itching,Naphazoline / pheniramine,7.1,10
+"Crohn's Disease, Maintenance",Remicade,7.1,20
+High Cholesterol,Ezetimibe / simvastatin,7.1,10
+"Diabetes, Type 2",Empagliflozin,7.1,41
+Seizures,Zonisamide,7.1,31
+Anxiety,Mirtazapine,7.09,149
+acial Wrinkles,Dermal filler,7.09,11
+"Ulcerative Colitis, Maintenance",Asacol,7.09,11
+Osteoarthritis,Esomeprazole / naproxen,7.09,11
+ibromyalgia,Pristiq,7.09,11
+Influenza,Tamiflu,7.09,174
+Migraine,Migranal,7.08,13
+ibromyalgia,Venlafaxine,7.08,26
+Obesity,Bupropion / naltrexone,7.08,678
+Allergic Rhinitis,Zyrtec,7.08,40
+High Blood Pressure,Hyzaar,7.07,14
+"Diabetes, Type 2",Insulin detemir,7.07,14
+"COPD, Maintenance",Fluticasone / salmeterol,7.07,14
+Major Depressive Disorde,Bupropion,7.07,114
+"Breast Cancer, Metastatic",Ibrance,7.07,15
+Overactive Bladde,Trospium,7.06,16
+Anxiety,Pristiq,7.06,65
+Birth Control,Levonorgestrel,7.06,2129
+Major Depressive Disorde,Duloxetine,7.06,33
+"Diabetes, Type 2",Bydureon,7.06,136
+Major Depressive Disorde,Wellbutrin XL,7.06,36
+Bipolar Disorde,Saphris,7.05,132
+Bacterial Vaginitis,Metronidazole,7.05,401
+Insomnia,Ambien CR,7.04,45
+Pulmonary Embolism,Rivaroxaban,7.04,27
+Asthma,Singulair,7.03,30
+Epilepsy,Carbamazepine,7.02,40
+Anxiety,Bupropion,7.02,55
+Acne,Drospirenone / ethinyl estradiol,7.02,199
+"Onychomycosis, Toenail",Terbinafine,7.01,141
+Keratosis,Imiquimod,7.0,29
+Upper Respiratory Tract Infection,Amoxicillin / clavulanate,7.0,18
+Benign Essential Trem,Gabapentin,7.0,8
+Expectoration,Mucomyst,7.0,3
+Benign Prostatic Hyperplasia,Hytrin,7.0,9
+Irritable Bowel Syndrome,Doxepin,7.0,3
+Urinary Incontinence,OnabotulinumtoxinA,7.0,3
+Erosive Esophagitis,Protonix,7.0,3
+High Blood Pressure,Terazosin,7.0,5
+Ischemic Stroke,Clopidogrel,7.0,7
+Obsessive Compulsive Disorde,Aripiprazole,7.0,11
+Depression,Seroquel,7.0,19
+Paranoid Disorde,Quetiapine,7.0,9
+Asthma,Alvesco,7.0,4
+Birth Control,Loestrin Fe 1 / 20,7.0,4
+lic Acid Deficiency,Deplin,7.0,3
+Cough and Nasal Congestion,Dextromethorphan / guaifenesin / phenylephrine,7.0,3
+emale Infertility,Metformin,7.0,4
+"Hypothyroidism, After Thyroid Removal",Armour Thyroid,7.0,12
+atigue,Dextroamphetamine,7.0,4
+Streptococcal Infection,Levaquin,7.0,4
+Herpes Simplex Dendritic Keratitis,Ganciclovir,7.0,3
+Reversal of Opioid Sedation,Naloxone,7.0,3
+Restless Legs Syndrome,Ultram,7.0,5
+Macular Degeneration,Eylea,7.0,4
+Not Listed / Othe,Levothyroxine,7.0,3
+Not Listed / Othe,Levonorgestrel,7.0,5
+Not Listed / Othe,Hydroxyzine,7.0,3
+Postmenopausal Symptoms,Duavee,7.0,3
+Postmenopausal Symptoms,Prempro,7.0,8
+"High Cholesterol, Familial Heterozygous",Crestor,7.0,3
+Irritable Bowel Syndrome,Questran,7.0,3
+Ankylosing Spondylitis,Infliximab,7.0,6
+"Conjunctivitis, Bacterial",TobraDex,7.0,3
+Bipolar Disorde,Clonidine,7.0,5
+Cough,Tylenol with Codeine #3,7.0,4
+Premature Ventricular Depolarizations,Metoprolol,7.0,5
+GERD,Aluminum hydroxide / magnesium trisilicate,7.0,3
+High Cholesterol,Gemfibrozil,7.0,11
+Not Listed / Othe,Temazepam,7.0,4
+Not Listed / Othe,Bupropion,7.0,4
+Endometriosis,Microgestin 1 / 20,7.0,4
+Trichotillomania,Naltrexone,7.0,3
+Skin Rash,Prednisone,7.0,9
+Major Depressive Disorde,Trazodone,7.0,12
+Seizures,Valproic acid,7.0,3
+Light Sedation,Librium,7.0,3
+Ankylosing Spondylitis,Remicade,7.0,7
+Bladder Infection,Fosfomycin,7.0,9
+Bladder Infection,Monurol,7.0,3
+Postherpetic Neuralgia,Lyrica,7.0,10
+Histoplasmosis,Itraconazole,7.0,3
+Back Pain,Indomethacin,7.0,3
+Postmenopausal Symptoms,Climara,7.0,9
+Premenstrual Dysphoric Disorde,Gianvi,7.0,13
+Light Sedation,Chlordiazepoxide,7.0,3
+Prevention of Thromboembolism in Atrial Fibrillation,Eliquis,7.0,22
+Prevention of Thromboembolism in Atrial Fibrillation,Warfarin,7.0,3
+"Nausea/Vomiting, Postoperative",Zofran,7.0,3
+Angina,Metoprolol,7.0,5
+Clostridial Infection,Vancomycin,7.0,4
+Condylomata Acuminata,Condylox,7.0,5
+Neuralgia,Methylprednisolone,7.0,3
+Neuralgia,Levetiracetam,7.0,6
+Birth Control,Beyaz,7.0,59
+Angina Pectoris Prophylaxis,Diltiazem,7.0,3
+Malaria,Malarone,7.0,3
+Primary Ovarian Failure,Vivelle-Dot,7.0,3
+Prostate Cance,Eligard,7.0,4
+Nausea/Vomiting,Ativan,7.0,8
+Nausea/Vomiting,Diphenhydramine,7.0,12
+Nausea/Vomiting,Trimethobenzamide,7.0,3
+Cold Symptoms,Tussionex Pennkinetic,7.0,7
+Cluster Headaches,Zanaflex,7.0,4
+Peripheral Neuropathy,Cymbalta,7.0,11
+Overactive Bladde,Gelnique,7.0,3
+Plaque Psoriasis,Betamethasone / calcipotriene,7.0,4
+Otitis Media,Omnicef,7.0,11
+Interstitial Cystitis,Pyridium,7.0,6
+Bipolar Disorde,Risperdal,7.0,41
+Iron Deficiency Anemia,Venofer,7.0,3
+Endometriosis,Alesse,7.0,3
+Endometriosis,Cryselle,7.0,4
+Osteolytic Bone Metastases of Solid Tumors,Zoledronic acid,7.0,6
+Acne,Yaz,7.0,73
+Major Depressive Disorde,Escitalopram,7.0,47
+Generalized Anxiety Disorde,Seroquel XR,7.0,5
+Light Sedation,Thorazine,7.0,3
+Skin or Soft Tissue Infection,Azithromycin,7.0,4
+Skin or Soft Tissue Infection,Augmentin,7.0,15
+Skin or Soft Tissue Infection,Amoxicillin,7.0,3
+Prostatitis,SMZ-TMP DS,7.0,3
+Prostatitis,Moxifloxacin,7.0,3
+Prostatitis,Avelox,7.0,3
+Ovarian Cysts,Seasonique,7.0,3
+Dysautonomia,Pyridostigmine,7.0,5
+Dysautonomia,Mestinon,7.0,4
+Uterine Fibroids,Lupron Depot,7.0,20
+Tourette's Syndrome,Guanfacine,7.0,3
+Rheumatoid Arthritis,Feldene,7.0,3
+Hypersomnia,Armodafinil,7.0,19
+Deep Vein Thrombosis,Dabigatran,7.0,5
+Pain,Dilaudid-HP,7.0,3
+Tonsillitis/Pharyngitis,Cefprozil,7.0,3
+"Melanoma, Metastatic",Zelboraf,7.0,3
+"Anemia, Sickle Cell",Hydroxyurea,7.0,4
+Chlamydia Infection,Zithromax,7.0,9
+Chronic Fatigue Syndrome,Provigil,7.0,5
+Headache,Excedrin PM,7.0,3
+Candida Urinary Tract Infection,Fluconazole,7.0,4
+Perimenopausal Symptoms,Progesterone,7.0,4
+Pseudomembranous Colitis,Metronidazole,7.0,3
+Overactive Bladde,Tolterodine,7.0,25
+Autism,Venlafaxine,7.0,3
+Vitamin B12 Deficiency,Vitamin B12,7.0,3
+Dietary Fiber Supplementation,Psyllium,7.0,3
+"Crohn's Disease, Acute",Metronidazole,7.0,4
+Vaginal Yeast Infection,Nystatin,7.0,3
+Hashimoto's disease,Nature-Throid,7.0,11
+Head Lice,Natroba,7.0,3
+Acne,SMZ-TMP DS,7.0,3
+Atrophic Vaginitis,Conjugated estrogens,7.0,3
+Diabetic Macular Edema,Aflibercept,7.0,3
+Periodontitis,Chlorhexidine,7.0,4
+Pain,Indocin,7.0,3
+Hyperthyroidism,Methimazole,7.0,9
+Periodic Limb Movement Disorde,Mirapex,7.0,3
+Periodic Limb Movement Disorde,Baclofen,7.0,5
+Period Pain,Ibuprofen,7.0,11
+"Diabetes, Type 2",Levemir,7.0,14
+Pudendal Neuralgia,Amitriptyline,7.0,3
+Hemorrhoids,Lidocaine,7.0,6
+"COPD, Maintenance",Spiriva Respimat,7.0,4
+Muscle Pain,Advil,7.0,3
+Swine Flu,Tamiflu,7.0,10
+Supraventricular Tachycardia,Metoprolol,7.0,39
+3</span> users found this comment helpful.,Yaz,7.0,3
+Atopic Dermatitis,Pimecrolimus,7.0,4
+Borderline Personality Disorde,Sertraline,7.0,4
+Inflammatory Conditions,Mobic,7.0,23
+"Diabetes, Type 2",Glyburide,7.0,4
+Allergic Rhinitis,Nasacort Allergy 24HR,7.0,5
+Reflex Sympathetic Dystrophy Syndrome,Milnacipran,7.0,4
+Migraine,Flexeril,7.0,8
+Allergic Rhinitis,QNASL,7.0,3
+Allergic Rhinitis,Pseudoephedrine / triprolidine,7.0,3
+"COPD, Maintenance",Albuterol / ipratropium,7.0,21
+2</span> users found this comment helpful.,Tri-Sprintec,7.0,9
+ibromyalgia,Trazodone,7.0,21
+Depression,Paliperidone,7.0,3
+Asthma,Mepolizumab,7.0,3
+3</span> users found this comment helpful.,Jolessa,7.0,3
+Bowel Preparation,MoviPrep,6.99,141
+Obesity,Contrave,6.99,649
+Depression,Quetiapine,6.99,87
+Pain,Nortriptyline,6.98,60
+Narcolepsy,Provigil,6.98,56
+Emergency Contraception,Ulipristal,6.98,55
+Emergency Contraception,ella,6.98,51
+Ulcerative Colitis,Mesalamine,6.97,39
+Depression,Aripiprazole,6.97,151
+Vaginal Yeast Infection,Fluconazole,6.97,177
+Opiate Dependence,Zubsolv,6.97,34
+min),Metformin,6.97,31
+High Blood Pressure,Hydrochlorothiazide / lisinopril,6.97,31
+Bipolar Disorde,Topamax,6.97,31
+Acne,Solodyn,6.97,60
+Schizoaffective Disorde,Geodon,6.96,28
+Birth Control,Microgestin 1 / 20,6.96,28
+Bacterial Infection,Amoxicillin,6.96,27
+Period Pain,Mefenamic acid,6.96,27
+Restless Legs Syndrome,Ropinirole,6.96,123
+Influenza,Oseltamivir,6.96,172
+Birth Control,Mirena,6.96,965
+Trigeminal Neuralgia,Tegretol,6.96,23
+Allergic Rhinitis,Mometasone,6.95,22
+Muscle Spasm,Baclofen,6.95,65
+Anxiety,Lamotrigine,6.95,20
+Bipolar Disorde,Cymbalta,6.95,20
+Motion Sickness,Transderm-Scop,6.95,40
+Rosacea,Metronidazole,6.95,38
+Underactive Thyroid,Tirosint,6.94,17
+Actinic Keratosis,Fluorouracil,6.94,17
+Depression,Paxil,6.94,98
+Tendonitis,Meloxicam,6.94,16
+Urinary Tract Infection,Doxycycline,6.93,15
+"Diabetes, Type 2",Lantus,6.93,15
+Bipolar Disorde,Paliperidone,6.93,15
+Benign Essential Trem,Propranolol,6.93,29
+Bipolar Disorde,Escitalopram,6.93,29
+Rheumatoid Arthritis,Leflunomide,6.93,29
+Diabetic Peripheral Neuropathy,Cymbalta,6.92,26
+Schizoaffective Disorde,Quetiapine,6.92,26
+Precocious Puberty,Leuprolide,6.92,13
+Migraine Prevention,Depakote ER,6.92,13
+Rheumatoid Arthritis,Plaquenil,6.92,25
+GERD,Dexlansoprazole,6.92,85
+Dysuria,Uricalm,6.92,12
+Major Depressive Disorde,Sertraline,6.91,56
+Depression,Nuvigil,6.91,11
+Benign Prostatic Hyperplasia,Dutasteride / tamsulosin,6.91,11
+Seizure Prevention,Lamotrigine,6.91,44
+Diabetic Peripheral Neuropathy,Lyrica,6.91,32
+Perimenopausal Symptoms,Clonidine,6.9,42
+Atopic Dermatitis,Eucrisa,6.9,21
+ADHD,Focalin,6.9,40
+Peripheral Neuropathy,Gabapentin,6.9,88
+Back Pain,Cymbalta,6.89,19
+Bipolar Disorde,Lexapro,6.89,19
+Cervical Dystonia,OnabotulinumtoxinA,6.89,19
+Skin or Soft Tissue Infection,Amoxicillin / clavulanate,6.89,19
+Nausea/Vomiting of Pregnancy,Diclegis,6.89,65
+"Constipation, Chronic",Lubiprostone,6.89,83
+Alopecia,Minoxidil,6.89,46
+Obsessive Compulsive Disorde,Abilify,6.89,9
+Postmenopausal Symptoms,Conjugated estrogens / medroxyprogesterone,6.89,9
+Overactive Bladde,Enablex,6.89,9
+Schizophrenia,Aripiprazole,6.89,45
+Birth Control,Generess Fe,6.88,104
+Depression,Nortriptyline,6.88,17
+Insomnia,Melatonin,6.88,101
+Anxiety,Duloxetine,6.88,125
+Upper Respiratory Tract Infection,Azithromycin,6.88,33
+Diverticulitis,Metronidazole,6.88,81
+Post Traumatic Stress Disorde,Mirtazapine,6.88,16
+Sinusitis,Amoxicillin,6.88,8
+Sinusitis,Prednisone,6.88,8
+Upper Respiratory Tract Infection,Cephalexin,6.88,8
+Muscle Spasm,Amrix,6.88,24
+Schizophrenia,Iloperidone,6.88,8
+Inflammatory Conditions,Meloxicam,6.87,91
+Depression,Wellbutrin SR,6.87,53
+Allergic Rhinitis,Fexofenadine,6.87,45
+Hashimoto's disease,Levothyroxine,6.87,45
+Human Papillomavirus Prophylaxis,Human papillomavirus vaccine,6.87,15
+Bipolar Disorde,Lurasidone,6.87,277
+Major Depressive Disorde,Effexor XR,6.86,37
+Bipolar Disorde,Venlafaxine,6.86,37
+Nasal Congestion,Pseudoephedrine,6.86,29
+Panic Disorde,Bupropion,6.86,7
+Tourette's Syndrome,Aripiprazole,6.86,7
+Rheumatoid Arthritis,Mobic,6.86,14
+Primary Immunodeficiency Syndrome,Immune globulin subcutaneous,6.86,14
+Seasonal Allergic Conjunctivitis,Pataday,6.86,14
+Osteoarthritis,Duexis,6.86,7
+Sjogren's Syndrome,Evoxac,6.86,7
+Restless Legs Syndrome,Requip,6.86,49
+"Crohn's Disease, Maintenance",Imuran,6.86,7
+Post Traumatic Stress Disorde,Risperidone,6.86,14
+Vitamin/Mineral Supplementation during Pregnancy/Lactation,Prenatal Plus,6.86,7
+Borderline Personality Disorde,Aripiprazole,6.86,7
+Pruritus,Hydroxyzine,6.86,21
+ADHD,Metadate CD,6.85,27
+Insomnia,Trazodone,6.85,382
+Ulcerative Colitis,Azathioprine,6.85,13
+Depression,Armodafinil,6.85,13
+"COPD, Maintenance",Spiriva,6.85,39
+GERD,Protonix,6.84,19
+Prostate Cance,Lupron,6.84,19
+"COPD, Maintenance",Tiotropium,6.84,50
+Bowel Preparation,Polyethylene glycol 3350 with electrolytes,6.84,198
+Underactive Thyroid,Synthroid,6.84,43
+"Breast Cancer, Metastatic",Femara,6.83,6
+Peripheral Neuropathy,Neurontin,6.83,18
+"Crohn's Disease, Acute",Humira,6.83,6
+Allergic Rhinitis,Omnaris,6.83,6
+Sedation,Phenergan,6.83,6
+Light Sedation,Promethazine,6.83,6
+Muscle Pain,Nabumetone,6.83,6
+Alzheimer's Disease,Galantamine,6.83,6
+ibromyalgia,Savella,6.83,208
+Skin or Soft Tissue Infection,Cephalexin,6.83,63
+Major Depressive Disorde,Mirtazapine,6.82,40
+Menstrual Disorders,Microgestin Fe 1 / 20,6.82,17
+Tourette's Syndrome,Clonidine,6.82,17
+Bipolar Disorde,Latuda,6.82,270
+Kidney Infections,Levofloxacin,6.82,11
+Sjogren's Syndrome,Hydroxychloroquine,6.82,22
+Generalized Anxiety Disorde,Venlafaxine,6.81,70
+Narcolepsy,Modafinil,6.81,70
+Depression,Viibryd,6.81,285
+Anxiety,Venlafaxine,6.81,145
+Pseudotumor Cerebri,Diamox,6.81,16
+High Cholesterol,Evolocumab,6.81,16
+Migraine Prevention,Botox,6.81,58
+Uterine Fibroids,Leuprolide,6.81,26
+Rheumatoid Arthritis,Adalimumab,6.8,76
+Endometriosis,Tri-Sprintec,6.8,5
+Supraventricular Tachycardia,Cartia XT,6.8,5
+Stomach Ulce,Pantoprazole,6.8,15
+ibromyalgia,Ultram,6.8,20
+"Asthma, Maintenance",Pulmicort Flexhaler,6.8,5
+Lactation Augmentation,Metoclopramide,6.8,5
+"Ulcerative Colitis, Active",Rowasa,6.8,5
+"Constipation, Drug Induced",Relistor,6.8,20
+"Breast Cancer, Metastatic",Anastrozole,6.8,5
+Rheumatoid Arthritis,Diclofenac / misoprostol,6.8,5
+Depression,Lisdexamfetamine,6.8,5
+High Blood Pressure,Lasix,6.8,5
+Stomach Ulce,Sucralfate,6.8,10
+Sciatica,Ibuprofen,6.8,5
+Parkinson's Disease,Rotigotine,6.8,5
+Major Depressive Disorde,Venlafaxine,6.8,89
+Acne,Yasmin,6.8,64
+Pain,Naproxen,6.8,49
+High Blood Pressure,Diltiazem,6.79,19
+Acne,TriNessa,6.78,60
+Constipation,Linaclotide,6.78,36
+Ulcerative Colitis,Prednisone,6.78,18
+Insomnia,Temazepam,6.78,183
+Dental Abscess,Metronidazole,6.78,58
+Insomnia,Silenor,6.77,66
+COPD,Fluticasone / vilanterol,6.77,13
+High Blood Pressure,Micardis,6.76,17
+High Blood Pressure,Benicar HCT,6.76,17
+"Breast Cancer, Metastatic",Palbociclib,6.76,17
+High Blood Pressure,Nebivolol,6.76,110
+Schizophrenia,Olanzapine,6.76,21
+Birth Control,Natazia,6.76,29
+Major Depressive Disorde,Rexulti,6.75,57
+Trigeminal Neuralgia,Carbamazepine,6.75,57
+Bacterial Infection,Flagyl,6.75,73
+Epilepsy,Felbamate,6.75,4
+Pain,Naprosyn,6.75,4
+atigue,Methylphenidate,6.75,4
+Epilepsy,Gabapentin,6.75,8
+Schizophrenia,Brexpiprazole,6.75,8
+Seizures,Oxcarbazepine,6.75,16
+High Blood Pressure,Lopressor,6.75,8
+Neuropathic Pain,Oxcarbazepine,6.75,4
+Pinworm Infection (Enterobius vermicularis),Pyrantel,6.75,4
+Depression,Fluvoxamine,6.75,12
+Asthma,Ciclesonide,6.75,4
+Migraine Prevention,Zonisamide,6.75,20
+"Conjunctivitis, Bacterial",Moxifloxacin,6.75,8
+High Blood Pressure,Guanfacine,6.75,4
+Diagnosis and Investigation,Regadenoson,6.75,4
+Stomach Ulce,Lansoprazole,6.75,4
+Birth Control,Azurette,6.75,12
+Back Pain,Vicodin,6.75,12
+Urinary Tract Infection,Septra,6.75,4
+"Conjunctivitis, Allergic",Alcaftadine,6.75,12
+Obesity,Bontril PDM,6.75,4
+High Blood Pressure,Azilsartan medoxomil / chlorthalidone,6.75,8
+Pain,Diphenhydramine / naproxen,6.75,8
+Seizure Prevention,Lamictal,6.75,24
+Cold Symptoms,Diphenhydramine,6.75,4
+Pain,Capsaicin,6.75,12
+Birth Control,NuvaRing,6.74,620
+Insomnia,Sonata,6.74,31
+Neuropathic Pain,Gabapentin,6.74,65
+Dietary Supplementation,Multivitamin,6.74,38
+"COPD, Maintenance",Advair Diskus,6.73,15
+Underactive Thyroid,Nature-Throid,6.73,15
+Multiple Sclerosis,Rebif,6.73,15
+Schizoaffective Disorde,Risperdal,6.73,15
+Pseudotumor Cerebri,Acetazolamide,6.73,44
+"COPD, Maintenance",Albuterol,6.73,11
+Bronchitis,Moxifloxacin,6.73,22
+Irritable Bowel Syndrome,Eluxadoline,6.73,91
+"Diabetes, Type 2",Glipizide,6.72,29
+Birth Control,Ethinyl estradiol / norelgestromin,6.72,373
+Inflammatory Conditions,Dexamethasone,6.71,21
+High Blood Pressure,Hydrochlorothiazide / valsartan,6.71,14
+Secondary Hyperparathyroidism,Cinacalcet,6.71,7
+Bronchitis,Azithromycin Dose Pack,6.71,7
+Stomach Ulce,Carafate,6.71,7
+Asthma,Breo Ellipta,6.71,24
+Insomnia,Unisom SleepTabs,6.71,24
+Nausea/Vomiting of Pregnancy,Doxylamine / pyridoxine,6.71,58
+Back Pain,Tramadol,6.7,108
+Bipolar Disorde,Cariprazine,6.7,54
+Bacterial Vaginitis,Tindamax,6.7,10
+Alzheimer's Disease,Rivastigmine,6.7,10
+Psoriasis,Dovonex,6.7,10
+Hot Flashes,Brisdelle,6.7,20
+Ulcerative Colitis,Budesonide,6.7,10
+Anxiety,Vilazodone,6.7,20
+Birth Control,Levora,6.69,95
+High Blood Pressure,Atenolol,6.69,62
+ibromyalgia,Amitriptyline,6.69,52
+Major Depressive Disorde,Pristiq,6.69,26
+Generalized Anxiety Disorde,Effexor XR,6.69,39
+Osteoarthritis,Hyaluronan,6.69,84
+Irritable Bowel Syndrome,Viberzi,6.69,90
+Rheumatoid Arthritis,Naproxen,6.69,16
+Rheumatoid Arthritis,Orencia,6.68,19
+"Constipation, Chronic",Amitiza,6.68,79
+Generalized Anxiety Disorde,Cymbalta,6.68,60
+Cough and Nasal Congestion,Guaifenesin / pseudoephedrine,6.68,142
+Seizures,Phenytoin,6.68,25
+Diabetic Peripheral Neuropathy,Gabapentin,6.68,28
+Sinusitis,Amoxil,6.67,3
+Ophthalmic Surgery,Moxifloxacin,6.67,3
+"Asthma, Maintenance",Fluticasone,6.67,15
+Acne,Keflex,6.67,3
+Influenza Prophylaxis,"Influenza virus vaccine, inactivated",6.67,3
+Abnormal Uterine Bleeding,Levlen,6.67,3
+Abnormal Uterine Bleeding,Sronyx,6.67,3
+Ankylosing Spondylitis,Esomeprazole / naproxen,6.67,3
+Hepatocellular Carcinoma,Sorafenib,6.67,3
+"Conjunctivitis, Allergic",Bepreve,6.67,12
+Perioral Dermatitis,Pimecrolimus,6.67,3
+Systemic Mastocytosis,Cromolyn,6.67,3
+"COPD, Maintenance",Symbicort,6.67,9
+"High Cholesterol, Familial Heterozygous",Lovastatin,6.67,3
+Urinary Tract Infection,Cefuroxime,6.67,6
+"Diabetes, Type 2",Jentadueto,6.67,6
+Edema,Hydrochlorothiazide,6.67,3
+Bronchitis,Zithromax,6.67,30
+Allergic Rhinitis,Diphenhydramine,6.67,9
+Hypersomnia,NoDoz,6.67,6
+Tinea Versicol,Ketoconazole,6.67,3
+Bipolar Disorde,Valproic acid,6.67,6
+Birth Control,Junel 1 / 20,6.67,6
+Tinea Cruris,Terbinafine,6.67,3
+High Blood Pressure,Coreg CR,6.67,3
+Left Ventricular Dysfunction,Enalapril,6.67,3
+Macular Degeneration,Ranibizumab,6.67,3
+Endometriosis,Danazol,6.67,3
+Generalized Anxiety Disorde,Paxil CR,6.67,3
+Constipation,Docusate,6.67,12
+Polycystic Ovary Syndrome,Drospirenone / ethinyl estradiol,6.67,9
+Alcohol Withdrawal,Clonidine,6.67,3
+Light Sedation,Meperidine,6.67,3
+Major Depressive Disorde,Seroquel XR,6.67,6
+Arrhythmia,Cordarone,6.67,3
+Depression,Paroxetine,6.66,136
+Emergency Contraception,Aftera,6.66,59
+Bipolar Disorde,Bupropion,6.66,32
+Muscle Spasm,Chlorzoxazone,6.66,32
+Sciatica,Cyclobenzaprine,6.66,29
+ibromyalgia,Gabapentin,6.65,98
+Anxiety and Stress,Paroxetine,6.65,69
+Allergic Rhinitis,Triamcinolone,6.65,43
+ibromyalgia,Milnacipran,6.65,200
+Hashimoto's disease,Synthroid,6.65,17
+Atopic Dermatitis,Crisaborole,6.64,22
+Epilepsy,Tegretol,6.64,22
+High Blood Pressure,Clonidine,6.64,33
+Muscle Spasm,Tizanidine,6.63,134
+Birth Control,Ethinyl estradiol / etonogestrel,6.63,631
+Overactive Bladde,Detrol LA,6.62,8
+Insomnia,Doxylamine,6.62,72
+Cough,Dextromethorphan / guaifenesin,6.62,8
+Cough and Nasal Congestion,Bromfed DM,6.62,8
+Pain,Talwin Nx,6.62,8
+Borderline Personality Disorde,Risperidone,6.62,8
+"Asthma, Maintenance",Breo Ellipta,6.62,8
+Hepatitis C,Pegasys,6.62,8
+Birth Control,Amethia,6.62,8
+Birth Control,Dienogest / estradiol,6.62,24
+Osteoarthritis,Orthovisc,6.62,77
+Narcolepsy,Armodafinil,6.62,69
+Schizophrenia,Lurasidone,6.62,45
+Birth Control,Aviane,6.62,219
+High Blood Pressure,Bystolic,6.62,99
+Schizophrenia,Invega Sustenna,6.62,13
+ADHD,Amphetamine,6.61,44
+Cough,Guaifenesin,6.61,36
+Birth Control,Ortho Cyclen,6.61,33
+ibromyalgia,Lyrica,6.6,189
+"Crohn's Disease, Acute",Infliximab,6.6,10
+"Crohn's Disease, Acute",Adalimumab,6.6,5
+Pain,Tylenol,6.6,5
+Hepatitis C,Ribavirin,6.6,5
+"Asthma, Maintenance",Mometasone,6.6,10
+Nasal Carriage of Staphylococcus aureus,Mupirocin,6.6,5
+High Cholesterol,Niacin / simvastatin,6.6,5
+Migraine,Orphenadrine,6.6,5
+Postpartum Depression,Paroxetine,6.6,5
+Sedation,Vistaril,6.6,5
+Birth Control,Cyred,6.6,5
+Bronchitis,Sulfamethoxazole / trimethoprim,6.6,5
+Not Listed / Othe,Lisinopril,6.6,5
+Bleeding Disorde,Tranexamic acid,6.6,5
+Insomnia,Nytol,6.6,5
+Pulmonary Embolism,Xarelto,6.59,27
+Depression,Abilify,6.59,142
+Neutropenia Associated with Chemotherapy,Neulasta,6.59,22
+Generalized Anxiety Disorde,Duloxetine,6.59,63
+Birth Control,Ortho Tri-Cyclen Lo,6.59,179
+Sinusitis,Moxifloxacin,6.59,41
+Birth Control,Lutera,6.58,195
+Pain,Naloxone / pentazocine,6.58,12
+Osteoarthritis,Naproxen,6.58,24
+Sinusitis,Biaxin,6.58,12
+Birth Control,Zarah,6.58,60
+Sinusitis,Clindamycin,6.58,12
+Diverticulitis,Flagyl,6.58,38
+Bacterial Skin Infection,Bactrim,6.58,33
+Tinea Pedis,Terbinafine,6.57,7
+High Blood Pressure,Propranolol,6.57,14
+Allergic Rhinitis,Dymista,6.57,49
+Schizoaffective Disorde,Invega Sustenna,6.57,7
+Prevention of Hypokalemia,Potassium chloride,6.57,7
+Vaginal Yeast Infection,Vagistat-1,6.57,7
+"Diabetes, Type 2",Insulin lispro,6.57,7
+Bipolar Disorde,Zyprexa,6.56,71
+Seizures,Levetiracetam,6.56,103
+Schizophrenia,Zyprexa,6.56,16
+Bipolar Disorde,Olanzapine,6.56,107
+Birth Control,ParaGard,6.56,368
+Allergic Rhinitis,Benadryl,6.56,9
+Irritable Bowel Syndrome,Immune globulin oral,6.56,9
+High Blood Pressure,Benazepril,6.56,9
+Paranoid Disorde,Olanzapine,6.56,9
+Major Depressive Disorde,Abilify,6.56,36
+Pain,Indomethacin,6.56,9
+Allergic Rhinitis,Azelastine / fluticasone,6.55,47
+Skin or Soft Tissue Infection,Clindamycin,6.55,40
+Depression,Duloxetine,6.55,328
+Overactive Bladde,Oxybutynin,6.55,86
+Bipolar Disorde,Effexor XR,6.55,11
+High Blood Pressure,Diovan HCT,6.55,11
+Postherpetic Neuralgia,Pregabalin,6.55,11
+"Diabetes, Type 2",Onglyza,6.55,11
+ibromyalgia,Duloxetine,6.54,152
+Oophorectomy,Estradiol,6.54,13
+Osteoarthritis,Sodium hyaluronate,6.53,116
+Major Depressive Disorde,Paroxetine,6.53,15
+Post Traumatic Stress Disorde,Paxil,6.53,15
+Rheumatoid Arthritis,Hydroxychloroquine,6.53,47
+Ovarian Cysts,Sprintec,6.53,17
+Birth Control,Desogen,6.53,17
+Birth Control,Loestrin 24 Fe,6.52,276
+Neuropathic Pain,Pregabalin,6.52,96
+Birth Control,Drospirenone / ethinyl estradiol / levomefolate calcium,6.51,113
+High Blood Pressure,Diovan,6.51,43
+Schizophrenia,Latuda,6.51,47
+Pain,Tramadol,6.51,357
+Cough,Tessalon Perles,6.51,51
+Chronic Pain,Butrans,6.51,59
+Allergic Rhinitis,Cetirizine,6.51,67
+Major Depressive Disorde,Vortioxetine,6.5,161
+2</span> users found this comment helpful.,LoSeasonique,6.5,4
+Anal Fissure and Fistula,Rectiv,6.5,4
+Amenorrhea,Norethindrone,6.5,4
+"Diabetes, Type 2",ActoPlus Met,6.5,4
+"Ischemic Stroke, Prophylaxis",Aspirin / dipyridamole,6.5,8
+"Asthma, acute",Prednisolone,6.5,4
+ibromyalgia,Fluoxetine,6.5,6
+Deep Vein Thrombosis,Pradaxa,6.5,6
+Atrial Fibrillation,Digoxin,6.5,4
+Chronic Spasticity,Baclofen,6.5,12
+"Diabetes, Type 2",Insulin degludec,6.5,14
+Insomnia,Benadryl Allergy,6.5,4
+Nasal Congestion,Sudafed 24-Hour,6.5,4
+Hypoestrogenism,Estradiol,6.5,8
+TSH Suppression,Levothyroxine,6.5,4
+Perioral Dermatitis,Tacrolimus,6.5,4
+Labor Pain,Stadol,6.5,10
+Schizophrenia,Loxapine,6.5,4
+Ovarian Cysts,Tri-Sprintec,6.5,8
+Autism,Aripiprazole,6.5,14
+Peripheral Neuropathy,Carbamazepine,6.5,8
+Postural Orthostatic Tachycardia Syndrome,Midodrine,6.5,6
+1</span> users found this comment helpful.,Loestrin 24 Fe,6.5,6
+Depression,Paxil CR,6.5,10
+Sciatica,Naproxen,6.5,24
+Seborrheic Dermatitis,Xolegel,6.5,4
+Abnormal Uterine Bleeding,Megestrol,6.5,16
+High Blood Pressure,Enalapril,6.5,4
+Raynaud's Syndrome,Amlodipine,6.5,4
+Sjogren's Syndrome,Plaquenil,6.5,10
+Hepatitis C,Viekira Pak,6.5,8
+Not Listed / Othe,Quetiapine,6.5,6
+Bladder Infection,Keflex,6.5,4
+Post Traumatic Stress Disorde,Aripiprazole,6.5,4
+Duodenal Ulce,Pantoprazole,6.5,4
+GERD,Carafate,6.5,8
+Pulmonary Hypertension,Sildenafil,6.5,6
+Benign Prostatic Hyperplasia,Saw palmetto,6.5,4
+Ulcerative Colitis,Apriso,6.5,10
+ibromyalgia,Pregabalin,6.5,212
+Narcolepsy,Nuvigil,6.49,59
+Bronchitis,Azithromycin,6.49,100
+Insomnia,Lunesta,6.48,128
+Allergic Rhinitis,Nasacort,6.48,29
+High Cholesterol,Rosuvastatin,6.48,50
+Depression,Venlafaxine,6.48,437
+Pain,Gabapentin,6.48,176
+GERD,Dexilant,6.48,65
+Anxiety,BuSpar,6.48,233
+High Cholesterol,Crestor,6.48,42
+Schizoaffective Disorde,Risperidone,6.47,19
+Major Depressive Disorde,Effexor,6.47,19
+Muscle Spasm,Flexeril,6.47,76
+Breast Cance,Femara,6.47,17
+Depression,Risperidone,6.47,17
+Insomnia,Diphenhydramine,6.47,64
+Endometriosis,Ethinyl estradiol / norethindrone,6.47,43
+Endometriosis,Depo-Provera,6.46,28
+Vaginal Yeast Infection,Diflucan,6.46,56
+"Ischemic Stroke, Prophylaxis",Aggrenox,6.46,13
+"Hypogonadism, Male",Testim,6.46,63
+Bacterial Infection,Ciprofloxacin,6.46,24
+Bipolar Disorde,Duloxetine,6.45,22
+Hyperprolactinemia,Bromocriptine,6.45,11
+Menstrual Disorders,Ocella,6.45,11
+Menstrual Disorders,Yasmin,6.45,11
+Tourette's Syndrome,Pimozide,6.45,11
+Depression,Imipramine,6.45,11
+Progesterone Insufficiency,Progesterone,6.45,11
+Pain,Embeda,6.45,11
+Pain,Nucynta,6.45,164
+Obesity,Alli,6.45,51
+Osteoarthritis,Synvisc-One,6.45,60
+High Blood Pressure,Telmisartan,6.45,20
+Osteoarthritis,Euflexxa,6.45,98
+Bacterial Infection,Metronidazole,6.45,208
+Insomnia,Doxepin,6.45,130
+Urinary Tract Infection,Levaquin,6.44,18
+Muscle Spasm,Norflex,6.44,9
+Peripheral Neuropathy,Lyrica,6.44,9
+Psoriatic Arthritis,Golimumab,6.44,9
+High Blood Pressure,Ramipril,6.44,34
+ibromyalgia,Cymbalta,6.44,146
+Seizures,Keppra,6.43,81
+Depression,Vilazodone,6.43,315
+"Asthma, Maintenance",Fluticasone / vilanterol,6.43,7
+Endometriosis,Sprintec,6.43,7
+Dry Skin,Emollients,6.43,35
+Birth Control,Altavera,6.43,7
+Pain,Lidoderm,6.43,28
+Irritable Bowel Syndrome,Lubiprostone,6.43,35
+High Blood Pressure,Valturna,6.43,7
+Abnormal Uterine Bleeding,Loestrin 24 Fe,6.42,33
+Benign Prostatic Hyperplasia,Rapaflo,6.42,62
+Atrial Fibrillation,Multaq,6.42,12
+Tonsillitis/Pharyngitis,Azithromycin,6.41,41
+Underactive Thyroid,Levothyroxine,6.41,177
+Rheumatoid Arthritis,Humira,6.41,71
+Ovarian Cysts,Ethinyl estradiol / norgestimate,6.41,54
+Diabetic Peripheral Neuropathy,Pregabalin,6.4,35
+Bowel Preparation,GoLYTELY,6.4,15
+ibromyalgia,Neurontin,6.4,20
+Migraine,Cyproheptadine,6.4,20
+Ovarian Cysts,LoSeasonique,6.4,5
+Postural Orthostatic Tachycardia Syndrome,Fludrocortisone,6.4,5
+Asthma,Nucala,6.4,5
+Breast Cance,Everolimus,6.4,5
+"Breast Cancer, Metastatic",Faslodex,6.4,5
+Postmenopausal Symptoms,Ethinyl estradiol / norethindrone,6.4,5
+Schizoaffective Disorde,Zyprexa,6.4,20
+Muscle Pain,Naproxen,6.4,20
+Vitamin/Mineral Supplementation during Pregnancy/Lactation,CitraNatal 90 DHA,6.4,5
+Sinusitis,Omnicef,6.4,5
+Reflex Sympathetic Dystrophy Syndrome,Gabapentin,6.4,15
+Seizures,Fycompa,6.4,5
+Hepatic Encephalopathy,Rifaximin,6.4,5
+Bipolar Disorde,Carbamazepine,6.4,53
+Atrophic Vaginitis,Estrace Vaginal Cream,6.39,23
+Deep Vein Thrombosis,Xarelto,6.39,23
+Acne,Minocycline,6.39,232
+Premature Lab,Hydroxyprogesterone,6.39,31
+Cough and Nasal Congestion,Mucinex D,6.39,114
+Insomnia,Acetaminophen / diphenhydramine,6.38,13
+"Asthma, Maintenance",Albuterol,6.38,13
+0</span> users found this comment helpful.,Loestrin 24 Fe,6.38,21
+Bacterial Vaginitis,MetroGel-Vaginal,6.38,21
+Weight Loss,Contrave,6.38,263
+Sciatica,Flexeril,6.38,16
+"Conjunctivitis, Bacterial",Vigamox,6.38,8
+Hypertriglyceridemia,Fenofibrate,6.38,16
+Obsessive Compulsive Disorde,Olanzapine,6.38,8
+ADHD,Dyanavel XR,6.38,8
+Irritable Bowel Syndrome,Levsin,6.38,8
+"Diabetes, Type 2",Glyxambi,6.38,8
+Rheumatoid Arthritis,Rituxan,6.38,8
+Cough,Mucinex,6.38,24
+Neutropenia Associated with Chemotherapy,Pegfilgrastim,6.37,19
+Bacterial Infection,Cephalexin,6.37,41
+Postpartum Depression,Venlafaxine,6.36,11
+Osteoarthritis,Hylan g-f 20,6.36,94
+Schizophrenia,Abilify,6.36,36
+Prostate Cance,Leuprolide,6.36,36
+Urinary Incontinence,Oxybutynin,6.36,25
+Head Lice,Ivermectin,6.36,25
+Strep Throat,Amoxicillin / clavulanate,6.36,39
+"Diabetes, Type 2",Jardiance,6.36,39
+Rheumatoid Arthritis,Arava,6.36,14
+Birth Control,Necon 1 / 35,6.36,14
+Bacterial Vaginitis,Clindamycin,6.35,40
+Migraine Prevention,Topamax,6.35,222
+Vaginal Yeast Infection,Terconazole,6.34,44
+Birth Control,Lyza,6.34,44
+Epilepsy,Tegretol XR,6.33,6
+Paranoid Disorde,Ziprasidone,6.33,3
+Heart Failure,Spironolactone,6.33,3
+Heart Failure,Isosorbide mononitrate,6.33,3
+"Sexual Dysfunction, SSRI Induced",BuSpar,6.33,3
+Opioid-Induced Constipation,Relistor,6.33,3
+Menstrual Disorders,Microgestin Fe 1.5 / 30,6.33,6
+Erectile Dysfunction,Avanafil,6.33,27
+High Cholesterol,Praluent,6.33,12
+Supraventricular Tachycardia,Adenosine,6.33,3
+Amenorrhea,Progesterone,6.33,3
+Birth Control,Mono-Linyah,6.33,6
+Chronic Pancreatitis,Creon,6.33,3
+Birth Control,Cyclafem 1 / 35,6.33,6
+Not Listed / Othe,Metronidazole,6.33,3
+GERD,Pantoprazole,6.33,54
+Post Traumatic Stress Disorde,Venlafaxine,6.33,9
+Osteoarthritis,Monovisc,6.33,3
+ADHD,Aptensio XR,6.33,3
+Temporomandibular Joint Disorde,Baclofen,6.33,3
+Hypertriglyceridemia,Lovaza,6.33,3
+Eosinophilic Esophagitis,Budesonide,6.33,3
+Crohn's Disease,Balsalazide,6.33,3
+Otitis Media,Azithromycin,6.33,6
+Schizoaffective Disorde,Zyprexa Zydis,6.33,3
+Chronic Pain,Duloxetine,6.33,66
+Allergic Urticaria,Atarax,6.33,3
+"Sexual Dysfunction, SSRI Induced",Bupropion,6.33,27
+Pneumonia,Cefdinir,6.33,3
+Nasal Congestion,Claritin-D 12 Hour,6.33,3
+Bipolar Disorde,Risperidone,6.33,69
+HIV Infection,Sustiva,6.33,3
+Skin or Soft Tissue Infection,Ciprofloxacin,6.33,3
+Otitis Media,Ciprofloxacin / dexamethasone,6.33,9
+Mitral Valve Prolapse,Propranolol,6.33,3
+Migraine,Ergotamine,6.33,3
+Hyperhidrosis,Clonidine,6.33,3
+Tendonitis,Naprosyn,6.33,3
+"Nausea/Vomiting, Postoperative",Ondansetron,6.33,3
+Insomnia,Tylenol PM,6.33,9
+Autism,Risperidone,6.33,30
+Back Pain,Bayer Aspirin,6.33,3
+Bipolar Disorde,Vraylar,6.33,42
+"Deep Vein Thrombosis, Prophylaxis",Rivaroxaban,6.33,3
+Scabies,Permethrin,6.33,6
+Pain,Tapentadol,6.33,216
+Herbal Supplementation,S-adenosylmethionine,6.33,3
+Abnormal Uterine Bleeding,Ortho Tri-Cyclen,6.33,6
+Parkinson's Disease,Mirapex,6.33,3
+Parkinson's Disease,Ropinirole,6.33,3
+Depression,Cymbalta,6.32,303
+Polycystic Ovary Syndrome,Ethinyl estradiol / norethindrone,6.32,53
+Weight Loss,Bupropion / naltrexone,6.32,267
+Abnormal Uterine Bleeding,Mononessa,6.32,19
+"Diabetes, Type 2",Glucophage,6.32,19
+Birth Control,Microgestin Fe 1.5 / 30,6.31,42
+Postoperative Pain,Toradol,6.3,10
+Major Depressive Disorde,Trintellix,6.3,151
+Birth Control,Ocella,6.29,68
+High Blood Pressure,Metoprolol,6.29,92
+Constipation,Senna,6.29,48
+Muscle Spasm,Robaxin,6.29,31
+Insomnia,Desyrel,6.29,7
+Primary Immunodeficiency Syndrome,Hizentra,6.29,7
+Heart Attack,Metoprolol,6.29,7
+High Blood Pressure,Furosemide,6.29,7
+High Blood Pressure,Lotrel,6.29,14
+Bipolar Disorde,Divalproex sodium,6.28,128
+ADHD,Adzenys XR-ODT,6.28,18
+Birth Control,Mononessa,6.28,101
+Epilepsy,Keppra,6.28,29
+High Blood Pressure,Cozaar,6.27,33
+Psoriatic Arthritis,Stelara,6.27,11
+Major Depressive Disorde,Olanzapine,6.27,11
+Birth Control,TriNessa,6.27,191
+Hypersomnia,Nuvigil,6.26,19
+Anxiety,Atarax,6.26,50
+Cold Symptoms,Acetaminophen / diphenhydramine / phenylephrine,6.25,4
+Irritable Bowel Syndrome,EnteraGam,6.25,8
+Osteoarthritis,Aleve,6.25,4
+High Blood Pressure,Verapamil,6.25,4
+Pain,Trezix,6.25,4
+Osteoporosis,Zometa,6.25,4
+Tonsillitis/Pharyngitis,Azithromycin Dose Pack,6.25,4
+Light Sedation,Midazolam,6.25,12
+Birth Control,CamreseLo,6.25,4
+Atrophic Vaginitis,Estring,6.25,20
+"COPD, Acute",Albuterol,6.25,8
+Hyperprolactinemia,Parlodel,6.25,8
+"Melanoma, Metastatic",Vemurafenib,6.25,4
+Prevention of Bladder infection,Macrobid,6.25,12
+Not Listed / Othe,Venlafaxine,6.25,4
+Lipodystrophy,Egrifta,6.25,4
+Dietary Supplementation,Biotin,6.25,4
+Vertig,Phenergan,6.25,4
+Clostridial Infection,Flagyl,6.25,4
+"Asthma, Maintenance",ProAir HFA,6.25,4
+Diabetic Kidney Disease,Lisinopril,6.25,8
+Auditory Processing Disorde,Dexmethylphenidate,6.25,4
+Muscle Pain,Ibuprofen,6.25,4
+Major Depressive Disorde,Zyprexa,6.25,8
+Anxiety and Stress,Paxil,6.24,54
+Muscle Spasm,Cyclobenzaprine,6.24,179
+ibromyalgia,Topiramate,6.24,25
+Agitated State,Abilify,6.24,21
+Endometriosis,Ethinyl estradiol / norgestimate,6.24,34
+"Asthma, Maintenance",Montelukast,6.23,43
+Upper Respiratory Tract Infection,Augmentin,6.23,13
+Crohn's Disease,Humira,6.23,22
+Pain,Ultram,6.22,80
+Birth Control,Gianvi,6.22,76
+High Blood Pressure,Perindopril,6.22,9
+Myelodysplastic Syndrome,Azacitidine,6.22,9
+Parkinson's Disease,Carbidopa / levodopa,6.22,18
+Glaucoma,Combigan,6.22,9
+Alopecia,Rogaine,6.22,9
+High Cholesterol,Niacin,6.21,28
+Pain,Neurontin,6.21,28
+Neuropathic Pain,Lyrica,6.21,80
+"Diabetes, Type 2",Metformin,6.21,81
+Crohn's Disease,Adalimumab,6.21,24
+Deep Vein Thrombosis,Rivaroxaban,6.21,29
+Chronic Pain,Cymbalta,6.21,63
+New Daily Persistent Headache,Sumatriptan,6.2,5
+Vitamin D Deficiency,Cholecalciferol,6.2,5
+acial Wrinkles,Botox Cosmetic,6.2,5
+Ulcerative Colitis,Uceris,6.2,5
+Birth Control,Zovia 1 / 35,6.2,5
+High Blood Pressure,Metoprolol Tartrate,6.2,5
+Prostate Cance,Lupron Depot,6.2,5
+Migraine Prevention,Divalproex sodium,6.2,45
+Borderline Personality Disorde,Topiramate,6.2,5
+Psychosis,Iloperidone,6.2,5
+Malaria Prevention,Malarone,6.2,15
+Depression,Risperdal,6.2,5
+Postpartum Depression,Paxil,6.2,5
+Undifferentiated Connective Tissue Disease,Hydroxychloroquine,6.2,10
+Edema,Triamterene,6.2,5
+Cough,Dextromethorphan / promethazine,6.2,5
+Depression,Olanzapine,6.2,51
+Seizures,Trileptal,6.18,11
+"Asthma, Maintenance",Beclomethasone,6.18,22
+Allergic Rhinitis,Fluticasone,6.18,44
+Helicobacter Pylori Infection,Metronidazole,6.18,11
+High Blood Pressure,Edarbi,6.18,11
+Birth Control,Tri-Sprintec,6.18,257
+Bipolar Disorde,Abilify,6.17,150
+Birth Control,Sprintec,6.17,432
+"Glaucoma, Open Angle",Bimatoprost,6.17,6
+Anxiety,Buspirone,6.16,407
+Dysuria,Phenazopyridine,6.16,43
+Chronic Pain,Tramadol,6.16,101
+High Cholesterol,Alirocumab,6.15,13
+Sedation,Hydroxyzine,6.15,46
+Schizoaffective Disorde,Paliperidone,6.15,33
+Endometriosis,Ethinyl estradiol / levonorgestrel,6.15,53
+High Blood Pressure,Exforge,6.15,27
+Osteoporosis,Teriparatide,6.15,41
+Ulcerative Colitis,Humira,6.14,14
+Reflex Sympathetic Dystrophy Syndrome,Lyrica,6.14,7
+Parkinson's Disease,Rasagiline,6.14,7
+Strep Throat,Biaxin,6.14,7
+High Cholesterol,Pravachol,6.14,7
+Atrial Fibrillation,Dronedarone,6.14,21
+High Blood Pressure,Prinivil,6.14,7
+0</span> users found this comment helpful.,Mirena,6.14,7
+Migraine Prevention,Topiramate,6.14,331
+Birth Control,Chateal,6.14,103
+Bowel Preparation,Citric acid / magnesium oxide / sodium picosulfate,6.14,81
+Osteoporosis,Reclast,6.13,30
+Migraine,Cyclobenzaprine,6.13,15
+Migraine,OnabotulinumtoxinA,6.12,8
+"Sexual Dysfunction, SSRI Induced",Buspirone,6.12,8
+"Breast Cancer, Metastatic",Capecitabine,6.12,8
+Iron Deficiency Anemia,Ferrous sulfate,6.12,8
+Hot Flashes,Duloxetine,6.12,8
+Epilepsy,Levetiracetam,6.12,51
+"Diabetes, Type 2",Invokana,6.11,143
+Bronchitis,Amoxicillin,6.11,9
+Human Papillomavirus Prophylaxis,Gardasil,6.11,18
+Angina Pectoris Prophylaxis,Isosorbide mononitrate,6.11,9
+Anxiety and Stress,Fluvoxamine,6.11,28
+Major Depressive Disorde,Brexpiprazole,6.1,68
+"Diabetes, Type 2",Saxagliptin,6.1,10
+Alzheimer's Disease,Exelon,6.1,10
+Epilepsy,Fycompa,6.1,10
+Birth Control,Safyral,6.09,43
+Dysuria,Pyridium,6.09,11
+Pneumonia,Azithromycin,6.09,11
+Benzodiazepine Withdrawal,Clonazepam,6.09,11
+Birth Control,Seasonique,6.09,133
+Opiate Dependence,Bunavail,6.09,34
+Osteoporosis,Forteo,6.09,46
+Diabetic Peripheral Neuropathy,Duloxetine,6.09,23
+Nasal Congestion,Vicks Sinex Nasal Spray (old formulation),6.08,12
+Irritable Bowel Syndrome,Amitiza,6.08,36
+Atrial Fibrillation,Metoprolol,6.08,37
+"Diabetes, Type 2",Janumet,6.08,26
+Birth Control,Implanon,6.07,1095
+"Conjunctivitis, Allergic",Lastacaft,6.07,14
+Breast Cance,Arimidex,6.07,29
+High Cholesterol,Pitavastatin,6.07,29
+Bipolar Disorde,Depakote,6.06,93
+Back Pain,Nabumetone,6.06,16
+Prevention of Thromboembolism in Atrial Fibrillation,Apixaban,6.06,32
+ADHD,Intuniv,6.06,82
+ge (amlodipine / valsartan),Amlodipine / valsartan,6.06,33
+Agitated State,Aripiprazole,6.06,17
+Gastroparesis,Reglan,6.06,18
+Birth Control,Lo Loestrin Fe,6.05,667
+Sinusitis,Avelox,6.05,38
+Cough,Codeine / guaifenesin,6.05,40
+Anxiety,Risperidone,6.05,21
+Seizure Prevention,Topamax,6.04,25
+High Blood Pressure,Amlodipine / benazepril,6.04,25
+Rheumatoid Arthritis,Meloxicam,6.04,25
+Herpes Simplex,Docosanol,6.03,159
+Seizure Prevention,Topiramate,6.03,37
+Schizophrenia,Paliperidone,6.02,51
+"Diabetes, Type 2",Empagliflozin / linagliptin,6.0,7
+HIV Infection,Nevirapine,6.0,3
+Tourette's Syndrome,Olanzapine,6.0,3
+"Conjunctivitis, Allergic",Bepotastine,6.0,10
+"Glaucoma, Open Angle",Cosopt,6.0,3
+Glaucoma,Brimonidine / timolol,6.0,7
+Colorectal Cance,Oxaliplatin,6.0,3
+Systemic Lupus Erythematosus,Prednisone,6.0,3
+Tonsillitis/Pharyngitis,Cefdinir,6.0,4
+Cough and Nasal Congestion,Brompheniramine / dextromethorphan / pseudoephedrine,6.0,15
+"Deep Vein Thrombosis, Recurrent Event",Xarelto,6.0,3
+Dystonia,Carbamazepine,6.0,3
+Diarrhea,Imodium A-D,6.0,4
+Dental Abscess,Clarithromycin,6.0,5
+Parkinson's Disease,Azilect,6.0,4
+Anxiety,Wellbutrin XL,6.0,4
+Pneumonia,Augmentin,6.0,3
+Insomnia,Benadryl,6.0,3
+Insomnia,Eszopiclone,6.0,162
+Seasonal Allergic Conjunctivitis,Pazeo,6.0,4
+Bowel Preparation,Prepopik,6.0,82
+Hypertriglyceridemia,Fenofibric acid,6.0,9
+Helicobacter Pylori Infection,Clarithromycin,6.0,15
+Spondylolisthesis,Gabapentin,6.0,7
+COPD,Montelukast,6.0,3
+Hemorrhoids,Phenylephrine / pramoxine,6.0,3
+"COPD, Maintenance",Breo Ellipta,6.0,4
+High Cholesterol,Zocor,6.0,12
+High Blood Pressure,Zestril,6.0,7
+Skin and Structure Infection,Amoxicillin / clavulanate,6.0,4
+Anxiety,Trifluoperazine,6.0,3
+Helicobacter Pylori Infection,Flagyl,6.0,3
+Endometriosis,Nora-Be,6.0,3
+Abnormal Uterine Bleeding,Apri,6.0,5
+Urticaria,Benadryl Allergy,6.0,3
+Edema,Hydrochlorothiazide / triamterene,6.0,10
+Urticaria,Chlorpheniramine,6.0,3
+Ulcerative Colitis,Entyvio,6.0,6
+Ulcerative Colitis,Adalimumab,6.0,12
+Polycystic Ovary Syndrome,Junel Fe 1 / 20,6.0,4
+Major Depressive Disorde,Quetiapine,6.0,17
+Keratoconjunctivitis Sicca,Restasis,6.0,28
+Lennox-Gastaut Syndrome,Onfi,6.0,5
+Interstitial Cystitis,Azo Urinary Pain Relief,6.0,3
+Bone infection,Metronidazole,6.0,3
+Schizoaffective Disorde,Seroquel XR,6.0,4
+Interstitial Cystitis,Hydroxyzine,6.0,3
+Multiple Sclerosis,Acthar,6.0,3
+Pulmonary Hypertension,Adcirca,6.0,3
+Raynaud's Syndrome,Norvasc,6.0,3
+Migraine Prevention,Inderal LA,6.0,5
+Migraine Prevention,Riboflavin,6.0,3
+Ovarian Cysts,Ethinyl estradiol / levonorgestrel,6.0,20
+Reflex Sympathetic Dystrophy Syndrome,Savella,6.0,3
+Migraine,Botox,6.0,7
+Polycystic Ovary Syndrome,Chateal,6.0,3
+Acne,TriNessa Lo,6.0,3
+Anesthesia,Fentanyl,6.0,4
+Muscle Pain,Methyl salicylate,6.0,8
+Not Listed / Othe,Nortriptyline,6.0,3
+Birth Control,Blisovi Fe 1.5 / 30,6.0,3
+Psoriatic Arthritis,Simponi,6.0,10
+Polycystic Ovary Syndrome,Seasonique,6.0,5
+Postherpetic Neuralgia,Capsaicin,6.0,3
+Bipolar Disorde,Wellbutrin,6.0,5
+Prevention of Bladder infection,Sulfamethoxazole / trimethoprim,6.0,4
+Benign Prostatic Hyperplasia,Jalyn,6.0,12
+Precocious Puberty,Lupron Depot-PED,6.0,10
+Postural Orthostatic Tachycardia Syndrome,ProAmatine,6.0,5
+Postoperative Pain,Fentanyl,6.0,4
+Premature Lab,Terbutaline,6.0,4
+Postoperative Ocular Inflammation,Nepafenac,6.0,3
+Osteoarthritis,Famotidine / ibuprofen,6.0,7
+Osteoarthritis,Kenalog-40,6.0,3
+Osteoarthritis,Capsaicin,6.0,12
+Back Pain,Trolamine salicylate,6.0,3
+Osteoarthritis,Naprosyn,6.0,5
+3</span> users found this comment helpful.,Lo Loestrin Fe,6.0,4
+mulation) (phenylephrine),Phenylephrine,6.0,12
+Depression,Trintellix,6.0,243
+Birth Control,Xulane,5.99,159
+Helicobacter Pylori Infection,Pylera,5.98,62
+"Diabetes, Type 2",Canagliflozin,5.98,146
+"Diabetes, Type 2",Dulaglutide,5.97,231
+Birth Control,Kariva,5.96,55
+Birth Control,Drospirenone / ethinyl estradiol,5.96,522
+Erectile Dysfunction,Stendra,5.96,26
+Birth Control,Liletta,5.95,209
+Birth Control,Seasonale,5.95,20
+High Blood Pressure,Nifedipine,5.94,17
+Tendonitis,Naproxen,5.94,16
+Birth Control,Ethinyl estradiol / norgestimate,5.93,1580
+Allergic Urticaria,Hydroxyzine,5.93,15
+Tonsillitis/Pharyngitis,Clarithromycin,5.93,15
+Chronic Pain,Buprenorphine,5.93,136
+Bowel Preparation,Bisacodyl,5.92,40
+Bacterial Infection,Levaquin,5.92,13
+Acne,Junel Fe 1 / 20,5.92,13
+Multiple Sclerosis,Teriflunomide,5.92,24
+Birth Control,Ethinyl estradiol / ethynodiol,5.91,33
+Birth Control,Ethinyl estradiol / levonorgestrel,5.9,1600
+"Constipation, Drug Induced",Lubiprostone,5.9,10
+Menstrual Disorders,Loestrin 24 Fe,5.9,30
+Osteoarthritis,Nabumetone,5.9,10
+Acne,Ethinyl estradiol / norgestimate,5.9,215
+moterol / mometasone),Formoterol / mometasone,5.9,29
+Plaque Psoriasis,Apremilast,5.89,94
+ADHD,Guanfacine,5.89,119
+COPD,Olodaterol / tiotropium,5.89,9
+Rheumatoid Arthritis,Voltaren,5.89,9
+min / sitagliptin),Metformin / sitagliptin,5.88,26
+Birth Control,Cryselle,5.88,77
+Depression,Vortioxetine,5.88,345
+Opioid-Induced Constipation,Movantik,5.88,16
+Allergic Rhinitis,Desloratadine,5.88,8
+Basal Cell Carcinoma,Aldara,5.88,8
+Irritable Bowel Syndrome,Rifaximin,5.87,31
+Muscle Spasm,Methocarbamol,5.87,107
+Endometriosis,Medroxyprogesterone,5.87,38
+Peripheral Neuropathy,Duloxetine,5.87,15
+Depression,Lithium,5.87,15
+Major Depressive Disorde,Aripiprazole,5.86,44
+Irritable Bowel Syndrome,Xifaxan,5.86,22
+Benign Prostatic Hyperplasia,Silodosin,5.86,63
+Pulmonary Hypertension,Revatio,5.86,7
+Bowel Preparation,Sodium biphosphate / sodium phosphate,5.86,7
+Eye Redness/Itching,Opcon-A,5.86,7
+Parkinson's Disease,Neupro,5.86,7
+Glaucoma,Diamox,5.86,7
+Plaque Psoriasis,Otezla,5.85,101
+Bronchitis,Avelox,5.85,20
+Birth Control,Velivet,5.85,20
+Endometriosis,Leuprolide,5.85,79
+Depression,Effexor,5.85,194
+Birth Control,Reclipsen,5.84,111
+Bacterial Infection,Avelox,5.83,12
+Abnormal Uterine Bleeding,TriNessa,5.83,12
+COPD,Stiolto Respimat,5.83,6
+Trigeminal Neuralgia,Topamax,5.83,6
+"Constipation, Drug Induced",Amitiza,5.83,12
+Osteoarthritis,Supartz,5.83,18
+Urinary Tract Infection,Cipro,5.82,91
+Endometriosis,Goserelin,5.82,17
+Muscle Spasm,Lorzone,5.82,17
+Benign Prostatic Hyperplasia,Uroxatral,5.82,17
+Asthma,Dulera,5.82,17
+Abnormal Uterine Bleeding,Ethinyl estradiol / norgestrel,5.82,17
+Osteoporosis,Boniva,5.82,17
+2</span> users found this comment helpful.,Loestrin 24 Fe,5.82,11
+Giardiasis,Metronidazole,5.82,11
+Psoriatic Arthritis,Methotrexate,5.82,11
+Allergic Rhinitis,Montelukast,5.82,65
+Nausea/Vomiting,Scopolamine,5.81,21
+Birth Control,Etonogestrel,5.81,3314
+Helicobacter Pylori Infection,Bismuth subcitrate potassium / metronidazole / tetracycline,5.81,67
+"Diabetes, Type 2",Trulicity,5.81,221
+Birth Control,Lo / Ovral-28,5.8,5
+Multiple Myeloma,Revlimid,5.8,5
+Birth Control,Ortho Micronor,5.8,50
+Acne,Loryna,5.8,15
+Polycystic Ovary Syndrome,LoSeasonique,5.8,5
+Deep Vein Thrombosis,Apixaban,5.8,5
+Deep Vein Thrombosis,Eliquis,5.8,5
+Back Pain,Naproxen,5.8,55
+Chronic Pain,Ultram ODT,5.8,5
+Urinary Incontinence,Ditropan,5.8,5
+Birth Control,Ortho Tri-Cyclen,5.79,87
+Panic Disorde,Buspirone,5.79,48
+ibromyalgia,Elavil,5.79,14
+Upper Respiratory Tract Infection,Doxycycline,5.79,14
+Depression,Zyprexa,5.79,28
+"Breast Cancer, Adjuvant",Letrozole,5.78,9
+High Blood Pressure,Spironolactone,5.78,18
+Psoriatic Arthritis,Ustekinumab,5.78,9
+Urinary Tract Infection,Bactrim DS,5.78,63
+Major Depressive Disorde,Cymbalta,5.77,31
+High Blood Pressure,Valsartan,5.77,66
+Pain,Hydrocodone,5.76,97
+Benign Essential Trem,Primidone,5.75,32
+Endometrial Hyperplasia,Megestrol,5.75,4
+Oral Thrush,Mycelex Troche,5.75,4
+Crohn's Disease,Remicade,5.75,8
+Hemorrhoids,RectiCare,5.75,4
+Premenstrual Dysphoric Disorde,Yasmin,5.75,4
+Ankylosing Spondylitis,Naproxen,5.75,4
+Bulimia,Topamax,5.75,4
+High Blood Pressure,Azilsartan medoxomil,5.75,12
+Muscle Spasm,Fexmid,5.75,4
+Chronic Fatigue Syndrome,Cymbalta,5.75,4
+Abnormal Uterine Bleeding,Desogestrel / ethinyl estradiol,5.75,4
+Birth Control,Microgestin Fe 1 / 20,5.75,323
+Birth Control,Yaz,5.74,188
+"Diabetes, Type 2",Januvia,5.74,47
+Birth Control,Portia,5.74,50
+Bacterial Infection,Doxycycline,5.74,50
+Breast Cance,Letrozole,5.74,46
+Birth Control,Yasmin,5.74,84
+Gastroparesis,Metoclopramide,5.74,19
+Bipolar Disorde,Aripiprazole,5.73,166
+"Onychomycosis, Toenail",Jublia,5.73,71
+Herpes Simplex,Abreva,5.73,158
+Plaque Psoriasis,Humira,5.73,11
+Epilepsy,Perampanel,5.73,11
+Bipolar Disorde,Geodon,5.72,109
+Rheumatoid Arthritis,Tofacitinib,5.72,25
+Panic Disorde,BuSpar,5.72,25
+Dry Eye Disease,Lifitegrast,5.72,64
+Constipation,Dulcolax,5.72,365
+Endometriosis,Norethindrone,5.71,21
+Vitamin/Mineral Supplementation and Deficiency,Multivitamin with minerals,5.71,14
+Osteoarthritis,Triamcinolone,5.71,7
+"Tuberculosis, Latent",Isoniazid,5.71,7
+Schizophrenia,Seroquel,5.71,14
+Anxiety,Vistaril,5.71,94
+Atrophic Vaginitis,Estradiol,5.71,97
+Constipation,Bisacodyl,5.71,456
+Urinary Incontinence,Myrbetriq,5.71,17
+Endometriosis,Zoladex,5.71,17
+Birth Control,Jolivette,5.7,57
+Sinusitis,Augmentin,5.7,57
+High Blood Pressure,Ziac,5.7,10
+Androgenetic Alopecia,Finasteride,5.68,38
+Endometriosis,Lupron Depot,5.68,60
+Birth Control,Nexplanon,5.68,2149
+Anxiety,Hydroxyzine,5.68,315
+Acne,Tri-Previfem,5.68,28
+Birth Control,Desogestrel / ethinyl estradiol,5.68,494
+Birth Control,Ethinyl estradiol / norgestrel,5.67,118
+Pain,Talwin,5.67,6
+Atrophic Vaginitis,Premarin,5.67,3
+Macular Degeneration,Aflibercept,5.67,3
+Parkinson's Disease,Carbidopa / entacapone / levodopa,5.67,6
+Cough,Delsym 12 Hour Cough Relief,5.67,9
+Bipolar Disorde,Tegretol XR,5.67,3
+Bipolar Disorde,Catapres,5.67,3
+Stomach Ulce,Prevacid,5.67,3
+Abnormal Uterine Bleeding,Orsythia,5.67,3
+High Blood Pressure,Nifedical XL,5.67,3
+Abnormal Uterine Bleeding,Previfem,5.67,6
+High Blood Pressure,Procardia XL,5.67,3
+Psychosis,Prolixin,5.67,3
+"Hyperlipoproteinemia Type IIa, Elevated LDL",Fenofibrate,5.67,3
+High Blood Pressure,Quinapril,5.67,3
+Multiple Myeloma,Lenalidomide,5.67,3
+Osteoarthritis,Synvisc,5.67,21
+Persistent Depressive Disorde,Bupropion,5.67,3
+High Cholesterol,Zetia,5.67,21
+Migraine,Zecuity,5.67,3
+2</span> users found this comment helpful.,Sprintec,5.67,6
+Pain,Lidocaine Viscous,5.67,3
+Endometriosis,Tri-Previfem,5.67,3
+"Tuberculosis, Latent",Rifampin,5.67,3
+Underactive Thyroid,Levothroid,5.67,3
+Upper Respiratory Tract Infection,Biaxin,5.67,6
+Panic Disorde,Paxil CR,5.67,3
+ibromyalgia,Effexor XR,5.67,3
+Birth Control,Loryna,5.67,18
+Migraine Prevention,Vitamin B2,5.67,3
+Urinary Tract Infection,Uribel,5.67,9
+Uterine Fibroids,Lupron,5.67,3
+zen Shoulde,Nabumetone,5.67,3
+Birth Control,Zovia,5.67,30
+Bacterial Infection,Clindamycin,5.66,210
+Birth Control,Ethinyl estradiol / norethindrone,5.66,2337
+High Blood Pressure,Hydrochlorothiazide / triamterene,5.65,23
+Overactive Bladde,Myrbetriq,5.65,60
+Schizophrenia,Risperidone,5.64,39
+Acne,Ortho Tri-Cyclen,5.64,39
+Benign Prostatic Hyperplasia,Tamsulosin,5.64,105
+Multiple Sclerosis,Aubagio,5.64,22
+Rheumatoid Arthritis,Xeljanz,5.63,27
+High Cholesterol,Livalo,5.63,35
+Birth Control,Aubra,5.63,78
+Overactive Bladde,Fesoterodine,5.62,24
+Bronchitis,Levofloxacin,5.62,64
+Anxiety and Stress,Luvox,5.62,16
+Allergic Rhinitis,Loratadine,5.62,32
+Dry Eye Disease,Xiidra,5.62,58
+Birth Control,Jolessa,5.62,63
+"Onychomycosis, Toenail",Efinaconazole,5.61,75
+"COPD, Maintenance",Daliresp,5.6,10
+Rheumatoid Arthritis,Simponi Aria,5.6,5
+Ovarian Cysts,Ortho Tri-Cyclen,5.6,5
+"Glaucoma, Open Angle",Lumigan,5.6,5
+Not Listed / Othe,Levofloxacin,5.6,5
+Psychosis,Fluphenazine,5.6,5
+Birth Control,Orsythia,5.59,143
+Birth Control,Junel Fe 1.5 / 30,5.59,22
+Sinusitis,Levaquin,5.59,68
+Otitis Externa,Ciprodex,5.58,12
+Birth Control,Sronyx,5.58,80
+Cough,Cheratussin AC,5.57,21
+"Asthma, Maintenance",Qvar,5.57,28
+Bacterial Infection,Cipro,5.57,7
+Vertig,Antivert,5.57,7
+Malaria Prevention,Atovaquone / proguanil,5.57,14
+Kidney Infections,Bactrim,5.57,7
+Hypersomnia,Modafinil,5.57,7
+Benign Prostatic Hyperplasia,Alfuzosin,5.57,35
+Rheumatoid Arthritis,Sulfasalazine,5.57,23
+Overactive Bladde,Solifenacin,5.56,55
+"Diabetes, Type 2",Toujeo,5.56,9
+Menstrual Disorders,Drospirenone / ethinyl estradiol,5.55,65
+Birth Control,Apri,5.55,210
+Overactive Bladde,Botox,5.55,67
+Major Depressive Disorde,Fetzima,5.55,49
+High Blood Pressure,Losartan,5.52,166
+Breast Cance,Tamoxifen,5.52,27
+Birth Control,Medroxyprogesterone,5.52,502
+ADHD,Strattera,5.51,197
+"Hypogonadism, Male",Testopel,5.5,4
+ibromyalgia,Topamax,5.5,14
+Bronchitis,Ciprofloxacin,5.5,8
+Birth Control,Ogestrel-28,5.5,4
+Kidney Infections,Amoxicillin / clavulanate,5.5,4
+Malaria Prevention,Lariam,5.5,4
+Crohn's Disease,Infliximab,5.5,10
+Birth Control,Junel 1.5 / 30,5.5,4
+Skin or Soft Tissue Infection,Metronidazole,5.5,6
+Acne,Estarylla,5.5,6
+Birth Control,Marlissa,5.5,6
+High Blood Pressure,Altace,5.5,4
+Hypertriglyceridemia,TriCor,5.5,4
+ADHD,Wellbutrin,5.5,4
+Vitamin D Deficiency,Ergocalciferol,5.5,10
+Rheumatoid Arthritis,Oxaprozin,5.5,4
+acial Wrinkles,OnabotulinumtoxinA,5.5,8
+Ulcerative Colitis,Colazal,5.5,4
+Prostatitis,Bactrim DS,5.5,4
+Menstrual Disorders,Ethinyl estradiol / norethindrone,5.49,93
+Bacterial Skin Infection,Sulfamethoxazole / trimethoprim,5.49,82
+High Blood Pressure,Hydrochlorothiazide,5.48,66
+Birth Control,Quasense,5.48,25
+Bronchitis,Doxycycline,5.47,19
+"Diabetes, Type 2",Sitagliptin,5.47,51
+Atrial Fibrillation,Rivaroxaban,5.47,15
+Schizoaffective Disorde,Invega,5.46,26
+Glaucoma,Acetazolamide,5.45,11
+Bacterial Infection,Azithromycin,5.45,22
+Endometriosis,Loestrin 24 Fe,5.45,11
+Sinusitis,Clarithromycin,5.45,82
+Menstrual Disorders,Yaz,5.45,29
+Birth Control,Depo-Provera,5.45,479
+Osteoporosis,Zoledronic acid,5.44,34
+Arrhythmia,Amiodarone,5.44,16
+High Blood Pressure,Bisoprolol / hydrochlorothiazide,5.44,16
+Birth Control,Junel Fe 1 / 20,5.44,174
+Birth Control,LoSeasonique,5.44,39
+Abnormal Uterine Bleeding,Ethinyl estradiol / norethindrone,5.44,85
+Birth Control,Alesse,5.43,92
+Abnormal Uterine Bleeding,Junel Fe 1 / 20,5.43,7
+Diagnosis and Investigation,Lexiscan,5.43,7
+Cough and Nasal Congestion,Mucinex D Maximum Strength,5.43,7
+Allergies,Levocetirizine,5.43,75
+Menstrual Disorders,Gianvi,5.42,12
+Bacterial Infection,Moxifloxacin,5.41,17
+Major Depressive Disorde,Levomilnacipran,5.41,51
+ADHD,Atomoxetine,5.41,203
+Upper Respiratory Tract Infection,Clarithromycin,5.41,27
+Not Listed / Othe,Clindamycin,5.4,5
+Osteolytic Bone Metastases of Solid Tumors,Zometa,5.4,5
+Diverticulitis,Ciprofloxacin,5.4,15
+Overactive Bladde,Tamsulosin,5.4,20
+Urinary Incontinence,Mirabegron,5.4,20
+Pain,Hydroxyzine,5.4,10
+Otitis Externa,Hydrocortisone / neomycin / polymyxin b,5.4,5
+Acne,Tri-Sprintec,5.39,67
+Sinusitis,Levofloxacin,5.38,92
+Breast Cance,Anastrozole,5.38,72
+Schizophrenia,Rexulti,5.38,8
+Chronic Lymphocytic Leukemia,Ibrutinib,5.38,8
+Schizoaffective Disorde,Olanzapine,5.38,32
+Non-Small Cell Lung Cance,Nivolumab,5.36,14
+Asthma,Montelukast,5.34,62
+Bipolar Disorde,Ziprasidone,5.34,113
+"Diabetes, Type 2",Tanzeum,5.33,6
+2</span> users found this comment helpful.,Depo-Provera,5.33,3
+6</span> users found this comment helpful.,Mirena,5.33,3
+GERD,Reglan,5.33,9
+Tourette's Syndrome,Haloperidol,5.33,3
+Urinary Tract Infection,Hyoscyamine / methenamine / methylene blue / phenyl salicylate / sodium biphosphate,5.33,9
+Pain,Vistaril,5.33,6
+Epilepsy,Epitol,5.33,3
+Prevention of Hypokalemia,Klor-Con,5.33,3
+Cervical Dystonia,Baclofen,5.33,6
+Ulcerative Colitis,Asacol,5.33,6
+Overactive Bladde,VESIcare,5.33,51
+Post Traumatic Stress Disorde,Fluvoxamine,5.33,3
+Anxiety,Prochlorperazine,5.33,6
+Breast Cance,Capecitabine,5.33,3
+Obsessive Compulsive Disorde,Zyprexa,5.33,3
+Urticaria,Diphenhydramine,5.33,3
+Urticaria,Loratadine,5.33,6
+Schizophrenia,Zyprexa Zydis,5.33,3
+Vertig,Promethazine,5.33,3
+Keratosis,Solaraze,5.33,3
+0</span> users found this comment helpful.,Microgestin Fe 1 / 20,5.33,3
+Major Depressive Disorde,Viibryd,5.33,76
+Birth Control,Norethindrone,5.33,338
+Abnormal Uterine Bleeding,Levonorgestrel,5.32,276
+Dental Abscess,Amoxicillin,5.31,16
+Atrial Fibrillation,Xarelto,5.31,13
+Pain,Tylenol with Codeine #3,5.31,59
+ADHD,Quillivant XR,5.3,10
+Chronic Pain,Xtampza ER,5.3,10
+Urinary Tract Infection,Ciprofloxacin,5.29,160
+Bronchitis,Cipro,5.29,7
+Urinary Tract Infection,Levofloxacin,5.28,25
+Breast Cance,Aromasin,5.27,11
+Clostridial Infection,Metronidazole,5.26,19
+Tonsillitis/Pharyngitis,Phenol,5.25,4
+Lactation Augmentation,Reglan,5.25,4
+Birth Control,Depo-Provera Contraceptive,5.25,4
+Upper Respiratory Tract Infection,Azithromycin Dose Pack,5.25,4
+3</span> users found this comment helpful.,LoSeasonique,5.25,4
+Hypoactive Sexual Desire Disorde,Flibanserin,5.25,4
+Pulmonary Hypertension,Tadalafil,5.25,4
+Myasthenia Gravis,Mestinon,5.25,4
+Pancreatic Exocrine Dysfunction,Pancrelipase,5.25,4
+Sinusitis,Amoxicillin / clavulanate,5.24,122
+"Diabetes, Type 1",Insulin degludec,5.24,17
+Major Depressive Disorde,Desvenlafaxine,5.23,26
+Abnormal Uterine Bleeding,Mirena,5.22,254
+Otitis Media,Amoxicillin,5.2,5
+Overactive Bladde,OnabotulinumtoxinA,5.2,65
+Bacterial Infection,Cleocin,5.2,5
+0</span> users found this comment helpful.,Sprintec,5.2,5
+Birth Control,Sharobel,5.2,10
+Asperger Syndrome,Risperidone,5.2,5
+Erectile Dysfunction,Muse,5.2,15
+Epilepsy,Lamictal,5.2,5
+HIV Infection,Efavirenz,5.2,5
+"Glaucoma, Open Angle",Latanoprost,5.2,10
+"COPD, Maintenance",Fluticasone / vilanterol,5.2,5
+Birth Control,Camrese,5.19,57
+Benign Prostatic Hyperplasia,Flomax,5.19,63
+GERD,Metoclopramide,5.18,11
+Insomnia,Zaleplon,5.18,55
+High Cholesterol,Niaspan,5.18,17
+Birth Control,Nora-Be,5.17,52
+Overactive Bladde,Mirabegron,5.17,76
+Neuralgia,Baclofen,5.17,6
+Pain,Pentazocine,5.17,6
+Lactose Intolerance,Lactaid,5.17,6
+Headache,Acetaminophen / diphenhydramine,5.17,6
+High Cholesterol,Lipitor,5.17,30
+Otitis Media,Sulfamethoxazole / trimethoprim,5.17,6
+Hyperlipoproteinemia,Fenofibrate,5.17,6
+Bowel Preparation,Polyethylene glycol 3350,5.17,6
+High Blood Pressure,Lisinopril,5.16,264
+Nasal Congestion,Oxymetazoline,5.16,58
+Alzheimer's Disease,Aricept,5.15,13
+1</span> users found this comment helpful.,Depo-Provera,5.14,7
+Benign Prostatic Hyperplasia,Finasteride,5.14,21
+Birth Control,Tri-Estarylla,5.14,7
+High Cholesterol,Repatha,5.14,22
+Chronic Pain,Embeda,5.13,15
+Major Depressive Disorde,Vilazodone,5.13,78
+Alzheimer's Disease,Donepezil,5.12,24
+Insomnia,Unisom SleepGels,5.12,8
+Pain,Lidocaine,5.12,68
+Chronic Pain,Ultram,5.11,18
+"Diabetes, Type 2",Kombiglyze XR,5.11,9
+Systemic Lupus Erythematosus,Imuran,5.11,9
+Polycystic Ovary Syndrome,Ethinyl estradiol / levonorgestrel,5.11,18
+Birth Control,Minastrin 24 Fe,5.11,156
+Pneumonia,Levofloxacin,5.1,67
+min / saxagliptin),Metformin / saxagliptin,5.1,10
+Pneumonia,Doxycycline,5.1,21
+"Onychomycosis, Toenail",Tavaborole,5.09,11
+High Blood Pressure,Irbesartan,5.09,33
+Birth Control,Previfem,5.09,11
+Psoriatic Arthritis,Apremilast,5.08,50
+Overactive Bladde,Toviaz,5.08,25
+Bacterial Infection,Levofloxacin,5.08,25
+Birth Control,Viorele,5.08,26
+Bronchitis,Biaxin,5.08,13
+Cough,Benzonatate,5.06,203
+Migraine Prevention,Depakote,5.05,20
+Birth Control,Tarina Fe 1 / 20,5.05,21
+"Diabetes, Type 2",Farxiga,5.03,40
+High Cholesterol,Atorvastatin,5.01,76
+1</span> users found this comment helpful.,Aviane,5.0,4
+Acne,Tri-Linyah,5.0,4
+Heart Attack,Warfarin,5.0,3
+Thrombocythemia,Hydroxyurea,5.0,3
+Chronic Myofascial Pain,Cyclobenzaprine,5.0,6
+Bladder Infection,Ciprofloxacin,5.0,62
+Acute Coronary Syndrome,Ticagrelor,5.0,16
+Nasal Polyps,Nasonex,5.0,3
+Alzheimer's Disease,Namenda,5.0,7
+Ulcerative Colitis,Sulfasalazine,5.0,8
+GERD,Famotidine,5.0,5
+High Blood Pressure,Atacand,5.0,4
+Birth Control,Errin,5.0,23
+Hereditary Angioedema,Icatibant,5.0,3
+Hereditary Angioedema,Firazyr,5.0,3
+Birth Control,Ethinyl estradiol / folic acid / levonorgestrel,5.0,3
+Mania,Haloperidol,5.0,3
+Birth Control,Levlen,5.0,8
+Psoriatic Arthritis,Sulfasalazine,5.0,9
+Parkinson's Disease,Trihexyphenidyl,5.0,3
+Not Listed / Othe,Topiramate,5.0,4
+"Diabetes, Type 2",Metformin / sitagliptin,5.0,5
+"Diabetes, Type 2",Avandia,5.0,4
+Schizophrenia,Risperdal,5.0,20
+Prevention of Atherothrombotic Events,Ticagrelor,5.0,3
+Prevention of Cardiovascular Disease,Lipitor,5.0,3
+Not Listed / Othe,Dexamethasone,5.0,4
+Bronchitis,Omnicef,5.0,5
+Osteoporosis,Calcitonin,5.0,3
+Stomach Ulce,Omeprazole,5.0,6
+Skin or Soft Tissue Infection,Levaquin,5.0,4
+Birth Control,Loestrin 21 1 / 20,5.0,11
+High Cholesterol,Ezetimibe,5.0,29
+High Blood Pressure,Lotensin,5.0,3
+Migraine,Amrix,5.0,3
+Otitis Media,Bactrim,5.0,3
+Hyperphosphatemia of Renal Failure,Sevelamer,5.0,7
+Bronchitis,Cefuroxime,5.0,4
+Autism,Geodon,5.0,4
+Hot Flashes,Citalopram,5.0,4
+"Breast Cancer, Metastatic",Xeloda,5.0,6
+Mild Cognitive Impairment,Donepezil,5.0,4
+Pain,Darvocet A500,5.0,3
+"Hypogonadism, Male",Aveed,5.0,3
+1</span> users found this comment helpful.,Tri-Sprintec,5.0,5
+3</span> users found this comment helpful.,Yasmin,5.0,3
+2</span> users found this comment helpful.,Levora,5.0,3
+1</span> users found this comment helpful.,Microgestin Fe 1 / 20,5.0,4
+3</span> users found this comment helpful.,Loestrin 24 Fe,5.0,3
+Birth Control,Tri-Previfem,4.97,86
+High Blood Pressure,Avapro,4.96,23
+Psoriatic Arthritis,Otezla,4.95,39
+Pain,Acetaminophen / codeine,4.95,94
+Breast Cance,Exemestane,4.94,32
+Insomnia,Rozerem,4.93,43
+Sinusitis,Bactrim DS,4.93,14
+Otitis Media,Augmentin,4.92,13
+Constipation,Correctol,4.92,13
+Depression,Levomilnacipran,4.92,50
+Birth Control,Falmina,4.92,24
+Schizophrenia,Invega,4.92,24
+Muscle Spasm,Robaxin-750,4.91,22
+Androgenetic Alopecia,Propecia,4.9,10
+Abnormal Uterine Bleeding,Nora-Be,4.9,10
+Urinary Tract Infection,Sulfamethoxazole / trimethoprim,4.89,236
+Heart Failure,Entresto,4.89,9
+Dietary Supplementation,Omega-3 polyunsaturated fatty acids,4.89,9
+Birth Control,Gildess Fe 1.5 / 30,4.89,18
+Oral Thrush,Clotrimazole,4.89,9
+Constipation,Senokot,4.88,17
+High Blood Pressure,Amlodipine,4.88,153
+Upper Respiratory Tract Infection,Sulfamethoxazole / trimethoprim,4.88,8
+Malaria Prevention,Mefloquine,4.88,8
+"Diabetes, Type 2",Actos,4.86,22
+Urinary Tract Infection,Bactrim,4.86,80
+Chronic Lymphocytic Leukemia,Imbruvica,4.86,7
+Breast Cance,Afinitor,4.86,7
+Bowel Preparation,Dulcolax,4.85,26
+"Diabetes, Type 1",Insulin glargine,4.85,13
+Abnormal Uterine Bleeding,Tri-Sprintec,4.84,25
+Birth Control,Nortrel 1 / 35,4.83,12
+Birth Control,Vienva,4.83,12
+High Blood Pressure,Inderal,4.83,6
+Light Sedation,Versed,4.83,12
+Prostatitis,Levaquin,4.83,6
+Surgical Prophylaxis,Clindamycin,4.83,12
+High Cholesterol,Trilipix,4.83,6
+Parkinson's Disease,Pramipexole,4.83,6
+Postmenopausal Symptoms,Climara Pro,4.83,12
+1</span> users found this comment helpful.,Gianvi,4.83,6
+Migraine,Metoclopramide,4.83,59
+"Constipation, Drug Induced",Naloxegol,4.82,83
+Urinary Tract Infection,Nitrofurantoin,4.82,318
+Keratoconjunctivitis Sicca,Cyclosporine,4.81,26
+Not Listed / Othe,Ethinyl estradiol / norethindrone,4.8,5
+Psoriatic Arthritis,Certolizumab,4.8,5
+Insomnia,Simply Sleep,4.8,5
+Urinary Tract Infection,Amoxicillin / clavulanate,4.8,15
+Paranoid Disorde,Zyprexa,4.8,5
+"COPD, Maintenance",Roflumilast,4.8,10
+Kidney Infections,Ciprofloxacin,4.79,34
+Birth Control,Lessina,4.78,9
+Nasal Congestion,Sodium chloride,4.78,9
+Osteoporosis,Ibandronate,4.76,21
+Insomnia,Ramelteon,4.76,41
+Urinary Tract Infection,Macrobid,4.76,147
+"Deep Vein Thrombosis, Recurrent Event",Rivaroxaban,4.75,4
+Hyperphosphatemia of Renal Failure,Renvela,4.75,4
+Keratosis,Diclofenac,4.75,4
+Depression,Aplenzin,4.75,4
+Endometriosis,Seasonique,4.75,24
+Mania,Chlorpromazine,4.75,4
+"Conjunctivitis, Bacterial",Azithromycin,4.75,4
+Abnormal Uterine Bleeding,Ortho Tri-Cyclen Lo,4.75,4
+Heart Failure,Sacubitril / valsartan,4.75,12
+Parkinson's Disease,Comtan,4.75,4
+Opioid-Induced Constipation,Naloxegol,4.73,15
+ADHD,Mydayis,4.73,11
+High Cholesterol,Simvastatin,4.72,60
+Periodic Limb Movement Disorde,Requip,4.71,7
+Pelvic Inflammatory Disease,Metronidazole,4.71,7
+Bronchitis,Clarithromycin,4.71,62
+Bladder Infection,Macrobid,4.7,79
+Chronic Pain,Morphine / naltrexone,4.7,23
+Light Anesthesia,Midazolam,4.69,13
+Birth Control,Taytulla,4.69,48
+"Onychomycosis, Toenail",Kerydin,4.69,16
+High Cholesterol,Pravastatin,4.68,22
+Bronchitis,Levaquin,4.68,37
+Seizures,Perampanel,4.67,3
+2</span> users found this comment helpful.,Jolessa,4.67,3
+Otitis Media,Zithromax,4.67,3
+Nasal Congestion,Claritin-D 24 Hour,4.67,3
+Irritable Bowel Syndrome,Metamucil,4.67,3
+Birth Control,Alyacen 1 / 35,4.67,6
+Psoriatic Arthritis,Cimzia,4.67,3
+Cold Symptoms,Acetaminophen / chlorpheniramine / phenylephrine,4.67,6
+COPD,Incruse Ellipta,4.67,3
+Abnormal Uterine Bleeding,Provera,4.67,36
+Allergic Rhinitis,Claritin-D,4.67,6
+Autism,Ziprasidone,4.67,6
+Breast Cance,Taxotere,4.67,3
+Menstrual Disorders,Microgestin 1 / 20,4.67,3
+Bowel Preparation,NuLYTELY,4.67,3
+Pulmonary Hypertension,Uptravi,4.67,3
+Postmenopausal Symptoms,Paxil,4.67,3
+6</span> users found this comment helpful.,Lo Loestrin Fe,4.67,3
+High Blood Pressure,Norvasc,4.66,38
+High Blood Pressure,Candesartan,4.64,14
+Endometriosis,Lupron,4.64,14
+Prostatitis,Sulfamethoxazole / trimethoprim,4.64,11
+Kidney Infections,Cipro,4.64,11
+4</span> users found this comment helpful.,Loestrin 24 Fe,4.62,8
+Birth Control,Tri-Linyah,4.62,8
+Computed Tomography,Barium sulfate,4.62,8
+Depression,Fetzima,4.62,37
+Birth Control,Camila,4.62,26
+Bladder Infection,Cipro,4.61,18
+Atrophic Urethritis,Estrace Vaginal Cream,4.6,5
+Birth Control,Cyclessa,4.6,5
+Urinary Tract Infection,Augmentin,4.6,5
+"Diabetes, Type 2",Rosiglitazone,4.6,5
+Pneumonia,Levaquin,4.6,35
+Supraventricular Tachycardia,Bisoprolol,4.6,5
+Arrhythmia,Verapamil,4.6,5
+Abnormal Uterine Bleeding,Microgestin Fe 1 / 20,4.6,5
+Strep Throat,Clarithromycin,4.59,27
+Birth Control,Gildess Fe 1 / 20,4.59,153
+Birth Control,TriNessa Lo,4.57,7
+Bacterial Infection,Augmentin,4.57,28
+Allergies,Xyzal,4.57,65
+Bladder Infection,Nitrofurantoin,4.56,146
+Atrial Fibrillation,Carvedilol,4.56,9
+Bacterial Skin Infection,Bactrim DS,4.56,18
+Allergic Rhinitis,Methylprednisolone,4.55,11
+Postmenopausal Symptoms,Estradiol / levonorgestrel,4.54,13
+Birth Control,Tri-Lo-Sprintec,4.51,43
+Cough and Nasal Congestion,Chlorpheniramine / dextromethorphan,4.5,4
+Systemic Lupus Erythematosus,Azathioprine,4.5,8
+Skin or Soft Tissue Infection,Minocycline,4.5,6
+Acne,Gildess Fe 1.5 / 30,4.5,4
+Otitis Media,Amoxicillin / clavulanate,4.5,14
+"Diabetes, Type 2",Novolog,4.5,4
+Rheumatoid Arthritis,Nabumetone,4.5,8
+High Blood Pressure,Dyazide,4.5,4
+High Cholesterol,Lovastatin,4.5,8
+Crohn's Disease,Imuran,4.5,4
+Crohn's Disease,Azathioprine,4.5,4
+"Diabetes, Type 2",Dapagliflozin,4.48,50
+Vaginal Yeast Infection,Tioconazole,4.48,706
+Abnormal Uterine Bleeding,Ethinyl estradiol / norgestimate,4.46,148
+Otitis Externa,Ciprofloxacin / dexamethasone,4.44,9
+Anxiety,Oxcarbazepine,4.44,9
+Nausea/Vomiting,Prochlorperazine,4.42,52
+Atrophic Urethritis,Estradiol,4.42,12
+Urinary Incontinence,Darifenacin,4.4,5
+Sinusitis,Sulfamethoxazole / trimethoprim,4.4,25
+1</span> users found this comment helpful.,TriNessa,4.4,5
+"Glaucoma, Open Angle",Dorzolamide / timolol,4.4,5
+High Blood Pressure,Chlorthalidone,4.4,5
+Abnormal Uterine Bleeding,Ethinyl estradiol / levonorgestrel,4.39,108
+"Diabetes, Type 1",Tresiba,4.38,13
+"Diabetes, Type 2",Tradjenta,4.38,21
+Neuropathic Pain,Lidocaine,4.38,8
+Abnormal Uterine Bleeding,LoSeasonique,4.36,11
+Bladder Infection,Levofloxacin,4.33,9
+"Glaucoma, Open Angle",Brimonidine,4.33,3
+Lactose Intolerance,Lactase,4.33,12
+Birth Control,Balziva,4.33,3
+Abnormal Uterine Bleeding,Cryselle,4.33,9
+Endometriosis,Errin,4.33,3
+Multiple Sclerosis,Glatopa,4.33,3
+"Diabetes, Type 2",Basaglar,4.33,3
+High Blood Pressure,Prazosin,4.33,6
+Otitis Media,Cefdinir,4.33,30
+Skin and Structure Infection,Clarithromycin,4.33,3
+High Cholesterol,Simcor,4.33,3
+Bacterial Infection,Amoxicillin / clavulanate,4.33,51
+Arrhythmia,Propranolol,4.33,3
+"Diabetes, Type 2",Pioglitazone,4.33,24
+Ovarian Cysts,Aviane,4.33,9
+Reflex Sympathetic Dystrophy Syndrome,Amitriptyline,4.33,3
+Ophthalmic Surgery,Vigamox,4.33,3
+Sinus Symptoms,Nasonex,4.33,3
+Osteoarthritis,Salonpas Pain Patch,4.33,3
+"Ulcerative Colitis, Active",Balsalazide,4.33,3
+"Diabetes, Type 2",Linagliptin,4.33,18
+Atrial Fibrillation,Cardizem CD,4.33,3
+Ovarian Cance,Bevacizumab,4.33,3
+Tinea Corporis,Griseofulvin,4.33,3
+Postherpetic Neuralgia,Lidoderm,4.33,3
+Abnormal Uterine Bleeding,Lutera,4.33,3
+Birth Control,Gildess 1 / 20,4.33,3
+High Blood Pressure,Aldactone,4.33,3
+Borderline Personality Disorde,Buspirone,4.33,3
+"Conjunctivitis, Bacterial",Polymyxin b / trimethoprim,4.33,3
+Underactive Thyroid,NP Thyroid,4.33,3
+Epilepsy,Lyrica,4.33,3
+Bacterial Infection,Cefuroxime,4.33,3
+Actinic Keratosis,Efudex,4.33,3
+Autism,Risperdal,4.31,13
+Bronchitis,Cefdinir,4.3,23
+Kidney Infections,Sulfamethoxazole / trimethoprim,4.29,17
+"Asthma, Maintenance",Dulera,4.29,7
+Acne,Microgestin Fe 1 / 20,4.29,14
+"Constipation, Drug Induced",Movantik,4.25,84
+"COPD, Maintenance",Combivent Respimat,4.25,8
+Sciatica,Nabumetone,4.25,4
+Abnormal Uterine Bleeding,Levora,4.25,4
+Bacterial Infection,Bactrim,4.25,16
+Influenza Prophylaxis,Oseltamivir,4.25,4
+Menstrual Disorders,Junel Fe 1 / 20,4.25,12
+Opioid-Induced Constipation,Lubiprostone,4.25,4
+Migraine,Reglan,4.24,38
+Nasal Congestion,Afrin,4.22,27
+Tinea Corporis,Terbinafine,4.2,5
+Birth Control,Nikki,4.2,5
+Emergency Contraception,EContra EZ,4.2,5
+Pulmonary Hypertension,Selexipag,4.2,5
+Ventricular Fibrillation,Amiodarone,4.2,5
+Abnormal Uterine Bleeding,Estarylla,4.18,11
+Bacterial Infection,Bactrim DS,4.18,11
+Pain,Hysingla ER,4.18,34
+Muscle Pain,Salonpas Pain Patch,4.17,6
+Pneumococcal Disease Prophylaxis,Pneumococcal 13-valent vaccine,4.17,12
+Inflammatory Conditions,Prednisolone,4.17,6
+Abnormal Uterine Bleeding,Alesse,4.14,7
+Polycystic Ovary Syndrome,Microgestin Fe 1 / 20,4.14,7
+Birth Control,Ashlyna,4.13,15
+Allergic Rhinitis,Loratadine / pseudoephedrine,4.12,8
+Birth Control,Lo / Ovral,4.12,8
+"Diabetes, Type 2",Albiglutide,4.11,9
+High Cholesterol,Fenofibric acid,4.11,9
+Acne,Gildess Fe 1 / 20,4.11,9
+Alzheimer's Disease,Memantine,4.09,11
+Crohn's Disease,Vedolizumab,4.09,11
+Overactive Bladde,Ditropan,4.09,11
+Abnormal Uterine Bleeding,Norethindrone,4.06,62
+Osteoporosis,Risedronate,4.06,16
+Nausea/Vomiting,Reglan,4.03,29
+Sinusitis,Cipro,4.0,3
+Depression,Pamelor,4.0,3
+0</span> users found this comment helpful.,Seasonique,4.0,3
+ibromyalgia,Effexor,4.0,4
+Depression,Oleptro,4.0,3
+Birth Control,Mircette,4.0,5
+Bronchitis,Gemifloxacin,4.0,3
+Migraine Prevention,Candesartan,4.0,3
+Pneumonia,Cefuroxime,4.0,3
+Endometriosis,Levora,4.0,4
+Endometriosis,Etonogestrel,4.0,7
+Migraine,Venlafaxine,4.0,4
+Renal Cell Carcinoma,Nivolumab,4.0,3
+Upper Respiratory Tract Infection,Keflex,4.0,3
+Parkinson's Disease,Stalevo,4.0,3
+Bronchospasm Prophylaxis,Albuterol,4.0,4
+Urinary Incontinence,Enablex,4.0,4
+Nausea/Vomiting,Transderm-Scop,4.0,8
+Chronic Pain,Roxicet,4.0,4
+Tonsillitis/Pharyngitis,Chloraseptic Sore Throat Spray,4.0,3
+Erectile Dysfunction,Yohimbine,4.0,3
+Bladder Infection,Levaquin,4.0,4
+Conjunctivitis,Loteprednol,4.0,3
+Ulcerative Colitis,Vedolizumab,4.0,6
+Eye Redness,Systane,4.0,3
+Bacterial Infection,Sulfamethoxazole / trimethoprim,3.97,32
+Prostatitis,Ciprofloxacin,3.96,28
+Sinusitis,Cefdinir,3.95,62
+Abnormal Uterine Bleeding,Sprintec,3.94,36
+Prostatitis,Cipro,3.92,13
+Acne,Ethinyl estradiol / norethindrone,3.91,129
+Abnormal Uterine Bleeding,Seasonique,3.89,38
+High Blood Pressure,Coreg,3.89,9
+Eye Redness/Itching,Tetrahydrozoline / zinc sulfate,3.88,8
+Menstrual Disorders,Loryna,3.88,8
+Anesthesia,Ketamine,3.86,7
+Bowel Preparation,MiraLax,3.83,6
+High Blood Pressure,Carvedilol,3.82,28
+"Asthma, acute",Albuterol,3.81,43
+Vaginal Yeast Infection,Monistat 7-Day Combination Pack,3.79,72
+Sinusitis,Bactrim,3.78,9
+Rosacea,Mirvaso,3.78,63
+Nausea/Vomiting,Metoclopramide,3.78,45
+Cough,Dextromethorphan,3.77,122
+Insomnia,Suvorexant,3.76,201
+Eye Redness/Itching,Visine Totality Multi-Symptom Relief,3.75,8
+Pancreatic Exocrine Dysfunction,Creon,3.75,4
+Skin or Soft Tissue Infection,Clarithromycin,3.75,12
+Chronic Fatigue Syndrome,Duloxetine,3.75,4
+Bronchiectasis,Albuterol,3.71,7
+Insomnia,Belsomra,3.71,189
+Nausea/Vomiting,Haloperidol,3.71,7
+Vaginal Yeast Infection,Monistat 3-Day Combination Pack,3.7,98
+Light Anesthesia,Versed,3.7,10
+Rosacea,Brimonidine,3.69,70
+Prostatitis,Levofloxacin,3.67,9
+Abnormal Uterine Bleeding,Jolessa,3.67,3
+Not Listed / Othe,Methylprednisolone,3.67,3
+Hypoactive Sexual Desire Disorde,Addyi,3.67,3
+Bowel Preparation,Dulcolax Laxative,3.67,3
+Abnormal Uterine Bleeding,Aygestin,3.67,3
+Nasal Congestion,Afrin Original,3.67,3
+Benzodiazepine Withdrawal,Clonidine,3.67,3
+Hyperlipoproteinemia,TriCor,3.67,3
+Acute Coronary Syndrome,Brilinta,3.67,12
+Anxiety,Compazine,3.67,3
+Juvenile Rheumatoid Arthritis,Naproxen,3.67,3
+Abnormal Uterine Bleeding,Premarin,3.67,3
+Psychosis,Trilafon,3.67,3
+Influenza Prophylaxis,FluMist,3.62,8
+Parkinson's Disease,Rytary,3.62,8
+Osteoporosis,Prolia,3.62,52
+Osteoporosis,Denosumab,3.6,53
+Hypertriglyceridemia,Trilipix,3.6,5
+0</span> users found this comment helpful.,Tri-Sprintec,3.6,10
+Opioid-Induced Constipation,Amitiza,3.6,5
+Chronic Pain,Belbuca,3.6,35
+"Diabetes, Type 2",Colesevelam,3.6,5
+"Crohn's Disease, Maintenance",Mercaptopurine,3.6,5
+Allergic Rhinitis,Claritin,3.57,14
+Sinusitis,Cefprozil,3.57,7
+Dental Abscess,Erythromycin,3.5,4
+Psoriatic Arthritis,Secukinumab,3.5,6
+Abnormal Uterine Bleeding,Gildess Fe 1 / 20,3.5,6
+Abnormal Uterine Bleeding,Ethinyl estradiol / etonogestrel,3.5,4
+Premenstrual Syndrome,Ethinyl estradiol / levonorgestrel,3.5,8
+"Diabetes, Type 2",Welchol,3.5,4
+Cough,Delsym,3.49,80
+Birth Control,Blisovi Fe 1 / 20,3.47,49
+Strep Throat,Cefdinir,3.45,11
+Birth Control,Estarylla,3.44,63
+Nausea/Vomiting,Compazine,3.44,39
+"Asthma, acute",ProAir HFA,3.4,5
+Endometriosis,Ortho Tri-Cyclen Lo,3.4,5
+Breast Cance,Docetaxel,3.4,5
+Pneumococcal Disease Prophylaxis,Prevnar 13,3.36,11
+Abnormal Uterine Bleeding,Tri-Previfem,3.36,11
+High Blood Pressure,Hydralazine,3.36,11
+Osteoporosis,Fosamax,3.36,11
+Rheumatoid Arthritis,Azathioprine,3.33,3
+Undifferentiated Connective Tissue Disease,Plaquenil,3.33,6
+Rheumatoid Arthritis,Sulfazine,3.33,3
+"Conjunctivitis, Bacterial",Azasite,3.33,3
+Colorectal Cance,Panitumumab,3.33,3
+Influenza Prophylaxis,"Influenza virus vaccine, live, trivalent",3.33,9
+Parkinson's Disease,Artane,3.33,3
+Birth Control,Larin Fe 1 / 20,3.33,3
+Abnormal Uterine Bleeding,Medroxyprogesterone,3.29,382
+Upper Respiratory Tract Infection,Bactrim DS,3.25,4
+Crohn's Disease,Entyvio,3.25,8
+Overactive Bladde,Flomax,3.25,8
+Birth Control,Nortrel 7 / 7 / 7,3.25,4
+Prevention of Cardiovascular Disease,Atorvastatin,3.25,4
+"Herpes Zoster, Prophylaxis",Zoster vaccine live,3.25,4
+Headache,Trazodone,3.25,4
+Angina,Isosorbide mononitrate,3.25,8
+Rosacea,Rhofade,3.22,9
+Acne,Loestrin 24 Fe,3.21,58
+Angina Pectoris Prophylaxis,Imdur,3.2,5
+Atrial Flutte,Diltiazem,3.17,6
+Abnormal Uterine Bleeding,Depo-Provera,3.15,343
+Birth Control,Blisovi 24 Fe,3.11,89
+Osteoporosis,Alendronate,3.06,16
+Vaginal Yeast Infection,Monistat 7,3.03,62
+Vaginal Yeast Infection,Miconazole,3.02,997
+Bladder Infection,Trimethoprim,3.0,3
+Obsessive Compulsive Disorde,Vilazodone,3.0,3
+Inflammatory Conditions,Decadron,3.0,7
+Neuralgia,Lioresal,3.0,3
+"Diabetes, Type 2",Humalog KwikPen,3.0,3
+Psoriatic Arthritis,Cosentyx,3.0,8
+Abnormal Uterine Bleeding,Quasense,3.0,7
+Anesthesia,Lidocaine,3.0,5
+Otitis Media,Hydrocortisone / neomycin / polymyxin b,3.0,4
+Body Dysmorphic Disorde,Ziprasidone,3.0,3
+Osteoporosis,Actonel,2.9,10
+Postmenopausal Symptoms,Estradiol Patch,2.8,5
+Acne,Microgestin Fe 1.5 / 30,2.8,5
+Prostatitis,Bactrim,2.8,5
+Labor Induction,Cervidil,2.75,4
+Otitis Media,Levofloxacin,2.75,4
+Pain,Tylenol with Codeine #4,2.75,4
+zen Shoulde,Naproxen,2.67,3
+Nausea/Vomiting,Haldol,2.67,6
+Parkinson's Disease,Requip,2.67,3
+Amebiasis,Metronidazole,2.67,3
+Skin and Structure Infection,Cefdinir,2.67,3
+Mania,Haldol,2.67,3
+Prevention of Osteoporosis,Alendronate,2.67,6
+Sore Throat,Phenol,2.67,3
+Birth Control,Necon 1 / 50,2.67,3
+Dementia,Haloperidol,2.67,3
+Urinary Tract Infection,Trimethoprim,2.6,5
+Non-Small Cell Lung Cance,Opdivo,2.6,10
+Abnormal Uterine Bleeding,Lyza,2.6,5
+Skin or Soft Tissue Infection,Levofloxacin,2.57,7
+Dry Eye Disease,Ocular lubricant,2.55,11
+Periodic Limb Movement Disorde,Ropinirole,2.5,6
+Rosacea,Oxymetazoline,2.38,8
+Anesthesia,Succinylcholine,2.38,8
+Nausea/Vomiting,Cyclizine,2.33,3
+Constipation,Lubiprostone,2.33,3
+Pain,Aspirin / oxycodone,2.33,3
+Postherpetic Neuralgia,Lidocaine,2.33,3
+Crohn's Disease,Apriso,2.33,3
+Atrophic Vaginitis,Yuvafem,2.32,19
+Abnormal Uterine Bleeding,Jolivette,2.25,4
+Influenza Prophylaxis,Tamiflu,2.25,4
+Sore Throat,Chloraseptic Sore Throat Spray,2.25,4
+Paranoid Disorde,Risperidone,2.2,5
+Urinary Tract Infection,SMZ-TMP DS,2.14,7
+COPD,Umeclidinium,2.0,3
+Postoperative Ocular Inflammation,Prednisolone,2.0,3
+Endometriosis,Camila,2.0,3
+Allergic Rhinitis,Allegra Allergy,1.8,5
+Dermatological Disorders,Hydroquinone,1.75,4
+"Diabetes, Type 1",Toujeo,1.75,4
+Tinea Cruris,Lamisil AT,1.67,3
+Ankylosing Spondylitis,Secukinumab,1.6,5
+Ankylosing Spondylitis,Cosentyx,1.6,5
+Vaginal Yeast Infection,Monistat 1-Day or Night Combination Pack,1.42,12
+"Asthma, acute",ProAir RespiClick,1.27,22
+Constipation,Amitiza,1.25,4
+Cough and Nasal Congestion,Brompheniramine / dextromethorphan / phenylephrine,1.25,4
+Abnormal Uterine Bleeding,Tri-Lo-Sprintec,1.14,7
+Prostate Cance,Xtandi,1.0,3
+Prostate Cance,Enzalutamide,1.0,3
+Non-Small Cell Lung Cance,Pembrolizumab,1.0,3
+Birth Control,Enskyce,1.0,3
+Birth Control,Mibelas 24 Fe,1.0,4
+Dry Eye Disease,Systane,1.0,5
+Bronchiectasis,ProAir RespiClick,1.0,3
+Diabetic Peripheral Neuropathy,Capsaicin,1.0,3
+Dry Eye Disease,Systane Ultra,1.0,3

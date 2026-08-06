@@ -1,0 +1,335 @@
+{% extends "base.html" %}
+{% block title %}Predict — Drug Emergency Response{% endblock %}
+{% block page_title %}Emergency Prediction{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>🔮 Emergency Response Predictor</h1>
+  <p>Enter drug details and a patient review to get an AI-powered emergency assessment</p>
+</div>
+
+<div class="grid-12">
+  <!-- Input Form -->
+  <div>
+    <div class="card" style="margin-bottom:20px;">
+      <h3 style="font-size:16px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px;">
+        <i data-lucide="pencil" style="width:16px;height:16px;color:var(--accent-blue);"></i>
+        Patient Review Input
+      </h3>
+
+      <div class="form-group autocomplete-wrap">
+        <label>Drug Name</label>
+        <div class="search-box">
+          <i data-lucide="search"></i>
+          <input type="text" id="drugInput" class="form-control" placeholder="e.g. Aspirin, Metformin…" autocomplete="off" />
+        </div>
+        <div class="autocomplete-list" id="drugDropdown"></div>
+      </div>
+
+      <div class="form-group autocomplete-wrap">
+        <label>Medical Condition</label>
+        <div class="search-box">
+          <i data-lucide="activity"></i>
+          <input type="text" id="conditionInput" class="form-control" placeholder="e.g. Depression, ADHD…" autocomplete="off" />
+        </div>
+        <div class="autocomplete-list" id="conditionDropdown"></div>
+      </div>
+
+      <div class="form-group">
+        <label>Patient Review</label>
+        <textarea id="reviewInput" class="form-control" placeholder="Write the patient's drug review here… (min 10 characters)"></textarea>
+        <div style="text-align:right;margin-top:4px;font-size:12px;color:var(--text-muted);" id="charCount">0 chars</div>
+      </div>
+
+      <div id="formError" class="alert alert-error" style="display:none;">
+        <i data-lucide="alert-triangle"></i>
+        <span id="formErrorMsg"></span>
+      </div>
+
+      <div style="display:flex;gap:12px;">
+        <button id="predictBtn" class="btn btn-primary btn-full btn-lg" onclick="runPrediction()">
+          <i data-lucide="zap"></i>
+          Predict Now
+        </button>
+        <button class="btn btn-ghost" onclick="clearForm()" style="white-space:nowrap;">
+          <i data-lucide="x"></i>
+          Clear
+        </button>
+      </div>
+    </div>
+
+    <!-- Example Reviews — one per Emergency Level -->
+    <div class="card">
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:14px;color:var(--text-secondary);display:flex;align-items:center;gap:6px;">
+        <i data-lucide="flask-conical" style="width:14px;height:14px;"></i>
+        Try an Example — One Per Level
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+
+        <!-- CRITICAL -->
+        <button class="example-btn" onclick="loadExample(0)" style="--lvl-color:#ff4560;">
+          <div class="example-badge" style="background:rgba(255,69,96,0.15);color:#ff4560;border-color:rgba(255,69,96,0.4);">🔴 CRITICAL</div>
+          <div class="example-text">"Oxycodone ruined my life. Severe addiction, multiple overdoses, constant vomiting and seizures. Ended up in the ICU twice. This drug is extremely dangerous and I deeply regret ever taking it."</div>
+        </button>
+
+        <!-- HIGH -->
+        <button class="example-btn" onclick="loadExample(1)" style="--lvl-color:#ff6b35;">
+          <div class="example-badge" style="background:rgba(255,107,53,0.15);color:#ff6b35;border-color:rgba(255,107,53,0.4);">🟠 HIGH</div>
+          <div class="example-text">"Clonazepam helped slightly with anxiety but the side effects were quite bad — constant drowsiness, memory problems and withdrawal was horrible. Felt worse overall and my doctor had to switch medications."</div>
+        </button>
+
+        <!-- MODERATE -->
+        <button class="example-btn" onclick="loadExample(2)" style="--lvl-color:#f59e0b;">
+          <div class="example-badge" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.4);">🟡 MODERATE</div>
+          <div class="example-text">"Metformin does an okay job managing my blood sugar but I still deal with nausea and an upset stomach most mornings. It works, but it is not comfortable to live with every day."</div>
+        </button>
+
+        <!-- LOW -->
+        <button class="example-btn" onclick="loadExample(3)" style="--lvl-color:#00c896;">
+          <div class="example-badge" style="background:rgba(0,200,150,0.15);color:#00c896;border-color:rgba(0,200,150,0.4);">🟢 LOW</div>
+          <div class="example-text">"Sertraline has been absolutely life-changing for my depression. I feel like myself again after years of struggling. No side effects at all and my mood has improved dramatically. Highly recommend this medication."</div>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Results Panel -->
+  <div>
+    <!-- Loading -->
+    <div class="loading-overlay" id="loadingPanel" style="min-height:300px;">
+      <div class="spinner"></div>
+      <p style="color:var(--text-secondary);">Running ML prediction…</p>
+    </div>
+
+    <!-- Placeholder -->
+    <div id="placeholderPanel" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px;gap:16px;">
+      <div style="font-size:64px;opacity:0.2;">🔮</div>
+      <p style="color:var(--text-muted);text-align:center;">Your prediction results<br/>will appear here</p>
+    </div>
+
+    <!-- Results -->
+    <div id="resultsPanel" class="result-container">
+
+      <!-- Emergency Level -->
+      <div class="card" style="margin-bottom:20px;text-align:center;">
+        <div style="font-size:12px;color:var(--text-secondary);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">Emergency Response Level</div>
+        <div id="emergencyBadge" class="emergency-badge" style="margin:0 auto 12px;display:inline-flex;"></div>
+        <div id="emergencyDesc" style="font-size:13px;color:var(--text-secondary);"></div>
+      </div>
+
+      <!-- Rating Gauge -->
+      <div class="card" style="margin-bottom:20px;">
+        <div style="font-size:14px;font-weight:700;margin-bottom:4px;text-align:center;">Predicted Rating</div>
+        <div class="gauge-container">
+          <div class="gauge-value" id="gaugeValue">—</div>
+          <div class="gauge-max">/10</div>
+          <div style="margin-top:8px;font-size:20px;" id="gaugeEmoji">—</div>
+        </div>
+        <div style="margin-top:8px;">
+          <div class="progress-label">
+            <span>Confidence</span>
+            <span id="confValue">—</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" id="confBar" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <!-- Sentiment -->
+      <div class="card" style="margin-bottom:20px;">
+        <div style="font-size:14px;font-weight:700;margin-bottom:16px;">Sentiment Analysis</div>
+        <div class="sentiment-bar" id="sentimentBar"></div>
+      </div>
+
+      <!-- Meta Info -->
+      <div class="card">
+        <div style="font-size:14px;font-weight:700;margin-bottom:12px;">Prediction Summary</div>
+        <table class="data-table">
+          <tr><td style="color:var(--text-secondary);">Drug</td><td id="sumDrug" style="font-weight:600;text-align:right;"></td></tr>
+          <tr><td style="color:var(--text-secondary);">Condition</td><td id="sumCondition" style="font-weight:600;text-align:right;"></td></tr>
+          <tr><td style="color:var(--text-secondary);">Review Words</td><td id="sumWords" style="font-weight:600;text-align:right;"></td></tr>
+          <tr><td style="color:var(--text-secondary);">Rating</td><td id="sumRating" style="font-weight:600;text-align:right;"></td></tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const examples = [
+  // 0 — CRITICAL (Rating 1–3): Very negative, dangerous, hospitalization language
+  {
+    drug:      "Oxycodone",
+    condition: "Pain",
+    review:    "Oxycodone completely ruined my life. I became severely addicted within weeks. I suffered multiple overdoses, constant vomiting and dangerous seizures. I was hospitalized in the ICU twice and nearly died. This drug is extremely dangerous and has caused irreversible damage to my health. I deeply regret ever taking it. Do not use this medication."
+  },
+  // 1 — HIGH (Rating 4–5): Mostly negative, significant side effects, partial failure
+  {
+    drug:      "Clonazepam",
+    condition: "Anxiety",
+    review:    "Clonazepam helped slightly with my anxiety at first but the side effects were quite bad. I experienced constant drowsiness, serious memory problems and confusion throughout the day. The withdrawal symptoms were horrible and unbearable. I felt significantly worse overall and my doctor had to urgently switch me to a different medication after just a few weeks."
+  },
+  // 2 — MODERATE (Rating 6–7): Mixed, works but uncomfortable, some side effects
+  {
+    drug:      "Metformin",
+    condition: "Diabetes Type 2",
+    review:    "Metformin does an okay job at managing my blood sugar levels and keeping them relatively stable. However I still deal with nausea and an upset stomach most mornings which is quite uncomfortable. The medication works well enough but it is not easy to live with the side effects on a daily basis. My doctor said to continue for now."
+  },
+  // 3 — LOW (Rating 8–10): Very positive, life-changing, no side effects
+  {
+    drug:      "Sertraline",
+    condition: "Depression",
+    review:    "Sertraline has been absolutely life-changing for my severe depression. I finally feel completely like myself again after years of struggling every single day. I have no side effects whatsoever. My mood has improved dramatically and I have so much more energy and motivation. I sleep well and my relationships have improved too. I highly recommend this medication to anyone suffering."
+  },
+];
+
+
+function loadExample(i) {
+  const ex = examples[i];
+  document.getElementById('drugInput').value      = ex.drug;
+  document.getElementById('conditionInput').value = ex.condition;
+  document.getElementById('reviewInput').value    = ex.review;
+  updateCharCount();
+}
+
+function clearForm() {
+  document.getElementById('drugInput').value      = '';
+  document.getElementById('conditionInput').value = '';
+  document.getElementById('reviewInput').value    = '';
+  updateCharCount();
+  showPanel('placeholder');
+  document.getElementById('formError').style.display = 'none';
+}
+
+function updateCharCount() {
+  const len = document.getElementById('reviewInput').value.length;
+  document.getElementById('charCount').textContent = `${len} chars`;
+}
+document.getElementById('reviewInput').addEventListener('input', updateCharCount);
+
+function showPanel(which) {
+  document.getElementById('loadingPanel').classList.remove('visible');
+  document.getElementById('loadingPanel').style.display = 'none';
+  document.getElementById('placeholderPanel').style.display = 'none';
+  document.getElementById('resultsPanel').classList.remove('visible');
+
+  if (which === 'loading') {
+    document.getElementById('loadingPanel').style.display = 'flex';
+    document.getElementById('loadingPanel').classList.add('visible');
+  } else if (which === 'placeholder') {
+    document.getElementById('placeholderPanel').style.display = 'flex';
+  } else if (which === 'results') {
+    document.getElementById('resultsPanel').classList.add('visible');
+  }
+}
+
+async function runPrediction() {
+  const drug    = document.getElementById('drugInput').value.trim() || 'Unknown';
+  const cond    = document.getElementById('conditionInput').value.trim() || 'Unknown';
+  const review  = document.getElementById('reviewInput').value.trim();
+  const errEl   = document.getElementById('formError');
+  const errMsg  = document.getElementById('formErrorMsg');
+
+  errEl.style.display = 'none';
+  if (review.length < 10) {
+    errMsg.textContent = 'Review must be at least 10 characters long.';
+    errEl.style.display = 'flex';
+    return;
+  }
+
+  showPanel('loading');
+  document.getElementById('predictBtn').disabled = true;
+
+  try {
+    const res  = await fetch('/api/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ drug, condition: cond, review })
+    });
+    const data = await res.json();
+
+    if (data.error) throw new Error(data.error);
+
+    // Emergency badge
+    const el = data.emergency.level;
+    const eEl = document.getElementById('emergencyBadge');
+    eEl.textContent = `${data.emergency.icon} ${el}`;
+    eEl.className = `emergency-badge emergency-${el}`;
+    document.getElementById('emergencyDesc').textContent = data.emergency.desc;
+
+    // Rating gauge
+    document.getElementById('gaugeValue').textContent = data.rating.predicted;
+    document.getElementById('gaugeEmoji').textContent = data.rating.emoji;
+    document.getElementById('confValue').textContent  = `${data.rating.confidence}%`;
+    setTimeout(() => {
+      document.getElementById('confBar').style.width = `${data.rating.confidence}%`;
+    }, 400);
+
+    // Sentiment
+    const sentColors = { Positive: 'var(--accent-green)', Neutral: 'var(--accent-amber)', Negative: 'var(--accent-red)' };
+    const sb = document.getElementById('sentimentBar');
+    sb.innerHTML = Object.entries(data.sentiment.all_proba).map(([lbl, pct]) => `
+      <div class="sentiment-pill ${lbl === data.sentiment.label ? 'active' : ''}">
+        <div class="pill-label">${lbl}</div>
+        <div class="pill-value" style="color:${sentColors[lbl] || 'var(--text-primary)'};">${pct}%</div>
+      </div>
+    `).join('');
+
+    // Summary
+    document.getElementById('sumDrug').textContent      = data.drug;
+    document.getElementById('sumCondition').textContent = data.condition;
+    document.getElementById('sumWords').textContent     = `${data.review_len} words`;
+    document.getElementById('sumRating').textContent    = `${data.rating.display}`;
+
+    showPanel('results');
+    lucide.createIcons();
+
+  } catch(err) {
+    errMsg.textContent = err.message || 'Prediction failed. Please try again.';
+    errEl.style.display = 'flex';
+    showPanel('placeholder');
+    lucide.createIcons();
+  } finally {
+    document.getElementById('predictBtn').disabled = false;
+  }
+}
+
+// Autocomplete
+function setupAutocomplete(inputId, dropdownId, endpoint) {
+  const input    = document.getElementById(inputId);
+  const dropdown = document.getElementById(dropdownId);
+  let timer;
+
+  input.addEventListener('input', () => {
+    clearTimeout(timer);
+    const q = input.value.trim();
+    if (q.length < 2) { dropdown.classList.remove('open'); return; }
+    timer = setTimeout(async () => {
+      const res   = await fetch(`/api/${endpoint}?q=${encodeURIComponent(q)}`);
+      const items = await res.json();
+      if (!items.length) { dropdown.classList.remove('open'); return; }
+      dropdown.innerHTML = items.map(i => `<div class="autocomplete-item">${i}</div>`).join('');
+      dropdown.classList.add('open');
+      dropdown.querySelectorAll('.autocomplete-item').forEach(el => {
+        el.addEventListener('click', () => {
+          input.value = el.textContent;
+          dropdown.classList.remove('open');
+        });
+      });
+    }, 250);
+  });
+
+  document.addEventListener('click', e => {
+    if (!input.contains(e.target)) dropdown.classList.remove('open');
+  });
+}
+
+setupAutocomplete('drugInput', 'drugDropdown', 'search_drugs');
+setupAutocomplete('conditionInput', 'conditionDropdown', 'search_conditions');
+lucide.createIcons();
+</script>
+{% endblock %}

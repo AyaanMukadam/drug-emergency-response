@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+{% block title %}Drug Recommender — Drug Emergency Response{% endblock %}
+{% block page_title %}Drug Recommender{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>💊 Drug Recommender</h1>
+  <p>Search by medical condition and get AI-ranked drug recommendations based on patient reviews</p>
+</div>
+
+<div class="grid-12">
+  <!-- Search Panel -->
+  <div>
+    <div class="card" style="margin-bottom:20px;">
+      <h3 style="font-size:16px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px;">
+        <i data-lucide="search" style="width:16px;height:16px;color:var(--accent-cyan);"></i>
+        Search Condition
+      </h3>
+
+      <div class="form-group autocomplete-wrap">
+        <label>Medical Condition</label>
+        <div class="search-box">
+          <i data-lucide="activity"></i>
+          <input type="text" id="condSearch" class="form-control" placeholder="e.g. Depression, ADHD…" autocomplete="off" />
+        </div>
+        <div class="autocomplete-list" id="condDropdown"></div>
+      </div>
+
+      <button class="btn btn-success btn-full" onclick="searchDrugs()" id="searchBtn">
+        <i data-lucide="stethoscope"></i>
+        Find Best Drugs
+      </button>
+    </div>
+
+    <!-- Popular Conditions Quick-pick -->
+    <div class="card">
+      <h3 style="font-size:14px;font-weight:700;margin-bottom:12px;color:var(--text-secondary);">
+        <i data-lucide="trending-up" style="width:14px;height:14px;display:inline;vertical-align:-2px;margin-right:6px;"></i>
+        Popular Conditions
+      </h3>
+      <div class="tag-cloud">
+        {% set popular = ['Depression', 'Pain', 'Anxiety', 'Birth Control', 'ADHD', 'Diabetes Type 2', 'High Blood Pressure', 'Insomnia', 'Acne', 'Migraine'] %}
+        {% for cond in popular %}
+          <span class="tag" onclick="quickSearch('{{ cond }}')">{{ cond }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div>
+    <!-- Placeholder -->
+    <div id="recPlaceholder" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px;gap:16px;">
+      <div style="font-size:64px;opacity:0.2;">💊</div>
+      <p style="color:var(--text-muted);text-align:center;">Search for a condition<br/>to see drug recommendations</p>
+    </div>
+
+    <!-- Loading -->
+    <div id="recLoading" class="loading-overlay" style="min-height:300px;display:none;">
+      <div class="spinner"></div>
+      <p style="color:var(--text-secondary);">Fetching recommendations…</p>
+    </div>
+
+    <!-- No Results -->
+    <div id="recEmpty" style="display:none;" class="card" style="text-align:center;padding:40px;">
+      <div style="font-size:48px;margin-bottom:16px;">🔍</div>
+      <h3 style="margin-bottom:8px;">No results found</h3>
+      <p style="color:var(--text-secondary);">Try a different condition name or use the quick-pick above</p>
+    </div>
+
+    <!-- Results list -->
+    <div id="recResults" style="display:none;">
+      <div id="recHeader" class="card" style="margin-bottom:16px;padding:16px 20px;display:flex;align-items:center;gap:12px;">
+        <div style="font-size:24px;">🏆</div>
+        <div>
+          <div id="recTitle" style="font-size:16px;font-weight:700;"></div>
+          <div id="recSubtitle" style="font-size:12px;color:var(--text-secondary);"></div>
+        </div>
+      </div>
+      <div id="drugList" style="display:flex;flex-direction:column;gap:12px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- How it Works -->
+<div class="divider" style="margin:32px 0;"></div>
+<div class="card" style="margin-bottom:24px;">
+  <h3 style="font-size:16px;font-weight:700;margin-bottom:20px;">
+    <i data-lucide="info" style="width:16px;height:16px;display:inline;vertical-align:-2px;margin-right:6px;color:var(--accent-blue);"></i>
+    How the Recommender Works
+  </h3>
+  <div class="grid-3">
+    <div style="text-align:center;padding:20px;">
+      <div style="font-size:36px;margin-bottom:12px;">📝</div>
+      <h4 style="margin-bottom:8px;font-size:14px;">1. Patient Reviews</h4>
+      <p style="font-size:13px;color:var(--text-secondary);">Aggregates thousands of real patient reviews from the dataset</p>
+    </div>
+    <div style="text-align:center;padding:20px;">
+      <div style="font-size:36px;margin-bottom:12px;">⚖️</div>
+      <h4 style="margin-bottom:8px;font-size:14px;">2. Rating Aggregation</h4>
+      <p style="font-size:13px;color:var(--text-secondary);">Calculates average satisfaction rating per drug per condition</p>
+    </div>
+    <div style="text-align:center;padding:20px;">
+      <div style="font-size:36px;margin-bottom:12px;">🏆</div>
+      <h4 style="margin-bottom:8px;font-size:14px;">3. Ranked Output</h4>
+      <p style="font-size:13px;color:var(--text-secondary);">Returns top drugs ranked by patient satisfaction score</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function quickSearch(cond) {
+  document.getElementById('condSearch').value = cond;
+  searchDrugs();
+}
+
+async function searchDrugs() {
+  const cond = document.getElementById('condSearch').value.trim();
+  if (!cond) return;
+
+  // Show loading
+  document.getElementById('recPlaceholder').style.display = 'none';
+  document.getElementById('recEmpty').style.display       = 'none';
+  document.getElementById('recResults').style.display     = 'none';
+  document.getElementById('recLoading').style.display     = 'flex';
+  document.getElementById('searchBtn').disabled = true;
+
+  try {
+    const res  = await fetch(`/api/recommend?condition=${encodeURIComponent(cond)}`);
+    const data = await res.json();
+
+    document.getElementById('recLoading').style.display = 'none';
+
+    if (!data.drugs || data.drugs.length === 0) {
+      document.getElementById('recEmpty').style.display = 'block';
+      return;
+    }
+
+    document.getElementById('recTitle').textContent    = `Top drugs for: ${data.condition}`;
+    document.getElementById('recSubtitle').textContent = `${data.drugs.length} drugs found · Ranked by patient satisfaction`;
+
+    const emergencyColors = { LOW: '#10b981', MODERATE: '#f59e0b', HIGH: '#f97316', CRITICAL: '#ef4444' };
+    const emergencyIcons  = { LOW: '🟢', MODERATE: '🟡', HIGH: '🟠', CRITICAL: '🔴' };
+
+    document.getElementById('drugList').innerHTML = data.drugs.map((drug, i) => `
+      <div class="drug-card" style="animation-delay:${i*0.07}s;">
+        <div class="drug-rank" style="${i < 3 ? 'background:linear-gradient(135deg,#f59e0b,#ef4444)' : ''}">${i + 1}</div>
+        <div class="drug-info">
+          <div class="drug-name">${drug.drugName}</div>
+          <div class="drug-meta">${drug.review_count} patient reviews</div>
+          <div class="drug-stars" style="margin-top:4px;">${drug.stars}</div>
+        </div>
+        <div>
+          <div class="drug-rating">${drug.avg_rating}</div>
+          <div class="drug-rating-sub">/10</div>
+          <div style="margin-top:6px;text-align:right;">
+            <span style="font-size:12px;font-weight:600;color:${drug.emergency_color};">
+              ${emergencyIcons[drug.emergency] || ''} ${drug.emergency}
+            </span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    document.getElementById('recResults').style.display = 'block';
+    lucide.createIcons();
+
+  } catch(err) {
+    document.getElementById('recLoading').style.display = 'none';
+    document.getElementById('recEmpty').style.display   = 'block';
+    console.error(err);
+  } finally {
+    document.getElementById('searchBtn').disabled = false;
+  }
+}
+
+// Autocomplete
+const input    = document.getElementById('condSearch');
+const dropdown = document.getElementById('condDropdown');
+let timer;
+input.addEventListener('input', () => {
+  clearTimeout(timer);
+  const q = input.value.trim();
+  if (q.length < 2) { dropdown.classList.remove('open'); return; }
+  timer = setTimeout(async () => {
+    const res   = await fetch(`/api/search_conditions?q=${encodeURIComponent(q)}`);
+    const items = await res.json();
+    if (!items.length) { dropdown.classList.remove('open'); return; }
+    dropdown.innerHTML = items.map(i => `<div class="autocomplete-item">${i}</div>`).join('');
+    dropdown.classList.add('open');
+    dropdown.querySelectorAll('.autocomplete-item').forEach(el => {
+      el.addEventListener('click', () => {
+        input.value = el.textContent;
+        dropdown.classList.remove('open');
+        searchDrugs();
+      });
+    });
+  }, 250);
+});
+document.addEventListener('click', e => {
+  if (!input.contains(e.target)) dropdown.classList.remove('open');
+});
+
+// Enter key
+input.addEventListener('keydown', e => { if (e.key === 'Enter') searchDrugs(); });
+
+lucide.createIcons();
+</script>
+{% endblock %}

@@ -1,0 +1,279 @@
+{% extends "base.html" %}
+{% block title %}Analytics — Drug Emergency Response{% endblock %}
+{% block page_title %}Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <h1>📊 Analytics Dashboard</h1>
+  <p>Visual insights from {{ analytics.total_reviews | default(0) | int | string }} drug reviews across {{ analytics.total_conditions | default(0) }} medical conditions</p>
+</div>
+
+<!-- Summary Row -->
+<div class="stats-grid" style="margin-bottom:28px;">
+  <div class="stat-card">
+    <div class="stat-icon blue"><i data-lucide="file-text"></i></div>
+    <div class="stat-info">
+      <div class="stat-value">{{ "{:,}".format(analytics.total_reviews | default(0) | int) }}</div>
+      <div class="stat-label">Reviews</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon purple"><i data-lucide="pill"></i></div>
+    <div class="stat-info">
+      <div class="stat-value">{{ analytics.total_drugs | default(0) }}</div>
+      <div class="stat-label">Drugs</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon cyan"><i data-lucide="activity"></i></div>
+    <div class="stat-info">
+      <div class="stat-value">{{ analytics.total_conditions | default(0) }}</div>
+      <div class="stat-label">Conditions</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon green"><i data-lucide="star"></i></div>
+    <div class="stat-info">
+      <div class="stat-value">{{ analytics.avg_rating | default(0) }}</div>
+      <div class="stat-label">Avg Rating</div>
+    </div>
+  </div>
+</div>
+
+<!-- Charts Row 1 -->
+<div class="grid-2" style="margin-bottom:24px;">
+  <div class="chart-card">
+    <h3>📈 Rating Distribution (1–10)</h3>
+    <div class="chart-wrap" style="height:250px;">
+      <canvas id="ratingChart"></canvas>
+    </div>
+  </div>
+  <div class="chart-card">
+    <h3>🎭 Sentiment Breakdown</h3>
+    <div class="chart-wrap" style="height:250px;">
+      <canvas id="sentimentChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Charts Row 2 -->
+<div class="grid-2" style="margin-bottom:24px;">
+  <div class="chart-card">
+    <h3>🏥 Top 15 Conditions by Review Volume</h3>
+    <div class="chart-wrap" style="height:320px;">
+      <canvas id="conditionChart"></canvas>
+    </div>
+  </div>
+  <div class="chart-card">
+    <h3>🚨 Emergency Level Distribution</h3>
+    <div class="chart-wrap" style="height:320px;">
+      <canvas id="emergencyChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- Top Drugs by Condition -->
+<div class="chart-card" style="margin-bottom:24px;">
+  <h3>💊 Top-Rated Drugs by Condition</h3>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;" id="condTabs"></div>
+  <div class="chart-wrap" style="height:280px;">
+    <canvas id="topDrugsChart"></canvas>
+  </div>
+</div>
+
+<!-- Avg Rating per Condition -->
+<div class="chart-card">
+  <h3>⭐ Average Rating by Top Conditions</h3>
+  <div class="chart-wrap" style="height:300px;">
+    <canvas id="avgRatingChart"></canvas>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const analytics = {{ analytics | tojson }};
+
+const COLORS = {
+  blue:   '#1a6bff', teal:   '#00d4aa', cyan:   '#00b4d8',
+  violet: '#7c3aed', purple: '#a855f7', green:  '#00c896',
+  amber:  '#f59e0b', red:    '#ff4560', orange: '#ff6b35',
+};
+
+const CHART_DEFAULTS = {
+  plugins: { legend: { labels: { color: '#7a8aaa', font: { family: 'Inter', size: 12 } } } },
+  scales: {
+    x: { ticks: { color: '#7a8aaa', font: { family: 'Inter', size: 11 } }, grid: { color: 'rgba(0,212,170,0.05)' } },
+    y: { ticks: { color: '#7a8aaa', font: { family: 'Inter', size: 11 } }, grid: { color: 'rgba(0,212,170,0.05)' } }
+  }
+};
+
+// ── Rating Distribution Chart ────────────────────────────────────────────────
+const ratingDist = analytics.rating_distribution || {};
+const ratingKeys = Array.from({length:10}, (_,i)=> String(i+1));
+const ratingVals = ratingKeys.map(k => ratingDist[k] || 0);
+new Chart(document.getElementById('ratingChart'), {
+  type: 'bar',
+  data: {
+    labels: ratingKeys.map(k => `★ ${k}`),
+    datasets: [{
+      label: 'Reviews',
+      data: ratingVals,
+      backgroundColor: ratingKeys.map(k => {
+        const v = parseInt(k);
+        if (v <= 3) return 'rgba(255,69,96,0.7)';
+        if (v <= 5) return 'rgba(255,107,53,0.7)';
+        if (v <= 7) return 'rgba(245,158,11,0.7)';
+        return 'rgba(0,200,150,0.7)';
+      }),
+      borderRadius: 7, borderSkipped: false,
+    }]
+  },
+  options: {
+    ...CHART_DEFAULTS,
+    plugins: { legend: { display: false } },
+    scales: CHART_DEFAULTS.scales,
+    responsive: true, maintainAspectRatio: false
+  }
+});
+
+// ── Sentiment Donut ──────────────────────────────────────────────────────────
+const sentDist = analytics.sentiment_distribution || {};
+new Chart(document.getElementById('sentimentChart'), {
+  type: 'doughnut',
+  data: {
+    labels: Object.keys(sentDist),
+    datasets: [{
+      data: Object.values(sentDist),
+      backgroundColor: [COLORS.teal, COLORS.amber, COLORS.red, COLORS.blue],
+      borderColor: '#01020a', borderWidth: 3, hoverOffset: 10,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, cutout: '68%',
+    plugins: { legend: { position: 'bottom', labels: { color: '#7a8aaa', font: { family: 'Inter', size: 12 }, padding: 18 } } }
+  }
+});
+
+// ── Condition Horizontal Bar ─────────────────────────────────────────────────
+const topConds  = analytics.top_conditions || {};
+const condLabels = Object.keys(topConds).slice(0,15);
+const condVals   = condLabels.map(k => topConds[k]);
+new Chart(document.getElementById('conditionChart'), {
+  type: 'bar',
+  data: {
+    labels: condLabels,
+    datasets: [{
+      label: 'Reviews',
+      data: condVals,
+      backgroundColor: 'rgba(0,212,170,0.55)',
+      borderColor: COLORS.teal, borderWidth: 1, borderRadius: 5,
+    }]
+  },
+  options: {
+    indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { color: '#7a8aaa' }, grid: { color: 'rgba(0,212,170,0.05)' } },
+      y: { ticks: { color: '#e8f0ff', font: { size: 11 } }, grid: { display: false } }
+    }
+  }
+});
+
+// ── Emergency Donut ──────────────────────────────────────────────────────────
+const emergDist = analytics.emergency_distribution || {};
+new Chart(document.getElementById('emergencyChart'), {
+  type: 'doughnut',
+  data: {
+    labels: ['🔴 Critical (1-3)', '🟠 High (4-5)', '🟡 Moderate (6-7)', '🟢 Low (8-10)'],
+    datasets: [{
+      data: [emergDist.CRITICAL||0, emergDist.HIGH||0, emergDist.MODERATE||0, emergDist.LOW||0],
+      backgroundColor: ['rgba(255,69,96,0.75)','rgba(255,107,53,0.75)','rgba(245,158,11,0.75)','rgba(0,200,150,0.75)'],
+      borderColor: '#01020a', borderWidth: 3, hoverOffset: 10,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false, cutout: '68%',
+    plugins: { legend: { position: 'bottom', labels: { color: '#7a8aaa', font: { family: 'Inter', size: 11 }, padding: 14 } } }
+  }
+});
+
+// ── Top Drugs by Condition ───────────────────────────────────────────────────
+const topDrugsByCond = analytics.top_drugs_by_condition || {};
+let topDrugsChart = null;
+
+function renderTopDrugsChart(cond) {
+  const data   = topDrugsByCond[cond] || [];
+  const labels = data.map(d => d.drugName);
+  const vals   = data.map(d => parseFloat(d.avg_rating).toFixed(2));
+  if (topDrugsChart) topDrugsChart.destroy();
+  topDrugsChart = new Chart(document.getElementById('topDrugsChart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: `Avg Rating — ${cond}`,
+        data: vals,
+        backgroundColor: 'rgba(124,58,237,0.6)',
+        borderColor: COLORS.violet, borderWidth: 1, borderRadius: 7,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { ticks: { color: '#e8f0ff', font: { size: 11 } }, grid: { display: false } },
+        y: { min: 0, max: 10, ticks: { color: '#7a8aaa' }, grid: { color: 'rgba(0,212,170,0.05)' } }
+      }
+    }
+  });
+}
+
+const condTabs  = document.getElementById('condTabs');
+const conditions = Object.keys(topDrugsByCond);
+conditions.forEach((cond, i) => {
+  const btn = document.createElement('button');
+  btn.className = `btn btn-ghost` + (i === 0 ? ' active' : '');
+  btn.textContent = cond;
+  btn.style.cssText = 'font-size:12px;padding:7px 14px;';
+  btn.addEventListener('click', () => {
+    condTabs.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderTopDrugsChart(cond);
+  });
+  condTabs.appendChild(btn);
+});
+if (conditions.length) renderTopDrugsChart(conditions[0]);
+
+// ── Avg Rating by Condition ──────────────────────────────────────────────────
+const condRatings  = analytics.condition_ratings || {};
+const crLabels = Object.keys(condRatings).slice(0,12);
+const crVals   = crLabels.map(k => condRatings[k]);
+new Chart(document.getElementById('avgRatingChart'), {
+  type: 'bar',
+  data: {
+    labels: crLabels,
+    datasets: [{
+      label: 'Avg Rating',
+      data: crVals,
+      backgroundColor: crVals.map(v => {
+        if (v <= 4) return 'rgba(255,69,96,0.6)';
+        if (v <= 6) return 'rgba(245,158,11,0.6)';
+        return 'rgba(0,200,150,0.6)';
+      }),
+      borderRadius: 7, borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { color: '#e8f0ff', font: { size: 11 } }, grid: { display: false } },
+      y: { min: 0, max: 10, ticks: { color: '#7a8aaa' }, grid: { color: 'rgba(0,212,170,0.05)' } }
+    }
+  }
+});
+
+lucide.createIcons();
+</script>
+{% endblock %}

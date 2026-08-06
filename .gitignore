@@ -1,0 +1,32 @@
+# Dataset — too large for GitHub (79MB), uploaded as GitHub Release asset
+data/drug.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Tunnel executable
+cloudflared.exe
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

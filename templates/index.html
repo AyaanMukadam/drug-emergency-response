@@ -1,0 +1,463 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — Drug Emergency Response Prediction{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section animate-in">
+  <h1>
+    Drug Emergency<br/>
+    <span class="gradient-text">Response Prediction</span>
+  </h1>
+  <p>
+    AI-powered system that analyzes drug reviews to predict patient ratings,
+    classify sentiment, and assess emergency response urgency using machine learning.
+  </p>
+  <div class="hero-actions">
+    <a href="/predict" class="btn btn-primary btn-lg">
+      <i data-lucide="brain-circuit"></i>
+      Run Prediction
+    </a>
+    <a href="/analytics" class="btn btn-ghost btn-lg">
+      <i data-lucide="bar-chart-3"></i>
+      View Analytics
+    </a>
+  </div>
+</section>
+
+<!-- Stats Grid -->
+<div class="stats-grid">
+  <div class="stat-card animate-in">
+    <div class="stat-icon blue"><i data-lucide="file-text"></i></div>
+    <div class="stat-info">
+      <div class="stat-value" id="statReviews">—</div>
+      <div class="stat-label">Total Reviews</div>
+    </div>
+  </div>
+  <div class="stat-card animate-in">
+    <div class="stat-icon violet"><i data-lucide="pill"></i></div>
+    <div class="stat-info">
+      <div class="stat-value" id="statDrugs">—</div>
+      <div class="stat-label">Unique Drugs</div>
+    </div>
+  </div>
+  <div class="stat-card animate-in">
+    <div class="stat-icon teal"><i data-lucide="activity"></i></div>
+    <div class="stat-info">
+      <div class="stat-value" id="statConditions">—</div>
+      <div class="stat-label">Conditions</div>
+    </div>
+  </div>
+  <div class="stat-card animate-in">
+    <div class="stat-icon green"><i data-lucide="star"></i></div>
+    <div class="stat-info">
+      <div class="stat-value" id="statAvgRating">—</div>
+      <div class="stat-label">Avg. Rating</div>
+    </div>
+  </div>
+</div>
+
+<!-- Feature Quick Access -->
+<div class="feature-grid">
+  <a href="/predict" class="feature-card animate-in">
+    <div class="feature-icon" style="background:rgba(79,142,247,0.15);">🔮</div>
+    <h3>Predict Emergency Level</h3>
+    <p>Enter a drug review and get instant ML-powered emergency response prediction</p>
+    <span class="feature-arrow">→</span>
+  </a>
+  <a href="/analytics" class="feature-card animate-in">
+    <div class="feature-icon" style="background:rgba(139,92,246,0.15);">📊</div>
+    <h3>Analytics Dashboard</h3>
+    <p>Explore visual insights: top drugs, conditions, sentiment trends &amp; more</p>
+    <span class="feature-arrow">→</span>
+  </a>
+  <a href="/recommend" class="feature-card animate-in">
+    <div class="feature-icon" style="background:rgba(6,182,212,0.15);">💊</div>
+    <h3>Drug Recommender</h3>
+    <p>Search by medical condition and get AI-ranked drug recommendations</p>
+    <span class="feature-arrow">→</span>
+  </a>
+</div>
+
+<!-- Model Info + Top Conditions -->
+<div class="grid-21" style="margin-bottom:32px;">
+  <div class="card animate-in">
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:16px;">
+      <i data-lucide="cpu" style="width:16px;height:16px;display:inline;vertical-align:-2px;margin-right:6px;color:var(--accent-blue)"></i>
+      ML Models Performance
+    </h3>
+    <div class="model-info-grid">
+      <div class="model-info-item">
+        <div class="val" id="metaRmse">—</div>
+        <div class="lbl">Rating RMSE</div>
+      </div>
+      <div class="model-info-item">
+        <div class="val" id="metaR2">—</div>
+        <div class="lbl">R² Score</div>
+      </div>
+      <div class="model-info-item">
+        <div class="val" id="metaTrain">—</div>
+        <div class="lbl">Train Samples</div>
+      </div>
+      <div class="model-info-item">
+        <div class="val" id="metaFeatures">8K</div>
+        <div class="lbl">TF-IDF Features</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="alert alert-info" style="margin-bottom:0;">
+      <i data-lucide="info"></i>
+      <span>Models: TF-IDF + Random Forest (Rating) · Logistic Regression (Sentiment)</span>
+    </div>
+  </div>
+
+  <div class="card animate-in">
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:16px;">
+      <i data-lucide="trending-up" style="width:16px;height:16px;display:inline;vertical-align:-2px;margin-right:6px;color:var(--accent-purple)"></i>
+      Top Conditions
+    </h3>
+    <div id="topConditionsList">
+      <div class="loading-overlay visible">
+        <div class="spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Emergency Distribution — CLICKABLE -->
+<div class="card animate-in">
+  <h3 style="font-size:16px;font-weight:700;margin-bottom:6px;">
+    <i data-lucide="shield-alert" style="width:16px;height:16px;display:inline;vertical-align:-2px;margin-right:6px;color:var(--accent-red)"></i>
+    Emergency Level Distribution in Dataset
+  </h3>
+  <p style="font-size:12px;color:var(--text-muted);margin-bottom:20px;">
+    <i data-lucide="mouse-pointer-click" style="width:12px;height:12px;display:inline;vertical-align:-1px;margin-right:4px;"></i>
+    Click any level to browse the full drug database for that category
+  </p>
+  <div id="emergencyBars"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DATABASE MODAL
+════════════════════════════════════════════════════════════ -->
+<div id="dbModal" class="db-modal-overlay" onclick="closeModalOutside(event)">
+  <div class="db-modal">
+
+    <!-- Modal Header -->
+    <div class="db-modal-header">
+      <div style="display:flex;align-items:center;gap:14px;flex:1;min-width:0;">
+        <div class="db-level-badge" id="modalLevelBadge"></div>
+        <div>
+          <div class="db-modal-title" id="modalTitle">Drug Database</div>
+          <div class="db-modal-sub" id="modalSub"></div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+        <!-- Search -->
+        <div class="search-box" style="width:220px;">
+          <i data-lucide="search"></i>
+          <input type="text" id="dbSearchInput" class="form-control" placeholder="Search drug or condition…" oninput="onDbSearch()" style="padding:9px 12px 9px 38px;font-size:13px;" />
+        </div>
+        <button class="db-close-btn" onclick="closeModal()" title="Close">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="db-modal-body">
+      <!-- Loading state -->
+      <div id="dbLoading" class="loading-overlay visible" style="padding:60px 0;">
+        <div class="spinner"></div>
+        <span style="color:var(--text-secondary);font-size:14px;">Loading records…</span>
+      </div>
+
+      <!-- Table -->
+      <div id="dbTableWrap" style="display:none;">
+        <table class="data-table db-table" id="dbTable">
+          <thead>
+            <tr>
+              <th style="width:80px;">#&nbsp;ID</th>
+              <th>Drug Name</th>
+              <th>Condition</th>
+              <th style="width:100px;text-align:center;">Rating</th>
+              <th style="width:130px;text-align:center;">Emergency</th>
+            </tr>
+          </thead>
+          <tbody id="dbTableBody"></tbody>
+        </table>
+      </div>
+
+      <!-- Empty state -->
+      <div id="dbEmpty" style="display:none;text-align:center;padding:60px 0;">
+        <div style="font-size:48px;margin-bottom:12px;">🔍</div>
+        <div style="font-size:15px;color:var(--text-secondary);">No records match your search</div>
+      </div>
+    </div>
+
+    <!-- Pagination Footer -->
+    <div class="db-modal-footer" id="dbFooter" style="display:none;">
+      <div id="dbPageInfo" style="font-size:13px;color:var(--text-secondary);"></div>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button class="btn btn-ghost" id="dbPrevBtn" onclick="changePage(-1)" style="padding:8px 14px;font-size:13px;">
+          <i data-lucide="chevron-left"></i> Prev
+        </button>
+        <div id="dbPageNums" style="display:flex;gap:4px;"></div>
+        <button class="btn btn-ghost" id="dbNextBtn" onclick="changePage(1)" style="padding:8px 14px;font-size:13px;">
+          Next <i data-lucide="chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const analytics = {{ analytics | tojson }};
+const metadata  = {{ metadata | tojson }};
+
+// ── Animate counter ──────────────────────────────────────────────────────────
+function animateCount(el, target, decimals = 0) {
+  const start = 0, duration = 1200;
+  const startTime = performance.now();
+  const update = (now) => {
+    const t = Math.min((now - startTime) / duration, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    const val = start + (target - start) * ease;
+    el.textContent = decimals ? val.toFixed(decimals) : Math.round(val).toLocaleString();
+    if (t < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+// Stats
+animateCount(document.getElementById('statReviews'), analytics.total_reviews || 0);
+animateCount(document.getElementById('statDrugs'), analytics.total_drugs || 0);
+animateCount(document.getElementById('statConditions'), analytics.total_conditions || 0);
+animateCount(document.getElementById('statAvgRating'), analytics.avg_rating || 0, 1);
+
+// Metadata
+if (metadata) {
+  document.getElementById('metaRmse').textContent = metadata.rating_rmse || '—';
+  document.getElementById('metaR2').textContent   = metadata.rating_r2   || '—';
+  animateCount(document.getElementById('metaTrain'), metadata.train_samples || 0);
+}
+
+// ── Top conditions ────────────────────────────────────────────────────────────
+const condList   = document.getElementById('topConditionsList');
+const topConds   = analytics.top_conditions || {};
+const condEntries = Object.entries(topConds).slice(0, 6);
+const maxCount   = Math.max(...condEntries.map(([,v]) => v));
+condList.innerHTML = condEntries.map(([cond, count]) => `
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span style="color:var(--text-primary);font-size:13px;">${cond}</span>
+      <span>${count.toLocaleString()}</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width:0%" data-target="${(count/maxCount*100).toFixed(1)}%"></div>
+    </div>
+  </div>
+`).join('');
+
+setTimeout(() => {
+  document.querySelectorAll('.progress-fill[data-target]').forEach(el => {
+    el.style.width = el.dataset.target;
+  });
+}, 200);
+
+// ── Emergency distribution — CLICKABLE bars ───────────────────────────────────
+const emergDist   = analytics.emergency_distribution || {};
+const emergColors = { CRITICAL: '#ff4560', HIGH: '#ff6b35', MODERATE: '#f59e0b', LOW: '#00c896' };
+const emergIcons  = { CRITICAL: '🔴', HIGH: '🟠', MODERATE: '🟡', LOW: '🟢' };
+const emergLabels = { CRITICAL: 'Rating 1–3', HIGH: 'Rating 4–5', MODERATE: 'Rating 6–7', LOW: 'Rating 8–10' };
+const emergContainer = document.getElementById('emergencyBars');
+const emergTotal     = Object.values(emergDist).reduce((a,b) => a+b, 0);
+
+['CRITICAL','HIGH','MODERATE','LOW'].forEach(level => {
+  const count = emergDist[level] || 0;
+  const pct   = emergTotal ? (count / emergTotal * 100).toFixed(1) : 0;
+
+  const row = document.createElement('div');
+  row.className = 'emerg-row';
+  row.setAttribute('data-level', level);
+  row.setAttribute('title', `Click to browse ${count.toLocaleString()} ${level} records`);
+  row.innerHTML = `
+    <div class="emerg-row-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="font-size:15px;font-weight:700;">${emergIcons[level]} ${level}</span>
+        <span class="badge" style="background:rgba(255,255,255,0.07);color:var(--text-secondary);font-size:11px;">${emergLabels[level]}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:13px;color:var(--text-secondary);">${count.toLocaleString()} records · ${pct}%</span>
+        <span class="emerg-view-btn" style="font-size:12px;color:${emergColors[level]};font-weight:600;display:flex;align-items:center;gap:4px;">
+          View Database <span style="font-size:16px;">→</span>
+        </span>
+      </div>
+    </div>
+    <div class="progress-bar" style="height:10px;margin-top:8px;">
+      <div class="progress-fill" style="width:0%;background:${emergColors[level]};box-shadow:0 0 12px ${emergColors[level]}50;" data-target="${pct}%"></div>
+    </div>
+  `;
+  row.addEventListener('click', () => openModal(level, emergColors[level], count));
+  emergContainer.appendChild(row);
+});
+
+setTimeout(() => {
+  document.querySelectorAll('.progress-fill[data-target]').forEach(el => {
+    el.style.width = el.dataset.target;
+  });
+}, 300);
+
+lucide.createIcons();
+
+// ══════════════════════════════════════════════════════════════════════════════
+// DATABASE MODAL LOGIC
+// ══════════════════════════════════════════════════════════════════════════════
+let _modalLevel = '';
+let _currentPage = 1;
+let _totalPages  = 1;
+let _searchTimer = null;
+
+function openModal(level, color, totalCount) {
+  _modalLevel  = level;
+  _currentPage = 1;
+
+  // Badge
+  const badge = document.getElementById('modalLevelBadge');
+  badge.textContent  = `${emergIcons[level]} ${level}`;
+  badge.style.cssText = `background:${color}20;border:1.5px solid ${color}70;color:${color};padding:6px 16px;border-radius:100px;font-size:13px;font-weight:800;letter-spacing:1px;`;
+
+  document.getElementById('modalTitle').textContent = `${level} — Drug Records`;
+  document.getElementById('modalSub').textContent   = `${totalCount.toLocaleString()} total records · ${emergLabels[level]}`;
+  document.getElementById('dbSearchInput').value    = '';
+
+  document.getElementById('dbModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  fetchRecords();
+  lucide.createIcons();
+}
+
+function closeModal() {
+  document.getElementById('dbModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('dbModal')) closeModal();
+}
+
+// Close on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
+
+function onDbSearch() {
+  clearTimeout(_searchTimer);
+  _currentPage = 1;
+  _searchTimer = setTimeout(fetchRecords, 300);
+}
+
+function changePage(delta) {
+  const next = _currentPage + delta;
+  if (next < 1 || next > _totalPages) return;
+  _currentPage = next;
+  fetchRecords();
+}
+
+function goToPage(p) {
+  _currentPage = p;
+  fetchRecords();
+}
+
+async function fetchRecords() {
+  const search = document.getElementById('dbSearchInput').value.trim();
+  const url    = `/api/emergency_records?level=${_modalLevel}&page=${_currentPage}&per_page=50${search ? '&search=' + encodeURIComponent(search) : ''}`;
+
+  // Show loading
+  document.getElementById('dbLoading').classList.add('visible');
+  document.getElementById('dbLoading').style.display = 'flex';
+  document.getElementById('dbTableWrap').style.display = 'none';
+  document.getElementById('dbEmpty').style.display     = 'none';
+  document.getElementById('dbFooter').style.display    = 'none';
+
+  try {
+    const res  = await fetch(url);
+    const data = await res.json();
+
+    _totalPages = data.total_pages || 1;
+
+    document.getElementById('dbLoading').classList.remove('visible');
+    document.getElementById('dbLoading').style.display = 'none';
+
+    if (!data.records || data.records.length === 0) {
+      document.getElementById('dbEmpty').style.display = 'block';
+      return;
+    }
+
+    // Rating stars helper
+    const stars = r => '★'.repeat(Math.round(r/2)) + '☆'.repeat(5 - Math.round(r/2));
+    const ratingColor = r => {
+      if (r <= 3) return '#ef4444';
+      if (r <= 5) return '#f97316';
+      if (r <= 7) return '#f59e0b';
+      return '#10b981';
+    };
+
+    // Build rows
+    const tbody = document.getElementById('dbTableBody');
+    tbody.innerHTML = data.records.map((rec, i) => `
+      <tr style="animation:slideIn 0.3s ease ${(i % 10) * 0.03}s both;">
+        <td style="color:var(--text-muted);font-size:12px;font-weight:600;">#${rec.id}</td>
+        <td style="font-weight:600;">${rec.drugName}</td>
+        <td style="color:var(--text-secondary);">${rec.condition}</td>
+        <td style="text-align:center;">
+          <span style="font-size:15px;font-weight:800;color:${ratingColor(rec.rating)};">${rec.rating}</span>
+          <span style="font-size:11px;color:var(--text-muted);">/10</span>
+          <div style="font-size:10px;color:${ratingColor(rec.rating)};letter-spacing:1px;">${stars(rec.rating)}</div>
+        </td>
+        <td style="text-align:center;">
+          <span style="background:${rec.color}20;border:1px solid ${rec.color}60;color:${rec.color};padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;">${rec.emergency}</span>
+        </td>
+      </tr>
+    `).join('');
+
+    document.getElementById('dbTableWrap').style.display = 'block';
+
+    // Pagination info
+    const start = (data.page - 1) * data.per_page + 1;
+    const end   = Math.min(data.page * data.per_page, data.total);
+    document.getElementById('dbPageInfo').textContent = `Showing ${start.toLocaleString()}–${end.toLocaleString()} of ${data.total.toLocaleString()} records`;
+
+    // Page number buttons (show up to 7 around current)
+    const pageNums = document.getElementById('dbPageNums');
+    pageNums.innerHTML = '';
+    const maxButtons = 7;
+    let startP = Math.max(1, _currentPage - Math.floor(maxButtons/2));
+    let endP   = Math.min(_totalPages, startP + maxButtons - 1);
+    if (endP - startP < maxButtons - 1) startP = Math.max(1, endP - maxButtons + 1);
+
+    for (let p = startP; p <= endP; p++) {
+      const btn = document.createElement('button');
+      btn.className = `btn ${p === _currentPage ? 'btn-primary' : 'btn-ghost'}`;
+      btn.style.cssText = 'padding:6px 11px;font-size:13px;min-width:36px;';
+      btn.textContent = p;
+      btn.onclick = () => goToPage(p);
+      pageNums.appendChild(btn);
+    }
+
+    document.getElementById('dbPrevBtn').disabled = _currentPage <= 1;
+    document.getElementById('dbNextBtn').disabled = _currentPage >= _totalPages;
+    document.getElementById('dbFooter').style.display = 'flex';
+
+  } catch(err) {
+    document.getElementById('dbLoading').style.display = 'none';
+    document.getElementById('dbEmpty').style.display   = 'block';
+    console.error('DB fetch error:', err);
+  }
+}
+</script>
+{% endblock %}
