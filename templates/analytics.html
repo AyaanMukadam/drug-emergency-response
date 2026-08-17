@@ -8,30 +8,30 @@
   <p>Visual insights from {{ analytics.total_reviews | default(0) | int | string }} drug reviews across {{ analytics.total_conditions | default(0) }} medical conditions</p>
 </div>
 
-<!-- Summary Row -->
+<!-- Summary Row — CLICKABLE STAT CARDS -->
 <div class="stats-grid" style="margin-bottom:28px;">
-  <div class="stat-card">
+  <div class="stat-card" data-clickable="1" id="statReviews" onclick="openStatModal('reviews')" title="Click to explore review breakdown">
     <div class="stat-icon blue"><i data-lucide="file-text"></i></div>
     <div class="stat-info">
       <div class="stat-value">{{ "{:,}".format(analytics.total_reviews | default(0) | int) }}</div>
       <div class="stat-label">Reviews</div>
     </div>
   </div>
-  <div class="stat-card">
+  <div class="stat-card" data-clickable="1" id="statDrugs" onclick="openStatModal('drugs')" title="Click to explore top drugs">
     <div class="stat-icon purple"><i data-lucide="pill"></i></div>
     <div class="stat-info">
       <div class="stat-value">{{ analytics.total_drugs | default(0) }}</div>
       <div class="stat-label">Drugs</div>
     </div>
   </div>
-  <div class="stat-card">
+  <div class="stat-card" data-clickable="1" id="statConditions" onclick="openStatModal('conditions')" title="Click to explore conditions">
     <div class="stat-icon cyan"><i data-lucide="activity"></i></div>
     <div class="stat-info">
       <div class="stat-value">{{ analytics.total_conditions | default(0) }}</div>
       <div class="stat-label">Conditions</div>
     </div>
   </div>
-  <div class="stat-card">
+  <div class="stat-card" data-clickable="1" id="statRating" onclick="openStatModal('avg_rating')" title="Click to explore rating insights">
     <div class="stat-icon green"><i data-lucide="star"></i></div>
     <div class="stat-info">
       <div class="stat-value">{{ analytics.avg_rating | default(0) }}</div>
@@ -42,14 +42,19 @@
 
 <!-- Charts Row 1 -->
 <div class="grid-2" style="margin-bottom:24px;">
-  <div class="chart-card">
+  <!-- Rating Distribution -->
+  <div class="chart-card chart-interactive" style="position:relative;" data-clickable="1">
     <h3>📈 Rating Distribution (1–10)</h3>
+    <div class="chart-click-hint">Click a bar to explore →</div>
     <div class="chart-wrap" style="height:250px;">
       <canvas id="ratingChart"></canvas>
     </div>
   </div>
-  <div class="chart-card">
+
+  <!-- Sentiment Donut -->
+  <div class="chart-card chart-interactive" style="position:relative;" data-clickable="1">
     <h3>🎭 Sentiment Breakdown</h3>
+    <div class="chart-click-hint">Hover to shift colors · Click to explore →</div>
     <div class="chart-wrap" style="height:250px;">
       <canvas id="sentimentChart"></canvas>
     </div>
@@ -58,14 +63,19 @@
 
 <!-- Charts Row 2 -->
 <div class="grid-2" style="margin-bottom:24px;">
-  <div class="chart-card">
+  <!-- Top Conditions Bar -->
+  <div class="chart-card chart-interactive" style="position:relative;" data-clickable="1">
     <h3>🏥 Top 15 Conditions by Review Volume</h3>
+    <div class="chart-click-hint">Click a bar to explore →</div>
     <div class="chart-wrap" style="height:320px;">
       <canvas id="conditionChart"></canvas>
     </div>
   </div>
-  <div class="chart-card">
+
+  <!-- Emergency Donut -->
+  <div class="chart-card chart-interactive" style="position:relative;" data-clickable="1">
     <h3>🚨 Emergency Level Distribution</h3>
+    <div class="chart-click-hint">Hover to shift colors · Click to explore →</div>
     <div class="chart-wrap" style="height:320px;">
       <canvas id="emergencyChart"></canvas>
     </div>
@@ -73,8 +83,9 @@
 </div>
 
 <!-- Top Drugs by Condition -->
-<div class="chart-card" style="margin-bottom:24px;">
+<div class="chart-card chart-interactive" style="margin-bottom:24px;position:relative;" data-clickable="1">
   <h3>💊 Top-Rated Drugs by Condition</h3>
+  <div class="chart-click-hint">Click a bar to explore →</div>
   <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;" id="condTabs"></div>
   <div class="chart-wrap" style="height:280px;">
     <canvas id="topDrugsChart"></canvas>
@@ -82,10 +93,47 @@
 </div>
 
 <!-- Avg Rating per Condition -->
-<div class="chart-card">
+<div class="chart-card chart-interactive" style="position:relative;" data-clickable="1">
   <h3>⭐ Average Rating by Top Conditions</h3>
+  <div class="chart-click-hint">Click a bar to explore →</div>
   <div class="chart-wrap" style="height:300px;">
     <canvas id="avgRatingChart"></canvas>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     ANALYTICS DRILL-DOWN MODAL
+═══════════════════════════════════════════════════════════════════════════ -->
+<div id="analyticsModal" class="analytics-modal-overlay" onclick="closeAMOutside(event)">
+  <div class="analytics-modal" id="analyticsModalBox">
+
+    <!-- Header -->
+    <div class="am-header">
+      <div class="am-badge" id="amBadge">📊</div>
+      <div class="am-title-wrap">
+        <div class="am-title" id="amTitle">Analytics Detail</div>
+        <div class="am-sub" id="amSub"></div>
+      </div>
+      <button class="am-close-btn" onclick="closeAM()" title="Close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <!-- Metrics Strip -->
+    <div class="am-metrics" id="amMetrics"></div>
+
+    <!-- Tabs -->
+    <div class="am-tabs" id="amTabs"></div>
+
+    <!-- Body -->
+    <div class="am-body" id="amBody">
+      <div class="am-loading" id="amLoading">
+        <div class="spinner"></div>
+        <span style="color:var(--text-secondary);font-size:14px;">Loading details…</span>
+      </div>
+      <div id="amContent" style="display:none;"></div>
+    </div>
+
   </div>
 </div>
 {% endblock %}
@@ -94,10 +142,27 @@
 <script>
 const analytics = {{ analytics | tojson }};
 
+/* ── COLOUR PALETTES ─────────────────────────────────────────────────────── */
 const COLORS = {
   blue:   '#1a6bff', teal:   '#00d4aa', cyan:   '#00b4d8',
   violet: '#7c3aed', purple: '#a855f7', green:  '#00c896',
   amber:  '#f59e0b', red:    '#ff4560', orange: '#ff6b35',
+};
+
+// Dynamic hover palette spectrums for donut charts
+const SENTIMENT_PALETTES = {
+  base:    ['#00d4aa', '#f59e0b', '#ff4560'],
+  hover0:  ['#00ffcc', '#ffd166', '#ff6b8a'],   // Positive hovered
+  hover1:  ['#66ffe6', '#ffaa00', '#ff1a47'],    // Negative hovered
+  hover2:  ['#00b4d8', '#ffc300', '#ff4560'],    // Neutral hovered
+};
+
+const EMERGENCY_PALETTES = {
+  base:   ['rgba(255,69,96,0.75)', 'rgba(255,107,53,0.75)', 'rgba(245,158,11,0.75)', 'rgba(0,200,150,0.75)'],
+  hover0: ['#ff0033', 'rgba(255,107,53,0.4)', 'rgba(245,158,11,0.4)', 'rgba(0,200,150,0.4)'],  // CRITICAL
+  hover1: ['rgba(255,69,96,0.4)', '#ff5500', 'rgba(245,158,11,0.4)', 'rgba(0,200,150,0.4)'],   // HIGH
+  hover2: ['rgba(255,69,96,0.4)', 'rgba(255,107,53,0.4)', '#ffb800', 'rgba(0,200,150,0.4)'],   // MODERATE
+  hover3: ['rgba(255,69,96,0.4)', 'rgba(255,107,53,0.4)', 'rgba(245,158,11,0.4)', '#00ff99'],  // LOW
 };
 
 const CHART_DEFAULTS = {
@@ -108,104 +173,313 @@ const CHART_DEFAULTS = {
   }
 };
 
-// ── Rating Distribution Chart ────────────────────────────────────────────────
+/* ── RATING DISTRIBUTION CHART ──────────────────────────────────────────── */
 const ratingDist = analytics.rating_distribution || {};
-const ratingKeys = Array.from({length:10}, (_,i)=> String(i+1));
+const ratingKeys = Array.from({length:10}, (_,i) => String(i+1));
 const ratingVals = ratingKeys.map(k => ratingDist[k] || 0);
-new Chart(document.getElementById('ratingChart'), {
+
+// Hover color palette for bar chart
+const ratingBaseColors = ratingKeys.map(k => {
+  const v = parseInt(k);
+  if (v <= 3) return 'rgba(255,69,96,0.7)';
+  if (v <= 5) return 'rgba(255,107,53,0.7)';
+  if (v <= 7) return 'rgba(245,158,11,0.7)';
+  return 'rgba(0,200,150,0.7)';
+});
+const ratingHoverColors = ratingKeys.map(k => {
+  const v = parseInt(k);
+  if (v <= 3) return '#ff4560';
+  if (v <= 5) return '#ff6b35';
+  if (v <= 7) return '#f59e0b';
+  return '#00c896';
+});
+
+const ratingChart = new Chart(document.getElementById('ratingChart'), {
   type: 'bar',
   data: {
     labels: ratingKeys.map(k => `★ ${k}`),
     datasets: [{
       label: 'Reviews',
       data: ratingVals,
-      backgroundColor: ratingKeys.map(k => {
-        const v = parseInt(k);
-        if (v <= 3) return 'rgba(255,69,96,0.7)';
-        if (v <= 5) return 'rgba(255,107,53,0.7)';
-        if (v <= 7) return 'rgba(245,158,11,0.7)';
-        return 'rgba(0,200,150,0.7)';
-      }),
+      backgroundColor: ratingBaseColors,
+      hoverBackgroundColor: ratingHoverColors,
       borderRadius: 7, borderSkipped: false,
+      hoverBorderColor: '#ffffff33',
+      hoverBorderWidth: 1,
     }]
   },
   options: {
     ...CHART_DEFAULTS,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          title: (items) => `Rating ★ ${items[0].label.replace('★ ','')}`,
+          label: (item) => ` ${item.raw.toLocaleString()} reviews`,
+          afterLabel: (item) => {
+            const k = parseInt(item.label.replace('★ ',''));
+            const lvl = k<=3?'CRITICAL':k<=5?'HIGH':k<=7?'MODERATE':'LOW';
+            return ` Emergency Level: ${lvl}`;
+          }
+        },
+        backgroundColor: 'rgba(5,12,30,0.95)',
+        borderColor: 'rgba(0,212,170,0.3)', borderWidth: 1,
+        padding: 12, titleColor: '#e8f0ff', bodyColor: '#7a8aaa',
+      }
+    },
     scales: CHART_DEFAULTS.scales,
-    responsive: true, maintainAspectRatio: false
+    responsive: true, maintainAspectRatio: false,
+    onClick: (evt, elements) => {
+      if (elements.length) {
+        const idx = elements[0].index;
+        const ratingVal = idx + 1;
+        openModal({ type: 'rating', value: String(ratingVal) });
+      }
+    }
   }
 });
 
-// ── Sentiment Donut ──────────────────────────────────────────────────────────
+
+/* ── SENTIMENT DONUT — DYNAMIC HOVER COLORS ─────────────────────────────── */
 const sentDist = analytics.sentiment_distribution || {};
-new Chart(document.getElementById('sentimentChart'), {
+const sentLabels = Object.keys(sentDist);
+const sentVals   = Object.values(sentDist);
+
+let sentHoveredIndex = -1;
+const sentimentBaseColors = [COLORS.teal, COLORS.amber, COLORS.red, COLORS.blue];
+const sentimentBrightColors = ['#00ffcc', '#ffcc00', '#ff2a50', '#4d9fff'];
+
+function getSentimentColors(hoveredIdx) {
+  return sentLabels.map((_, i) => {
+    if (hoveredIdx === -1) return sentimentBaseColors[i] || COLORS.teal;
+    if (i === hoveredIdx) return sentimentBrightColors[i] || sentimentBaseColors[i];
+    return (sentimentBaseColors[i] || COLORS.teal) + '55'; // dim others
+  });
+}
+
+const sentimentChart = new Chart(document.getElementById('sentimentChart'), {
   type: 'doughnut',
   data: {
-    labels: Object.keys(sentDist),
+    labels: sentLabels,
     datasets: [{
-      data: Object.values(sentDist),
-      backgroundColor: [COLORS.teal, COLORS.amber, COLORS.red, COLORS.blue],
-      borderColor: '#01020a', borderWidth: 3, hoverOffset: 10,
+      data: sentVals,
+      backgroundColor: getSentimentColors(-1),
+      borderColor: '#01020a', borderWidth: 3,
+      hoverOffset: 16,
+      hoverBorderColor: '#ffffff44',
+      hoverBorderWidth: 2,
     }]
   },
   options: {
     responsive: true, maintainAspectRatio: false, cutout: '68%',
-    plugins: { legend: { position: 'bottom', labels: { color: '#7a8aaa', font: { family: 'Inter', size: 12 }, padding: 18 } } }
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { color: '#7a8aaa', font: { family: 'Inter', size: 12 }, padding: 18 },
+        onHover: (evt, legendItem) => {
+          sentHoveredIndex = legendItem.index;
+          sentimentChart.data.datasets[0].backgroundColor = getSentimentColors(sentHoveredIndex);
+          sentimentChart.update('none');
+        },
+        onLeave: () => {
+          sentHoveredIndex = -1;
+          sentimentChart.data.datasets[0].backgroundColor = getSentimentColors(-1);
+          sentimentChart.update('none');
+        }
+      },
+      tooltip: {
+        callbacks: {
+          label: (item) => ` ${item.label}: ${item.raw.toLocaleString()} reviews`,
+          afterLabel: (item) => {
+            const pct = ((item.raw / sentVals.reduce((a,b)=>a+b,0))*100).toFixed(1);
+            return ` (${pct}% of all reviews)`;
+          }
+        },
+        backgroundColor: 'rgba(5,12,30,0.95)',
+        borderColor: 'rgba(0,212,170,0.3)', borderWidth: 1,
+        padding: 12, titleColor: '#e8f0ff', bodyColor: '#7a8aaa',
+      }
+    },
+    onClick: (evt, elements) => {
+      if (elements.length) {
+        const idx = elements[0].index;
+        const label = sentLabels[idx];
+        openModal({ type: 'sentiment', value: label });
+      }
+    },
+    onHover: (evt, elements) => {
+      const canvas = sentimentChart.canvas;
+      canvas.style.cursor = elements.length ? 'pointer' : 'default';
+      const idx = elements.length ? elements[0].index : -1;
+      if (idx !== sentHoveredIndex) {
+        sentHoveredIndex = idx;
+        sentimentChart.data.datasets[0].backgroundColor = getSentimentColors(idx);
+        sentimentChart.update('none');
+      }
+    }
   }
 });
 
-// ── Condition Horizontal Bar ─────────────────────────────────────────────────
-const topConds  = analytics.top_conditions || {};
+
+/* ── CONDITION HORIZONTAL BAR ───────────────────────────────────────────── */
+const topConds   = analytics.top_conditions || {};
 const condLabels = Object.keys(topConds).slice(0,15);
 const condVals   = condLabels.map(k => topConds[k]);
-new Chart(document.getElementById('conditionChart'), {
+
+// Rainbow palette for conditions
+const condColors = condLabels.map((_, i) => {
+  const hue = (200 + i * 15) % 360;
+  return `hsla(${hue},70%,55%,0.55)`;
+});
+const condHoverColors = condLabels.map((_, i) => {
+  const hue = (200 + i * 15) % 360;
+  return `hsla(${hue},85%,65%,0.9)`;
+});
+
+const conditionChart = new Chart(document.getElementById('conditionChart'), {
   type: 'bar',
   data: {
     labels: condLabels,
     datasets: [{
       label: 'Reviews',
       data: condVals,
-      backgroundColor: 'rgba(0,212,170,0.55)',
-      borderColor: COLORS.teal, borderWidth: 1, borderRadius: 5,
+      backgroundColor: condColors,
+      hoverBackgroundColor: condHoverColors,
+      borderColor: 'rgba(0,212,170,0.5)', borderWidth: 1, borderRadius: 5,
+      hoverBorderColor: '#00d4aa', hoverBorderWidth: 2,
     }]
   },
   options: {
     indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (item) => ` ${item.raw.toLocaleString()} reviews`,
+          afterLabel: () => ' Click to explore this condition →'
+        },
+        backgroundColor: 'rgba(5,12,30,0.95)',
+        borderColor: 'rgba(0,212,170,0.3)', borderWidth: 1,
+        padding: 12, titleColor: '#e8f0ff', bodyColor: '#7a8aaa',
+      }
+    },
     scales: {
       x: { ticks: { color: '#7a8aaa' }, grid: { color: 'rgba(0,212,170,0.05)' } },
       y: { ticks: { color: '#e8f0ff', font: { size: 11 } }, grid: { display: false } }
+    },
+    onHover: (evt, elements) => {
+      conditionChart.canvas.style.cursor = elements.length ? 'pointer' : 'default';
+    },
+    onClick: (evt, elements) => {
+      if (elements.length) {
+        const idx = elements[0].index;
+        openModal({ type: 'condition', value: condLabels[idx] });
+      }
     }
   }
 });
 
-// ── Emergency Donut ──────────────────────────────────────────────────────────
+
+/* ── EMERGENCY DONUT — DYNAMIC HOVER COLORS ─────────────────────────────── */
 const emergDist = analytics.emergency_distribution || {};
-new Chart(document.getElementById('emergencyChart'), {
+const emergValues = [emergDist.CRITICAL||0, emergDist.HIGH||0, emergDist.MODERATE||0, emergDist.LOW||0];
+const emergLabelsArr = ['🔴 Critical (1-3)', '🟠 High (4-5)', '🟡 Moderate (6-7)', '🟢 Low (8-10)'];
+const emergKeys = ['CRITICAL', 'HIGH', 'MODERATE', 'LOW'];
+
+const emergBaseColors = [
+  'rgba(255,69,96,0.75)', 'rgba(255,107,53,0.75)',
+  'rgba(245,158,11,0.75)', 'rgba(0,200,150,0.75)'
+];
+const emergBrightColors = ['#ff2244', '#ff6600', '#ffcc00', '#00ff99'];
+
+let emergHoveredIndex = -1;
+
+function getEmergColors(hoveredIdx) {
+  return emergBaseColors.map((c, i) => {
+    if (hoveredIdx === -1) return c;
+    if (i === hoveredIdx) return emergBrightColors[i];
+    return emergBaseColors[i].replace(/[\d.]+\)$/, '0.25)'); // dim others
+  });
+}
+
+const emergencyChart = new Chart(document.getElementById('emergencyChart'), {
   type: 'doughnut',
   data: {
-    labels: ['🔴 Critical (1-3)', '🟠 High (4-5)', '🟡 Moderate (6-7)', '🟢 Low (8-10)'],
+    labels: emergLabelsArr,
     datasets: [{
-      data: [emergDist.CRITICAL||0, emergDist.HIGH||0, emergDist.MODERATE||0, emergDist.LOW||0],
-      backgroundColor: ['rgba(255,69,96,0.75)','rgba(255,107,53,0.75)','rgba(245,158,11,0.75)','rgba(0,200,150,0.75)'],
-      borderColor: '#01020a', borderWidth: 3, hoverOffset: 10,
+      data: emergValues,
+      backgroundColor: getEmergColors(-1),
+      borderColor: '#01020a', borderWidth: 3,
+      hoverOffset: 16,
+      hoverBorderColor: '#ffffff44', hoverBorderWidth: 2,
     }]
   },
   options: {
     responsive: true, maintainAspectRatio: false, cutout: '68%',
-    plugins: { legend: { position: 'bottom', labels: { color: '#7a8aaa', font: { family: 'Inter', size: 11 }, padding: 14 } } }
+    plugins: {
+      legend: {
+        position: 'bottom',
+        labels: { color: '#7a8aaa', font: { family: 'Inter', size: 11 }, padding: 14 },
+        onHover: (evt, legendItem) => {
+          emergHoveredIndex = legendItem.index;
+          emergencyChart.data.datasets[0].backgroundColor = getEmergColors(emergHoveredIndex);
+          emergencyChart.update('none');
+        },
+        onLeave: () => {
+          emergHoveredIndex = -1;
+          emergencyChart.data.datasets[0].backgroundColor = getEmergColors(-1);
+          emergencyChart.update('none');
+        }
+      },
+      tooltip: {
+        callbacks: {
+          label: (item) => ` ${item.raw.toLocaleString()} reviews`,
+          afterLabel: (item) => {
+            const total = emergValues.reduce((a,b)=>a+b,0);
+            const pct = ((item.raw / total)*100).toFixed(1);
+            return ` ${pct}% of total · Click to explore →`;
+          }
+        },
+        backgroundColor: 'rgba(5,12,30,0.95)',
+        borderColor: 'rgba(0,212,170,0.3)', borderWidth: 1,
+        padding: 12, titleColor: '#e8f0ff', bodyColor: '#7a8aaa',
+      }
+    },
+    onHover: (evt, elements) => {
+      const canvas = emergencyChart.canvas;
+      canvas.style.cursor = elements.length ? 'pointer' : 'default';
+      const idx = elements.length ? elements[0].index : -1;
+      if (idx !== emergHoveredIndex) {
+        emergHoveredIndex = idx;
+        emergencyChart.data.datasets[0].backgroundColor = getEmergColors(idx);
+        emergencyChart.update('none');
+      }
+    },
+    onClick: (evt, elements) => {
+      if (elements.length) {
+        const idx = elements[0].index;
+        openModal({ type: 'emergency', value: emergKeys[idx] });
+      }
+    }
   }
 });
 
-// ── Top Drugs by Condition ───────────────────────────────────────────────────
+
+/* ── TOP DRUGS BY CONDITION CHART ───────────────────────────────────────── */
 const topDrugsByCond = analytics.top_drugs_by_condition || {};
 let topDrugsChart = null;
+let currentCondForDrugs = '';
 
 function renderTopDrugsChart(cond) {
+  currentCondForDrugs = cond;
   const data   = topDrugsByCond[cond] || [];
   const labels = data.map(d => d.drugName);
   const vals   = data.map(d => parseFloat(d.avg_rating).toFixed(2));
+
+  // Gradient violet palette
+  const bgColors     = labels.map((_, i) => `hsla(${260 + i * 8},65%,55%,0.65)`);
+  const hoverBgColors = labels.map((_, i) => `hsla(${260 + i * 8},80%,70%,0.9)`);
+
   if (topDrugsChart) topDrugsChart.destroy();
   topDrugsChart = new Chart(document.getElementById('topDrugsChart'), {
     type: 'bar',
@@ -214,16 +488,37 @@ function renderTopDrugsChart(cond) {
       datasets: [{
         label: `Avg Rating — ${cond}`,
         data: vals,
-        backgroundColor: 'rgba(124,58,237,0.6)',
+        backgroundColor: bgColors,
+        hoverBackgroundColor: hoverBgColors,
         borderColor: COLORS.violet, borderWidth: 1, borderRadius: 7,
+        hoverBorderColor: '#fff5', hoverBorderWidth: 2,
       }]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (item) => ` Avg Rating: ${item.raw}/10`,
+            afterLabel: () => ' Click to explore this condition →',
+          },
+          backgroundColor: 'rgba(5,12,30,0.95)',
+          borderColor: 'rgba(124,58,237,0.4)', borderWidth: 1,
+          padding: 12, titleColor: '#e8f0ff', bodyColor: '#7a8aaa',
+        }
+      },
       scales: {
         x: { ticks: { color: '#e8f0ff', font: { size: 11 } }, grid: { display: false } },
         y: { min: 0, max: 10, ticks: { color: '#7a8aaa' }, grid: { color: 'rgba(0,212,170,0.05)' } }
+      },
+      onHover: (evt, elements) => {
+        topDrugsChart.canvas.style.cursor = elements.length ? 'pointer' : 'default';
+      },
+      onClick: (evt, elements) => {
+        if (elements.length) {
+          openModal({ type: 'condition', value: currentCondForDrugs });
+        }
       }
     }
   });
@@ -245,35 +540,369 @@ conditions.forEach((cond, i) => {
 });
 if (conditions.length) renderTopDrugsChart(conditions[0]);
 
-// ── Avg Rating by Condition ──────────────────────────────────────────────────
-const condRatings  = analytics.condition_ratings || {};
+
+/* ── AVG RATING BY CONDITION ────────────────────────────────────────────── */
+const condRatings = analytics.condition_ratings || {};
 const crLabels = Object.keys(condRatings).slice(0,12);
 const crVals   = crLabels.map(k => condRatings[k]);
-new Chart(document.getElementById('avgRatingChart'), {
+
+const crBaseColors = crVals.map(v => {
+  if (v <= 4) return 'rgba(255,69,96,0.6)';
+  if (v <= 6) return 'rgba(245,158,11,0.6)';
+  return 'rgba(0,200,150,0.6)';
+});
+const crHoverColors = crVals.map(v => {
+  if (v <= 4) return '#ff4560';
+  if (v <= 6) return '#f59e0b';
+  return '#00c896';
+});
+
+const avgRatingChart = new Chart(document.getElementById('avgRatingChart'), {
   type: 'bar',
   data: {
     labels: crLabels,
     datasets: [{
       label: 'Avg Rating',
       data: crVals,
-      backgroundColor: crVals.map(v => {
-        if (v <= 4) return 'rgba(255,69,96,0.6)';
-        if (v <= 6) return 'rgba(245,158,11,0.6)';
-        return 'rgba(0,200,150,0.6)';
-      }),
+      backgroundColor: crBaseColors,
+      hoverBackgroundColor: crHoverColors,
       borderRadius: 7, borderSkipped: false,
+      hoverBorderColor: '#fff4', hoverBorderWidth: 1,
     }]
   },
   options: {
     responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (item) => ` Avg Rating: ${item.raw}/10`,
+          afterLabel: () => ' Click to explore this condition →',
+        },
+        backgroundColor: 'rgba(5,12,30,0.95)',
+        borderColor: 'rgba(0,212,170,0.3)', borderWidth: 1,
+        padding: 12, titleColor: '#e8f0ff', bodyColor: '#7a8aaa',
+      }
+    },
     scales: {
       x: { ticks: { color: '#e8f0ff', font: { size: 11 } }, grid: { display: false } },
       y: { min: 0, max: 10, ticks: { color: '#7a8aaa' }, grid: { color: 'rgba(0,212,170,0.05)' } }
+    },
+    onHover: (evt, elements) => {
+      avgRatingChart.canvas.style.cursor = elements.length ? 'pointer' : 'default';
+    },
+    onClick: (evt, elements) => {
+      if (elements.length) {
+        const idx = elements[0].index;
+        openModal({ type: 'condition', value: crLabels[idx] });
+      }
     }
   }
 });
 
+
 lucide.createIcons();
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANALYTICS DRILL-DOWN MODAL LOGIC
+═══════════════════════════════════════════════════════════════════════════ */
+
+const EMERG_COLORS = {
+  CRITICAL: '#ff4560', HIGH: '#ff6b35', MODERATE: '#f59e0b', LOW: '#00c896'
+};
+const EMERG_ICONS  = { CRITICAL: '🔴', HIGH: '🟠', MODERATE: '🟡', LOW: '🟢' };
+const SENT_COLORS  = { Positive: '#00d4aa', Negative: '#ff4560', Neutral: '#f59e0b' };
+const SENT_ICONS   = { Positive: '😊', Negative: '😟', Neutral: '😐' };
+
+let _amActiveTab = 0;
+let _amData = null;
+
+function openModal({ type, value }) {
+  // Reset
+  _amActiveTab = 0;
+  _amData = null;
+  document.getElementById('amMetrics').innerHTML = '';
+  document.getElementById('amTabs').innerHTML = '';
+  document.getElementById('amContent').style.display = 'none';
+  document.getElementById('amLoading').style.display = 'flex';
+
+  // Determine color + badge
+  let color = '#00d4aa', glow = 'rgba(0,212,170,0.12)', badge = '📊', title = '', sub = '';
+
+  if (type === 'sentiment') {
+    color = SENT_COLORS[value] || '#00d4aa';
+    badge = SENT_ICONS[value] || '😐';
+    title = `${value} Sentiment`;
+    sub   = 'Reviews classified as ' + value.toLowerCase();
+  } else if (type === 'emergency') {
+    color = EMERG_COLORS[value] || '#00d4aa';
+    badge = EMERG_ICONS[value] || '⚠️';
+    title = `${value} Emergency Level`;
+    sub   = emergencyDescriptions[value] || '';
+  } else if (type === 'rating') {
+    const v = parseInt(value);
+    color = v<=3?'#ff4560':v<=5?'#ff6b35':v<=7?'#f59e0b':'#00c896';
+    badge = `★${value}`;
+    title = `Rating ${value}/10 — Breakdown`;
+    sub   = `Drugs & conditions rated exactly ${value} out of 10`;
+  } else if (type === 'condition') {
+    color = '#00b4d8'; badge = '🏥';
+    title = value;
+    sub   = 'Condition drill-down — top drugs & emergency distribution';
+  } else if (type === 'stat') {
+    const statMeta = {
+      reviews:    { color: '#1a6bff', badge: '📋', title: 'Review Overview' },
+      drugs:      { color: '#a855f7', badge: '💊', title: 'Top-Rated Drugs' },
+      conditions: { color: '#00b4d8', badge: '🏥', title: 'Top Conditions' },
+      avg_rating: { color: '#00c896', badge: '⭐', title: 'Rating Insights' },
+    };
+    const m = statMeta[value] || { color: '#00d4aa', badge: '📊', title: value };
+    color = m.color; badge = m.badge; title = m.title;
+    sub = 'Overview across all drug reviews in the dataset';
+  }
+
+  glow = color + '22';
+
+  // Apply theme
+  const modal = document.querySelector('.analytics-modal');
+  modal.style.setProperty('--am-color', color);
+  modal.style.setProperty('--am-glow', glow);
+  document.body.style.setProperty('--am-color', color);
+
+  document.getElementById('amBadge').textContent = badge;
+  document.getElementById('amBadge').style.background = color + '22';
+  document.getElementById('amBadge').style.borderColor = color + '55';
+  document.getElementById('amBadge').style.boxShadow = `0 0 16px ${glow}`;
+  document.getElementById('amTitle').textContent = title;
+  document.getElementById('amSub').textContent = sub;
+
+  // Open overlay
+  document.getElementById('analyticsModal').classList.add('open');
+  lucide.createIcons();
+
+  // Fetch data
+  fetch(`/api/analytics_detail?type=${encodeURIComponent(type)}&value=${encodeURIComponent(value)}`)
+    .then(r => r.json())
+    .then(data => {
+      _amData = data;
+      if (data.error) {
+        renderAMError(data.error);
+        return;
+      }
+      renderAMContent(data, color);
+    })
+    .catch(err => renderAMError('Failed to load details: ' + err.message));
+}
+
+function openStatModal(value) {
+  openModal({ type: 'stat', value });
+}
+
+const emergencyDescriptions = {
+  CRITICAL: 'Immediate medical attention recommended',
+  HIGH: 'High-risk response — monitor closely',
+  MODERATE: 'Moderate risk — standard observation',
+  LOW: 'Low risk — positive drug response',
+};
+
+function renderAMError(msg) {
+  document.getElementById('amLoading').style.display = 'none';
+  document.getElementById('amContent').style.display = 'block';
+  document.getElementById('amContent').innerHTML = `<div class="am-empty">⚠️ ${msg}</div>`;
+}
+
+function renderAMContent(data, color) {
+  document.getElementById('amLoading').style.display = 'none';
+  document.getElementById('amContent').style.display = 'block';
+
+  // Build metrics strip
+  const metricsEl = document.getElementById('amMetrics');
+  metricsEl.innerHTML = '';
+  const metrics = [];
+
+  if (data.total !== undefined)
+    metrics.push({ val: data.total.toLocaleString(), label: 'Reviews' });
+  if (data.avg_rating !== undefined)
+    metrics.push({ val: data.avg_rating + '/10', label: 'Avg Rating' });
+  if (data.emergency_level)
+    metrics.push({ val: data.emergency_level, label: 'Emergency' });
+  if (data.description)
+    metrics.push({ val: '⚕️', label: data.description });
+  if (data.avg_rating === undefined && data.title)
+    metrics.push({ val: '📊', label: data.title });
+
+  metrics.forEach(m => {
+    const el = document.createElement('div');
+    el.className = 'am-metric';
+    el.innerHTML = `
+      <div class="am-metric-val" style="color:${color}">${m.val}</div>
+      <div class="am-metric-label">${m.label}</div>`;
+    metricsEl.appendChild(el);
+  });
+
+  // Build tabs
+  const tabs = [];
+  if (data.top_conditions && data.top_conditions.length) tabs.push({ label: '🏥 Conditions', id: 'conditions' });
+  if (data.top_drugs && data.top_drugs.length)      tabs.push({ label: '💊 Drugs', id: 'drugs' });
+  if (data.emergency_distribution)                   tabs.push({ label: '🚨 Emergency', id: 'emergency' });
+  if (data.rating_distribution)                      tabs.push({ label: '⭐ Ratings', id: 'ratings' });
+  if (data.sentiment_distribution)                   tabs.push({ label: '🎭 Sentiment', id: 'sentiment' });
+  if (data.items && data.items.length)               tabs.push({ label: '📋 Overview', id: 'items' });
+
+  const tabsEl = document.getElementById('amTabs');
+  tabsEl.innerHTML = '';
+  tabs.forEach((t, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'am-tab' + (i === 0 ? ' active' : '');
+    btn.textContent = t.label;
+    btn.addEventListener('click', () => {
+      tabsEl.querySelectorAll('.am-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderAMTab(t.id, data, color);
+    });
+    tabsEl.appendChild(btn);
+  });
+
+  // Render first tab
+  if (tabs.length) renderAMTab(tabs[0].id, data, color);
+  else {
+    document.getElementById('amContent').innerHTML = '<div class="am-empty">No detail data available.</div>';
+  }
+}
+
+function renderAMTab(tabId, data, color) {
+  const body = document.getElementById('amContent');
+
+  if (tabId === 'conditions' && data.top_conditions) {
+    const maxC = Math.max(...data.top_conditions.map(c => c.count));
+    body.innerHTML = `
+      <div class="am-section-label">Top Conditions</div>
+      <div class="am-list">
+        ${data.top_conditions.map((c, i) => `
+          <div class="am-row" onclick="openModal({type:'condition',value:'${escapeHtml(c.condition)}'});" style="cursor:pointer;">
+            <div class="am-row-rank">#${i+1}</div>
+            <div class="am-row-name" title="${escapeHtml(c.condition)}">${escapeHtml(c.condition)}</div>
+            <div class="am-row-bar-wrap"><div class="am-row-bar" style="width:${Math.round(c.count/maxC*100)}%;background:${color}"></div></div>
+            <div class="am-row-count" style="color:${color}">${c.count.toLocaleString()}</div>
+          </div>`).join('')}
+      </div>`;
+  }
+
+  else if (tabId === 'drugs' && data.top_drugs) {
+    const maxD = Math.max(...data.top_drugs.map(d => d.avg_rating || d.reviews || 1));
+    body.innerHTML = `
+      <div class="am-section-label">Top Drugs</div>
+      <div class="am-list">
+        ${data.top_drugs.map((d, i) => {
+          const metric = d.avg_rating !== undefined ? d.avg_rating + '/10' : (d.reviews || '').toLocaleString() + ' reviews';
+          const barVal = d.avg_rating !== undefined ? d.avg_rating / 10 * 100 : (d.reviews / maxD * 100);
+          return `
+          <div class="am-row">
+            <div class="am-row-rank">#${i+1}</div>
+            <div class="am-row-name" title="${escapeHtml(d.drugName)}">${escapeHtml(d.drugName)}</div>
+            <div class="am-row-bar-wrap"><div class="am-row-bar" style="width:${Math.round(barVal)}%;background:${color}"></div></div>
+            <div class="am-row-count" style="color:${color}">${metric}</div>
+          </div>`;
+        }).join('')}
+      </div>`;
+  }
+
+  else if (tabId === 'emergency' && data.emergency_distribution) {
+    const eData = data.emergency_distribution;
+    const total = Object.values(eData).reduce((a,b) => a+b, 0) || 1;
+    body.innerHTML = `
+      <div class="am-section-label">Emergency Level Breakdown</div>
+      <div class="am-emerg-grid">
+        ${['CRITICAL','HIGH','MODERATE','LOW'].map(lvl => {
+          const cnt = eData[lvl] || 0;
+          const pct = ((cnt / total) * 100).toFixed(1);
+          return `<div class="am-emerg-badge" onclick="openModal({type:'emergency',value:'${lvl}'})" style="cursor:pointer;">
+            <span class="am-emerg-badge-dot" style="background:${EMERG_COLORS[lvl]}"></span>
+            <div class="am-emerg-badge-label">${EMERG_ICONS[lvl]} ${lvl}</div>
+            <div class="am-emerg-badge-count" style="color:${EMERG_COLORS[lvl]}">${cnt.toLocaleString()}</div>
+            <div style="font-size:10px;color:var(--text-secondary);margin-top:2px;">${pct}%</div>
+          </div>`;
+        }).join('')}
+      </div>`;
+  }
+
+  else if (tabId === 'ratings' && data.rating_distribution) {
+    const rData = data.rating_distribution;
+    const maxR = Math.max(...Object.values(rData));
+    body.innerHTML = `
+      <div class="am-section-label">Rating Distribution</div>
+      <div class="am-list">
+        ${Object.entries(rData).sort((a,b)=>parseInt(a[0])-parseInt(b[0])).map(([r, cnt]) => {
+          const rv = parseInt(r);
+          const barColor = rv<=3?'#ff4560':rv<=5?'#ff6b35':rv<=7?'#f59e0b':'#00c896';
+          return `<div class="am-row" onclick="openModal({type:'rating',value:'${r}'})" style="cursor:pointer;">
+            <div class="am-row-rank">★${r}</div>
+            <div class="am-row-bar-wrap" style="max-width:none;flex:1"><div class="am-row-bar" style="width:${Math.round(cnt/maxR*100)}%;background:${barColor}"></div></div>
+            <div class="am-row-count" style="color:${barColor}">${cnt.toLocaleString()}</div>
+          </div>`;
+        }).join('')}
+      </div>`;
+  }
+
+  else if (tabId === 'sentiment' && data.sentiment_distribution) {
+    const sData = data.sentiment_distribution;
+    const total = Object.values(sData).reduce((a,b) => a+b, 0) || 1;
+    body.innerHTML = `
+      <div class="am-section-label">Sentiment Breakdown</div>
+      <div class="am-emerg-grid">
+        ${Object.entries(sData).map(([label, cnt]) => {
+          const sc = SENT_COLORS[label] || '#00d4aa';
+          const pct = ((cnt / total) * 100).toFixed(1);
+          return `<div class="am-emerg-badge" onclick="openModal({type:'sentiment',value:'${label}'})" style="cursor:pointer;">
+            <span class="am-emerg-badge-dot" style="background:${sc}"></span>
+            <div class="am-emerg-badge-label">${SENT_ICONS[label]||''} ${label}</div>
+            <div class="am-emerg-badge-count" style="color:${sc}">${cnt.toLocaleString()}</div>
+            <div style="font-size:10px;color:var(--text-secondary);margin-top:2px;">${pct}%</div>
+          </div>`;
+        }).join('')}
+      </div>`;
+  }
+
+  else if (tabId === 'items' && data.items) {
+    // Stat modal overview items
+    const maxV = Math.max(...data.items.map(it => it.reviews || it.avg_rating || 1));
+    body.innerHTML = `
+      <div class="am-section-label">${data.title || 'Overview'}</div>
+      <div class="am-list">
+        ${data.items.map((it, i) => {
+          const name = it.condition || it.drugName || '—';
+          const val  = it.reviews ? it.reviews.toLocaleString() + ' reviews' : (it.avg_rating||'')+ '/10';
+          const barVal = it.reviews ? (it.reviews / maxV * 100) : ((it.avg_rating||0) / 10 * 100);
+          return `<div class="am-row">
+            <div class="am-row-rank">#${i+1}</div>
+            <div class="am-row-name" title="${escapeHtml(String(name))}">${escapeHtml(String(name))}</div>
+            <div class="am-row-bar-wrap"><div class="am-row-bar" style="width:${Math.round(barVal)}%;background:${color}"></div></div>
+            <div class="am-row-count" style="color:${color}">${val}</div>
+          </div>`;
+        }).join('')}
+      </div>`;
+  }
+
+  else {
+    body.innerHTML = '<div class="am-empty">No data available for this view.</div>';
+  }
+}
+
+function closeAM() {
+  document.getElementById('analyticsModal').classList.remove('open');
+}
+
+function closeAMOutside(e) {
+  if (e.target === document.getElementById('analyticsModal')) closeAM();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAM(); });
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
 </script>
 {% endblock %}
