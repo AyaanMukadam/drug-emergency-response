@@ -559,7 +559,24 @@
       initAuroraBorder(el);
       el.addEventListener('mousedown', (e) => addRipple(el, e, 'rgba(0,212,170,0.15)'));
     });
-  }
+
+    // Clickable stat cards (analytics page) — ripple + tilt
+    document.querySelectorAll('.stat-card[data-clickable]').forEach(el => {
+      el.addEventListener('mousedown', (e) => addRipple(el, e, 'rgba(0,212,170,0.2)'));
+    });
+
+    // Clickable chart cards (analytics page) — ripple on mousedown
+    document.querySelectorAll('.chart-card[data-clickable]').forEach(el => {
+      el.addEventListener('mousedown', (e) => addRipple(el, e, 'rgba(0,212,170,0.1)'));
+    });
+
+    // Analytics modal close button
+    document.querySelectorAll('.am-close-btn').forEach(el => {
+      el.addEventListener('mousedown', (e) => addRipple(el, e, 'rgba(255,69,96,0.3)'));
+    });
+
+
+  } // end initAll
 
   // Run after DOM + Lucide icons ready
   if (document.readyState === 'loading') {
