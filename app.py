@@ -264,6 +264,310 @@ def api_analytics():
     return jsonify(MODELS.get('analytics', {}))
 
 
+@app.route('/api/analytics_detail', methods=['GET'])
+def api_analytics_detail():
+    """
+    Drill-down analytics for click events on the Analytics page.
+    ?type=sentiment&value=Positive
+    ?type=emergency&value=CRITICAL
+    ?type=rating&value=8
+    ?type=condition&value=Depression
+    ?type=stat&value=conditions|drugs|reviews|avg_rating
+    """
+    detail_type = request.args.get('type', '').lower().strip()
+    value       = request.args.get('value', '').strip()
+
+    if not detail_type or not value:
+        return jsonify({'error': 'type and value parameters required'}), 400
+
+    # ── STAT CARD DRILL-DOWN (uses analytics.json only — no CSV needed) ──────
+    if detail_type == 'stat':
+        analytics = MODELS.get('analytics', {})
+        if value == 'conditions':
+            top_conds = analytics.get('top_conditions', {})
+            cond_ratings = analytics.get('condition_ratings', {})
+            items = [
+                {'condition': k, 'reviews': v, 'avg_rating': cond_ratings.get(k, 0)}
+                for k, v in top_conds.items()
+            ]
+            return jsonify({'type': 'stat', 'value': 'conditions', 'color': '#00b4d8',
+                            'title': 'Top Conditions by Review Volume', 'items': items})
+        elif value == 'drugs':
+            top_drugs_by_cond = analytics.get('top_drugs_by_condition', {})
+            all_drugs = []
+            for cond, drugs in top_drugs_by_cond.items():
+                for d in drugs[:2]:
+                    all_drugs.append({
+                        'drugName': d['drugName'],
+                        'condition': cond,
+                        'avg_rating': round(d['avg_rating'], 2),
+                        'reviews': d.get('reviews', 0)
+                    })
+            all_drugs.sort(key=lambda x: x['avg_rating'], reverse=True)
+            return jsonify({'type': 'stat', 'value': 'drugs', 'color': '#a855f7',
+                            'title': 'Top-Rated Drugs (by Condition)', 'items': all_drugs[:15]})
+        elif value == 'reviews':
+            rating_dist = analytics.get('rating_distribution', {})
+            sent_dist   = analytics.get('sentiment_distribution', {})
+            return jsonify({
+                'type': 'stat', 'value': 'reviews', 'color': '#1a6bff',
+                'title': 'Review Overview',
+                'total': analytics.get('total_reviews', 0),
+                'rating_distribution': rating_dist,
+                'sentiment_distribution': sent_dist,
+            })
+        elif value == 'avg_rating':
+            emerg_dist   = analytics.get('emergency_distribution', {})
+            sent_dist    = analytics.get('sentiment_distribution', {})
+            return jsonify({
+                'type': 'stat', 'value': 'avg_rating', 'color': '#00c896',
+                'title': 'Overall Rating Insights',
+                'avg_rating': analytics.get('avg_rating', 0),
+                'emergency_distribution': emerg_dist,
+                'sentiment_distribution': sent_dist,
+            })
+        else:
+            return jsonify({'error': f'Unknown stat value: {value}'}), 400
+
+    # For other types, we need the live dataset
+    df = get_dataset()
+    if df.empty:
+        return jsonify({'error': 'Dataset not available. Please ensure data/drug.csv is present.'}), 503
+
+
+    emergency_colors = {
+        'CRITICAL': '#ff4560', 'HIGH': '#ff6b35',
+        'MODERATE': '#f59e0b', 'LOW':  '#00c896'
+    }
+    sentiment_colors = {
+        'Positive': '#00d4aa', 'Negative': '#ff4560', 'Neutral': '#f59e0b'
+    }
+
+    try:
+        # ── SENTIMENT DRILL-DOWN ─────────────────────────────────────────────
+        if detail_type == 'sentiment':
+            # Map rating -> sentiment (using same label encoder logic from training)
+            label_map = {'Positive': (8, 10), 'Negative': (1, 5), 'Neutral': (6, 7)}
+            if value in label_map:
+                lo, hi = label_map[value]
+                subset = df[(df['rating'] >= lo) & (df['rating'] <= hi)]
+            else:
+                # Try using sentiment_distribution key
+                subset = df[df['rating'] >= 8] if value == 'Positive' else df[df['rating'] <= 5]
+
+            top_conds = (
+                subset.groupby('condition').size()
+                .sort_values(ascending=False).head(10)
+                .reset_index(name='count')
+            )
+            top_drugs = (
+                subset.groupby('drugName')['rating']
+                .agg(['mean','count']).reset_index()
+                .rename(columns={'mean':'avg_rating','count':'reviews'})
+                .sort_values('avg_rating', ascending=False).head(8)
+            )
+            emerg_dist = subset['emergency'].value_counts().to_dict()
+
+            return jsonify({
+                'type':    'sentiment',
+                'value':   value,
+                'color':   sentiment_colors.get(value, '#00d4aa'),
+                'total':   int(len(subset)),
+                'avg_rating': round(float(subset['rating'].mean()), 2),
+                'top_conditions': [
+                    {'condition': r['condition'], 'count': int(r['count'])}
+                    for _, r in top_conds.iterrows()
+                ],
+                'top_drugs': [
+                    {'drugName': str(r['drugName']),
+                     'avg_rating': round(float(r['avg_rating']), 2),
+                     'reviews': int(r['reviews'])}
+                    for _, r in top_drugs.iterrows()
+                ],
+                'emergency_distribution': {
+                    k: int(v) for k, v in emerg_dist.items()
+                },
+            })
+
+        # ── EMERGENCY DRILL-DOWN ─────────────────────────────────────────────
+        elif detail_type == 'emergency':
+            level = value.upper()
+            subset = df[df['emergency'] == level]
+            top_conds = (
+                subset.groupby('condition').size()
+                .sort_values(ascending=False).head(10)
+                .reset_index(name='count')
+            )
+            top_drugs = (
+                subset.groupby('drugName')['rating']
+                .agg(['mean','count']).reset_index()
+                .rename(columns={'mean':'avg_rating','count':'reviews'})
+                .sort_values('reviews', ascending=False).head(8)
+            )
+            sent_dist = {}
+            for rating, row in subset['rating'].value_counts().sort_index().items():
+                sent_dist[str(rating)] = int(row)
+
+            descriptions = {
+                'CRITICAL': 'Immediate medical attention recommended',
+                'HIGH':     'High-risk response — monitor closely',
+                'MODERATE': 'Moderate risk — standard observation',
+                'LOW':      'Low risk — positive drug response',
+            }
+
+            return jsonify({
+                'type':       'emergency',
+                'value':      level,
+                'color':      emergency_colors.get(level, '#00d4aa'),
+                'total':      int(len(subset)),
+                'avg_rating': round(float(subset['rating'].mean()), 2),
+                'description': descriptions.get(level, ''),
+                'top_conditions': [
+                    {'condition': r['condition'], 'count': int(r['count'])}
+                    for _, r in top_conds.iterrows()
+                ],
+                'top_drugs': [
+                    {'drugName': str(r['drugName']),
+                     'avg_rating': round(float(r['avg_rating']), 2),
+                     'reviews': int(r['reviews'])}
+                    for _, r in top_drugs.iterrows()
+                ],
+                'rating_distribution': sent_dist,
+            })
+
+        # ── RATING DRILL-DOWN ────────────────────────────────────────────────
+        elif detail_type == 'rating':
+            try:
+                rating_val = int(value)
+            except ValueError:
+                return jsonify({'error': 'value must be an integer 1-10'}), 400
+            subset = df[df['rating'] == rating_val]
+            top_conds = (
+                subset.groupby('condition').size()
+                .sort_values(ascending=False).head(10)
+                .reset_index(name='count')
+            )
+            top_drugs = (
+                subset.groupby('drugName').size()
+                .sort_values(ascending=False).head(8)
+                .reset_index(name='count')
+            )
+            emergency_level = (
+                'CRITICAL' if rating_val <= 3 else
+                'HIGH'     if rating_val <= 5 else
+                'MODERATE' if rating_val <= 7 else 'LOW'
+            )
+            color = (
+                '#ff4560' if rating_val <= 3 else
+                '#ff6b35' if rating_val <= 5 else
+                '#f59e0b' if rating_val <= 7 else '#00c896'
+            )
+            return jsonify({
+                'type':    'rating',
+                'value':   str(rating_val),
+                'color':   color,
+                'total':   int(len(subset)),
+                'emergency_level': emergency_level,
+                'top_conditions': [
+                    {'condition': r['condition'], 'count': int(r['count'])}
+                    for _, r in top_conds.iterrows()
+                ],
+                'top_drugs': [
+                    {'drugName': str(r['drugName']), 'reviews': int(r['count'])}
+                    for _, r in top_drugs.iterrows()
+                ],
+            })
+
+        # ── CONDITION DRILL-DOWN ─────────────────────────────────────────────
+        elif detail_type == 'condition':
+            subset = df[df['condition'].str.lower() == value.lower()]
+            if subset.empty:
+                mask = df['condition'].str.lower().str.contains(value.lower(), na=False)
+                subset = df[mask]
+
+            if subset.empty:
+                return jsonify({'error': f'Condition "{value}" not found'}), 404
+
+            top_drugs = (
+                subset.groupby('drugName')['rating']
+                .agg(['mean','count']).reset_index()
+                .rename(columns={'mean':'avg_rating','count':'reviews'})
+                .sort_values('avg_rating', ascending=False).head(8)
+            )
+            emerg_dist = subset['emergency'].value_counts().to_dict()
+            rating_dist = {str(r): int(c) for r, c in subset['rating'].value_counts().sort_index().items()}
+
+            return jsonify({
+                'type':       'condition',
+                'value':      value,
+                'color':      '#00b4d8',
+                'total':      int(len(subset)),
+                'avg_rating': round(float(subset['rating'].mean()), 2),
+                'top_drugs': [
+                    {'drugName': str(r['drugName']),
+                     'avg_rating': round(float(r['avg_rating']), 2),
+                     'reviews': int(r['reviews'])}
+                    for _, r in top_drugs.iterrows()
+                ],
+                'emergency_distribution': {k: int(v) for k, v in emerg_dist.items()},
+                'rating_distribution': rating_dist,
+            })
+
+        # ── STAT CARD DRILL-DOWN ─────────────────────────────────────────────
+        elif detail_type == 'stat':
+            analytics = MODELS.get('analytics', {})
+            if value == 'conditions':
+                top_conds = analytics.get('top_conditions', {})
+                cond_ratings = analytics.get('condition_ratings', {})
+                items = [
+                    {'condition': k, 'reviews': v, 'avg_rating': cond_ratings.get(k, 0)}
+                    for k, v in top_conds.items()
+                ]
+                return jsonify({'type': 'stat', 'value': 'conditions', 'color': '#00b4d8',
+                                'title': 'Top Conditions by Review Volume', 'items': items})
+            elif value == 'drugs':
+                top_drugs_by_cond = analytics.get('top_drugs_by_condition', {})
+                all_drugs = []
+                for cond, drugs in top_drugs_by_cond.items():
+                    for d in drugs[:2]:
+                        all_drugs.append({
+                            'drugName': d['drugName'],
+                            'condition': cond,
+                            'avg_rating': round(d['avg_rating'], 2),
+                            'reviews': d.get('reviews', 0)
+                        })
+                all_drugs.sort(key=lambda x: x['avg_rating'], reverse=True)
+                return jsonify({'type': 'stat', 'value': 'drugs', 'color': '#a855f7',
+                                'title': 'Top-Rated Drugs (by Condition)', 'items': all_drugs[:15]})
+            elif value == 'reviews':
+                rating_dist = analytics.get('rating_distribution', {})
+                sent_dist   = analytics.get('sentiment_distribution', {})
+                return jsonify({
+                    'type': 'stat', 'value': 'reviews', 'color': '#1a6bff',
+                    'title': 'Review Overview',
+                    'total': analytics.get('total_reviews', 0),
+                    'rating_distribution': rating_dist,
+                    'sentiment_distribution': sent_dist,
+                })
+            elif value == 'avg_rating':
+                emerg_dist   = analytics.get('emergency_distribution', {})
+                sent_dist    = analytics.get('sentiment_distribution', {})
+                return jsonify({
+                    'type': 'stat', 'value': 'avg_rating', 'color': '#00c896',
+                    'title': 'Overall Rating Insights',
+                    'avg_rating': analytics.get('avg_rating', 0),
+                    'emergency_distribution': emerg_dist,
+                    'sentiment_distribution': sent_dist,
+                })
+            else:
+                return jsonify({'error': f'Unknown stat value: {value}'}), 400
+
+        else:
+            return jsonify({'error': f'Unknown type: {detail_type}'}), 400
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 
 @app.route('/api/search_conditions', methods=['GET'])
 def api_search_conditions():
