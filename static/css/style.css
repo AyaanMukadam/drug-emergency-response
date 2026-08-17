@@ -1076,3 +1076,283 @@ select.form-control {
 }
 .example-btn:hover .example-text { color: var(--text-primary); }
 
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   ANALYTICS DRILL-DOWN MODAL
+   ═══════════════════════════════════════════════════════════════════════════ */
+.analytics-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,2,10,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 1100;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.analytics-modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.analytics-modal {
+  background: #050c1e;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 22px;
+  width: 100%; max-width: 860px; max-height: 90vh;
+  display: flex; flex-direction: column;
+  box-shadow: 0 30px 100px rgba(0,0,0,0.9), 0 0 80px var(--am-glow, rgba(0,212,170,0.08));
+  transform: translateY(28px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+.analytics-modal-overlay.open .analytics-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Colored top accent bar */
+.analytics-modal::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--am-color, #00d4aa), transparent);
+  z-index: 2;
+}
+
+/* Header */
+.am-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 22px 26px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.015);
+  flex-shrink: 0;
+}
+
+.am-badge {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+  background: rgba(0,212,170,0.12);
+  border: 1px solid rgba(0,212,170,0.25);
+  box-shadow: 0 0 16px var(--am-color, rgba(0,212,170,0.3));
+}
+
+.am-title-wrap { flex: 1; min-width: 0; }
+.am-title {
+  font-size: 17px; font-weight: 800;
+  color: var(--text-bright);
+  letter-spacing: -0.3px;
+}
+.am-sub {
+  font-size: 12px; color: var(--text-secondary); margin-top: 2px;
+}
+
+.am-close-btn {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 9px; color: var(--text-secondary);
+  cursor: pointer; width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition-fast); flex-shrink: 0;
+}
+.am-close-btn:hover {
+  background: rgba(255,69,96,0.12); color: var(--accent-red);
+  border-color: rgba(255,69,96,0.3);
+}
+.am-close-btn i { width: 16px; height: 16px; }
+
+/* Metric row */
+.am-metrics {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  padding: 16px 26px 0;
+  flex-shrink: 0;
+}
+.am-metric {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px; padding: 12px 18px;
+  text-align: center; flex: 1; min-width: 110px;
+  transition: var(--transition-fast);
+}
+.am-metric:hover {
+  background: rgba(255,255,255,0.065);
+  border-color: var(--am-color, rgba(0,212,170,0.3));
+  box-shadow: 0 0 12px var(--am-glow, rgba(0,212,170,0.08));
+}
+.am-metric-val {
+  font-size: 22px; font-weight: 800;
+  color: var(--am-color, #00d4aa);
+  letter-spacing: -0.5px;
+}
+.am-metric-label {
+  font-size: 11px; color: var(--text-secondary);
+  margin-top: 3px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+
+/* Tabs */
+.am-tabs {
+  display: flex; gap: 4px;
+  padding: 16px 26px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+.am-tab {
+  padding: 9px 16px; border-radius: 8px 8px 0 0;
+  font-size: 12px; font-weight: 600;
+  color: var(--text-secondary); cursor: pointer;
+  border: 1px solid transparent; border-bottom: none;
+  background: transparent;
+  transition: var(--transition-fast);
+  letter-spacing: 0.3px; text-transform: uppercase;
+}
+.am-tab:hover { color: var(--text-primary); background: rgba(255,255,255,0.04); }
+.am-tab.active {
+  color: var(--am-color, #00d4aa);
+  background: rgba(0,0,0,0.4);
+  border-color: rgba(255,255,255,0.07);
+}
+
+/* Body */
+.am-body {
+  flex: 1; overflow-y: auto; padding: 20px 26px 24px;
+  min-height: 0;
+}
+.am-body::-webkit-scrollbar { width: 5px; }
+.am-body::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1); border-radius: 10px;
+}
+
+/* Loading state inside modal */
+.am-loading {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 60px 0; gap: 14px;
+}
+
+/* Condition / Drug rows */
+.am-list { display: flex; flex-direction: column; gap: 8px; }
+
+.am-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border-radius: 10px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: var(--transition-fast);
+  cursor: default;
+}
+.am-row:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--am-color, rgba(0,212,170,0.25));
+  transform: translateX(2px);
+}
+.am-row-rank {
+  font-size: 11px; font-weight: 700; color: var(--text-secondary);
+  width: 22px; text-align: center; flex-shrink: 0;
+}
+.am-row-name {
+  flex: 1; font-size: 13px; font-weight: 600; color: var(--text-bright);
+  min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.am-row-bar-wrap {
+  flex: 1; height: 5px; background: rgba(255,255,255,0.06);
+  border-radius: 99px; overflow: hidden; max-width: 120px;
+}
+.am-row-bar {
+  height: 100%; border-radius: 99px;
+  background: var(--am-color, #00d4aa);
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.am-row-count {
+  font-size: 12px; font-weight: 600;
+  color: var(--am-color, #00d4aa);
+  flex-shrink: 0; min-width: 60px; text-align: right;
+}
+
+/* Mini emergency distribution badges */
+.am-emerg-grid {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.am-emerg-badge {
+  flex: 1; min-width: 110px; padding: 12px 14px;
+  border-radius: 12px; text-align: center;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: var(--transition-fast);
+}
+.am-emerg-badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.2);
+}
+.am-emerg-badge-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  margin: 0 auto 6px; display: block;
+}
+.am-emerg-badge-label {
+  font-size: 10px; color: var(--text-secondary);
+  text-transform: uppercase; letter-spacing: 0.6px;
+}
+.am-emerg-badge-count {
+  font-size: 16px; font-weight: 800; color: var(--text-bright);
+  margin-top: 2px;
+}
+
+/* Section labels */
+.am-section-label {
+  font-size: 11px; font-weight: 700;
+  color: var(--text-secondary); text-transform: uppercase;
+  letter-spacing: 0.8px; margin-bottom: 10px;
+}
+
+/* Empty state */
+.am-empty {
+  text-align: center; padding: 40px 0;
+  color: var(--text-secondary); font-size: 14px;
+}
+
+/* ── Interactive chart card cues ─────────────────────────────────────────── */
+.chart-card[data-clickable] {
+  cursor: pointer;
+  transition: var(--transition-fast), box-shadow 0.25s ease;
+}
+.chart-card[data-clickable]:hover {
+  box-shadow: 0 0 0 1px rgba(0,212,170,0.3), 0 8px 40px rgba(0,212,170,0.12);
+}
+
+/* Stat cards — clickable state */
+.stat-card[data-clickable] {
+  cursor: pointer;
+}
+.stat-card[data-clickable]:hover .stat-value {
+  color: var(--accent-teal);
+  text-shadow: 0 0 12px rgba(0,212,170,0.5);
+}
+
+/* Chart canvas — pointer cursor on hover for interactive charts */
+.chart-interactive canvas {
+  cursor: pointer !important;
+}
+
+/* Click hint tooltip on chart cards */
+.chart-click-hint {
+  position: absolute;
+  bottom: 12px; right: 14px;
+  font-size: 10px; color: rgba(255,255,255,0.28);
+  letter-spacing: 0.4px;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.chart-card:hover .chart-click-hint { opacity: 1; color: rgba(0,212,170,0.5); }
+
+/* Hover color morphing animation for donut/pie charts */
+@keyframes sliceHoverPulse {
+  0%   { filter: drop-shadow(0 0 0px transparent); }
+  50%  { filter: drop-shadow(0 0 12px var(--am-color, #00d4aa)); }
+  100% { filter: drop-shadow(0 0 4px var(--am-color, #00d4aa)); }
+}
+
+/* Neon glow on chart hover via wrapper class */
+.chart-neon-glow canvas {
+  filter: drop-shadow(0 0 8px var(--am-color, rgba(0,212,170,0.4)));
+  transition: filter 0.3s ease;
+}
